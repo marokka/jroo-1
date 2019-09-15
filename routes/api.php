@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,10 @@ Route::group(['prefix' => 'cart'], function () {
         'CartController@destroyProperty')->name('cart.destroyProperty'); // Удаление проперти у корзины
 
 
+});
+
+Route::get('/console', function (){
+    Artisan::call("migrate");
+    Artisan::call("cache:clear");
+    Artisan::call("storage:link");
 });
