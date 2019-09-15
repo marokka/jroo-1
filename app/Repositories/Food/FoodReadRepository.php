@@ -1,0 +1,67 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: aushev
+ * Date: 05.09.2019
+ * Time: 21:44
+ */
+
+namespace App\Repositories\Food;
+
+
+use App\Models\Food\Food;
+use App\Models\Food\FoodProperty;
+use App\Repositories\Category\CategoryRepository;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\DB;
+
+class FoodReadRepository
+{
+    /**
+     * @var CategoryRepository
+     */
+    private $categoryRepository;
+
+    /**
+     * FoodReadRepository constructor.
+     * @param CategoryRepository $categoryRepository
+     */
+    public function __construct(CategoryRepository $categoryRepository)
+    {
+        $this->categoryRepository = $categoryRepository;
+    }
+
+    /**
+     * Возвращает билдер запроса
+     *
+     * @return Builder
+     */
+    public function get(): Builder
+    {
+        return Food::select([Food::TABLE_NAME . '.*', DB::raw('GROUP_CONCAT(' .FoodProperty::TABLE_NAME . '.name' . ') as property_name')])
+            ->join(
+                FoodProperty::TABLE_NAME,
+                Food::TABLE_NAME . '.' . Food::ATTR_ID,
+                '=', FoodProperty::ATTR_FOOD_ID
+            )
+            ->groupBy(Food::TABLE_NAME . '.'. Food::ATTR_ID);
+    }
+
+    public function findByCategorySlug(string $slug): ?Builder
+    {
+        $category = $this->categoryRepository->findBySlug($slug);
+
+        $foods = Food::where(Food::ATTR_CATEGORY_ID, $category->id);
+
+        return $foods;
+    }
+
+    /**
+     * @param $id
+     * @return Builder|Builder[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model
+     */
+    public function byId($id)
+    {
+        return $this->get()->findOrFail($id);
+    }
+}
