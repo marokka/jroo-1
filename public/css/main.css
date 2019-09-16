@@ -37,7 +37,7 @@ body {
 }
 
 
-.grid-buttons .add-to-cart {
+.grid-buttons button {
     height: 40px;
     width: 40px;
 }
