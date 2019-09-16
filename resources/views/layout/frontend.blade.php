@@ -53,16 +53,16 @@
                         <div
                             class="header-right d-flex flex-column flex-md-row justify-content-md-end justify-content-center align-items-center">
                             <div class="social-link d-flex"><a href=""><img
-                                        src="https://img.icons8.com/bubbles/50/000000/vk-com.png"
+                                        src="{{asset('frontend/images/icon/vk-com.png')}}"
                                         style="width: 3em"> </a><a
                                     href="">
-                                    <img src="https://img.icons8.com/bubbles/50/000000/facebook-new.png"
+                                    <img src="{{asset('frontend/images/icon/facebook-new.png')}}"
                                          style="width: 3em"></a><a href=""><img
-                                        src="https://img.icons8.com/bubbles/50/000000/instagram.png" style="width: 3em">
+                                        src="{{asset('frontend/images/icon/instagram.png')}}" style="width: 3em">
                                 </a>
                             </div>
                             <div class="login d-flex"><a href="login.php"><img
-                                        src="https://img.icons8.com/bubbles/50/000000/gender-neutral-user.png"
+                                        src="{{asset('frontend/images/icon/gender-neutral-user.png')}}"
                                         style="width: 3em">Вход</a></div>
                         </div>
                     </div>
@@ -118,7 +118,7 @@
                                     <ul class="mb-0 d-flex flex-column">
                                         <li class="toggleable"><a class="menu-item"
                                                                   href="index.php"><img
-                                                    src="https://img.icons8.com/dusk/64/000000/restaurant-menu.png"
+                                                    src="{{asset('frontend/images/icon/restaurant-menu.png')}}"
                                                     style="width: 30px; margin-right: 5px;">Меню</a><span
                                                 class="sub-menu--expander"><i class="icon_plus"></i></span>
                                             <ul class="sub-menu">
@@ -130,17 +130,17 @@
 
                                         <li class="toggleable"><a class="menu-item"
                                                                   href="#"><img
-                                                    src="https://img.icons8.com/bubbles/50/000000/money.png"
+                                                    src="{{asset('frontend/images/icon/money.png')}}"
                                                     style="width: 30px; margin-right: 5px;">Оплата</a>
 
                                         </li>
                                         <li class="toggleable"><a class="menu-item" href="#"><img
-                                                    src="https://img.icons8.com/cotton/64/000000/delivery.png"
+                                                    src="{{asset('frontend/images/icon/delivery.png')}}"
                                                     style="width: 30px; margin-right: 5px;">Доставка</a>
 
                                         </li>
                                         <li class="toggleable"><a class="menu-item" href="contact.php"><img
-                                                    src="https://img.icons8.com/bubbles/50/000000/contact-card.png"
+                                                    src="{{asset('frontend/images/icon/contact-card.png')}}"
                                                     style="width: 30px; margin-right: 5px;">Контакты</a>
 
                                         </li>
@@ -148,18 +148,18 @@
                                 </div>
                                 <div class="mobile-login">
                                     <h2>Личный кабинет</h2><a href="login.php"><img
-                                            src="https://img.icons8.com/bubbles/50/000000/gender-neutral-user.png"
+                                            src="{{asset('frontend/images/icon/gender-neutral-user.png')}}"
                                             style="width: 30px; margin-right: 5px;">Вход</a><a
                                         href="register.php"><img
-                                            src="https://img.icons8.com/clouds/100/000000/add-user-male.png"
+                                            src="{{asset('frontend/images/icon/add-user-male.png')}}"
                                             style="width: 30px; margin-right: 5px;">Регистрация</a>
                                 </div>
                                 <div class="mobile-social"><a href=""><img
-                                            src="https://img.icons8.com/bubbles/50/000000/vk-com.png"></a><a
+                                            src="{{asset('frontend/images/icon/vk-com.png')}}"></a><a
                                         href=""><img
-                                            src="https://img.icons8.com/bubbles/50/000000/facebook-new.png"></a><a
+                                            src="{{asset('frontend/images/icon/facebook-new.png')}}"></a><a
                                         href=""><img
-                                            src="https://img.icons8.com/bubbles/50/000000/instagram-new.png"></a>
+                                            src="{{asset('frontend/images/icon/instagram.png')}}"></a>
                                 </div>
 
 
