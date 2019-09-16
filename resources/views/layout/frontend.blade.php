@@ -216,25 +216,25 @@
                             <div class="department-dropdown-menu">
                                 <ul>
                                     <li><a class="department-link" href="shop_grid+list_3col.html">
-                                            <img src="https://img.icons8.com/color/48/000000/steak-medium.png"
+                                            <img src="{{asset('frontend/images/icon/steak-medium.png')}}"
                                                  style="width: 35px;">Стейк (на выбор) + <img
-                                                src="https://img.icons8.com/dusk/64/000000/porridge.png"
+                                                src="{{asset('frontend/images/icon/porridge.png')}}"
                                                 style="width: 35px;">гарнир (на выбор) + <img
-                                                src="https://img.icons8.com/color/96/000000/sauce.png"
+                                                src="{{asset('frontend/images/icon/sauce.png')}}"
                                                 style="width: 35px;">соус (на выбор)</a></li>
                                     <li><a class="department-link" href="shop_grid+list_3col.html">
-                                            <img src="https://img.icons8.com/plasticine/100/000000/hamburger.png"
+                                            <img src="{{asset('frontend/images/icon/beefburger.png')}}"
                                                  style="width: 35px;">Бургер (на выбор) + <img
-                                                src="https://img.icons8.com/plasticine/100/000000/french-fries.png"
+                                                src="{{asset('frontend/images/icon/french-fries.png')}}"
                                                 style="width: 35px;">фри + <img
-                                                src="https://img.icons8.com/color/96/000000/sauce.png"
+                                                src="{{asset('frontend/images/icon/sauce.png')}}"
                                                 style="width: 35px;">(соус на выбор)</a></li>
                                     <li><a class="department-link" href="shop_grid+list_3col.html">
-                                            <img src="https://img.icons8.com/plasticine/100/000000/hamburger.png"
+                                            <img src="{{asset('frontend/images/icon/beefburger.png')}}"
                                                  style="width: 35px;">Бургер (на выбор) + <img
-                                                src="https://img.icons8.com/office/30/000000/sweet-potato.png"
+                                                src="{{asset('frontend/images/icon/sweet-patato.png')}}"
                                                 style="width: 35px;">картофельные дольки + <img
-                                                src="https://img.icons8.com/color/96/000000/sauce.png"
+                                                src="{{asset('frontend/images/icon/sauce.png')}}"
                                                 style="width: 35px;">(соус на выбор)</a></li>
                                 </ul>
                             </div>
