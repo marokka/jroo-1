@@ -49,9 +49,9 @@
                         </h3>
                         <button data-food-property-id="{{$food->property->id}}" class="add-to-cart normal-btn outline">Добавить в корзину
                         </button>
-                        <button class="add-to-compare normal-btn outline">+ Добавить в
+                        <!-- <button class="add-to-compare normal-btn outline">+ Добавить в
                             избранное
-                        </button>
+                        </button> -->
                     </div>
                 </div>
             </div>
