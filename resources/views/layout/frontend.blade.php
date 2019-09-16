@@ -156,10 +156,10 @@
                                 </div>
                                 <div class="mobile-social"><a href=""><img
                                             src="{{asset('frontend/images/icon/vk-com.png')}}"></a><a
-                                        href=""><img
+                                        href="" style="width: 30px; margin-right: 5px;"><img
                                             src="{{asset('frontend/images/icon/facebook-new.png')}}"></a><a
-                                        href=""><img
-                                            src="{{asset('frontend/images/icon/instagram.png')}}"></a>
+                                        href="" style="width: 30px; margin-right: 5px;"><img
+                                            src="{{asset('frontend/images/icon/instagram.png')}}" style="width: 30px; margin-right: 5px;"></a>
                                 </div>
 
 
