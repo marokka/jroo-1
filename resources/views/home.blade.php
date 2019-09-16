@@ -25,8 +25,8 @@
                         @foreach($categories as $category)
                             <div class="col-12 col-sm-4 col-lg-4">
                                 <a href="{{route('food.by-category-slug', $category->slug)}}">
-                                    <img class="categories-img" src="{{$category->img}}"
-                                         alt="{{$category->name}}" title="{{$category->name}}">
+                                    <img class="img-fluid" src="{{$category->img}}"
+                                         alt="{{$category->name}}" style="margin-bottom: 8%; border-radius: 14px;" title="{{$category->name}}">
                                 </a>
                             </div>
                         @endforeach
