@@ -31,7 +31,7 @@
                         <button class="add-to-wishlist button-borderless"><i
                                 class="icon_heart_alt"></i></button>
                     </div>
-                    <div class="product-select">
+                    <div class="grid-buttons">
                         {{--<button class="add-to-wishlist round-icon-btn"><i--}}
                                 {{--class="icon_heart_alt"></i></button>--}}
                         <button data-food-property-id="{{$food->property->id}}" class="add-to-cart round-icon-btn"><i class="fas fa-shopping-basket"></i>

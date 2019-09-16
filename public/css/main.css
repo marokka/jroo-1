@@ -36,3 +36,8 @@ body {
 	margin-bottom: 8%;
 }
 
+
+.grid-buttons .add-to-cart {
+    height: 40px;
+    width: 40px;
+}
