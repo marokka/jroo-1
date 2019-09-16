@@ -47,7 +47,7 @@
                             @endif
                             ₽{{$food->propertyCache()->price}}
                         </h3>
-                        <button class="add-to-cart normal-btn outline">Добавить в корзину
+                        <button data-food-property-id="{{$food->property->id}}" class="add-to-cart normal-btn outline">Добавить в корзину
                         </button>
                         <button class="add-to-compare normal-btn outline">+ Добавить в
                             избранное

@@ -198,7 +198,7 @@
                     </div>
                     <div class="col-3">
                         <div class="mobile-product_function d-flex align-items-center justify-content-end"><a
-                                class="function-icon" href="cart.php"><i class="fas fa-shopping-basket"
+                                class="function-icon" href="{{route('cart')}}"><i class="fas fa-shopping-basket"
                                                                          style="font-size: 2.9em"></i> </a>
                         </div>
                     </div>
