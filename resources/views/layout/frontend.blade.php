@@ -158,7 +158,7 @@
                                             src="{{asset('frontend/images/icon/vk-com.png')}}" style="width: 30px; margin-right: 5px;"></a><a
                                         href="" ><img
                                             src="{{asset('frontend/images/icon/facebook-new.png')}}"style="width: 30px; margin-right: 5px;"></a><a
-                                        href="" ><img src="{{asset('frontend/images/icon/instagram.png')}}" ></a>
+                                        href="" ><img src="{{asset('frontend/images/icon/instagram.png')}}" style="width: 30px; margin-right: 5px;" ></a>
                                 </div>
 
 
