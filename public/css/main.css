@@ -14,22 +14,25 @@ body {
 }
 
 .overlay {
-    position: absolute;
-    width: 317px;
-    height: 207px;
-    background-color: #00000082;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+	position: absolute;
+	width: 317px;
+	height: 175px;
+	background-color: #00000082;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	border-radius: 14px;
 }
 
 .overlay span {
-    font-size: 34px;
+	font-size: 34px;
 }
 
 .categories-img {
-    width: 317px;
-    height: 207px;
-    border-radius: 10px;
+	width: 317px;
+	height: 175px;
+	border-radius: 14px;
+	margin-bottom: 8%;
 }
+
