@@ -36,7 +36,9 @@ body {
 	margin-bottom: 8%;
 }
 
-
+.grid-buttons {
+    margin: 15px;
+}
 .grid-buttons button {
     height: 40px;
     width: 40px;
