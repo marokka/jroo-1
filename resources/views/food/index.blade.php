@@ -60,8 +60,8 @@
 
                                             </div>
                                             <div class="view-method">
-                                                <p id="grid-view"><i class="fas fa-th-large"></i></p>
-                                                <p class="active" id="list-view"><i class="fas fa-list"></i></p>
+                                                <p class="active" id="grid-view"><i class="fas fa-th-large"></i></p>
+                                                <p id="list-view"><i class="fas fa-list"></i></p>
                                             </div>
                                         </div>
                                     </div>
