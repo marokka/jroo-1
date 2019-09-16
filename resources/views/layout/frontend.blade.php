@@ -37,15 +37,15 @@
                     <div class="col-12 col-md-8">
                         <div class="header-left d-flex flex-column flex-md-row align-items-center">
                             <p class="d-flex align-items-center"><img
-                                    src="https://img.icons8.com/bubbles/50/000000/map-marker.png" style="width: 3em">Крым,
+                                    src="{{asset('frontend/images/icon/map-marker.png')}}')}}" style="width: 3em">Крым,
                                 г. Ялта,
                                 ул.
                                 Игнатенко дом 3</p>
                             <p class="d-flex align-items-center"><img
-                                    src="https://img.icons8.com/bubbles/50/000000/phone.png" style="width: 3em">+7(978)087-33-37
+                                    src="{{asset('frontend/images/icon/phone.png')}}')}}" style="width: 3em">+7(978)087-33-37
                             </p>
                             <p class="d-flex align-items-center"><img
-                                    src="https://img.icons8.com/bubbles/50/000000/time-machine.png" style="width: 3em">с
+                                    src="{{asset('frontend/images/icon/time-machine.png')}}')}}" style="width: 3em">с
                                 9:00 до 23:30</p>
                         </div>
                     </div>
