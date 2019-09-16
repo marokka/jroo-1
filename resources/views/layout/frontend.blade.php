@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{asset('frontend/css/scroll.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/jquery.fancybox.min.css')}}">
-    <link rel="shortcut icon" href="{{asset('frontend/images/JBS_Logo.png')}}')}}">
+    <link rel="shortcut icon" href="{{asset('frontend/images/JBS_Logo.png')}}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
@@ -37,15 +37,15 @@
                     <div class="col-12 col-md-8">
                         <div class="header-left d-flex flex-column flex-md-row align-items-center">
                             <p class="d-flex align-items-center"><img
-                                    src="{{asset('frontend/images/icon/map-marker.png')}}')}}" style="width: 3em">Крым,
+                                    src="{{asset('frontend/images/icon/map-marker.png')}}" style="width: 3em">Крым,
                                 г. Ялта,
                                 ул.
                                 Игнатенко дом 3</p>
                             <p class="d-flex align-items-center"><img
-                                    src="{{asset('frontend/images/icon/phone.png')}}')}}" style="width: 3em">+7(978)087-33-37
+                                    src="{{asset('frontend/images/icon/phone.png')}}" style="width: 3em">+7(978)087-33-37
                             </p>
                             <p class="d-flex align-items-center"><img
-                                    src="{{asset('frontend/images/icon/time-machine.png')}}')}}" style="width: 3em">с
+                                    src="{{asset('frontend/images/icon/time-machine.png')}}" style="width: 3em">с
                                 9:00 до 23:30</p>
                         </div>
                     </div>
