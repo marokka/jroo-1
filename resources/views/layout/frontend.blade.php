@@ -155,10 +155,10 @@
                                             style="width: 30px; margin-right: 5px;">Регистрация</a>
                                 </div>
                                 <div class="mobile-social"><a href=""><img
-                                            src="{{asset('frontend/images/icon/vk-com.png')}}" style="width: 30px; margin-right: 5px;"></a><a
+                                            src="{{asset('frontend/images/icon/vk-com.png')}}" style="width: 40px; margin-right: 5px;"></a><a
                                         href="" ><img
-                                            src="{{asset('frontend/images/icon/facebook-new.png')}}"style="width: 30px; margin-right: 5px;"></a><a
-                                        href="" ><img src="{{asset('frontend/images/icon/instagram.png')}}" style="width: 30px; margin-right: 5px;" ></a>
+                                            src="{{asset('frontend/images/icon/facebook-new.png')}}"style="width: 40px; margin-right: 5px;"></a><a
+                                        href="" ><img src="{{asset('frontend/images/icon/instagram.png')}}" style="width: 40px; margin-right: 5px;" ></a>
                                 </div>
 
 
