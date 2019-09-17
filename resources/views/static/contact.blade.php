@@ -10,12 +10,7 @@
 @extends('layout.frontend')
 
 @section('content')
-    {{ Widget::run('breadcumb.breadcumbWidget', ['items' => [
-                \App\Widgets\Breadcumb\models\Breadcrumb::create('Основной сайт', '#', 'fas fa-home'),
-                \App\Widgets\Breadcumb\models\Breadcrumb::create('Категории', route('home')),
-                \App\Widgets\Breadcumb\models\Breadcrumb::create($breadcumb, '#'),
-            ]])
-    }}
+
 
 <!-- End breadcrumb-->
 <div class="contact-us">
