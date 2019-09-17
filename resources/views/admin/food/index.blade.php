@@ -64,6 +64,8 @@ use App\Http\Controllers\Admin\FoodController as Controller;
                         @endforeach
                         </tbody>
                     </table>
+
+                    {{$foods->links()}}
                 </div>
 
             </div>
