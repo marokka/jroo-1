@@ -79,11 +79,11 @@
                         <div class="navgition-menu d-flex align-items-center justify-content-center">
                             <ul class="mb-0">
                                 <li class="toggleable"><a class="menu-item active"
-                                                          href="shop_grid+list_3col.html">Меню
+                                                          href="/">Меню
                                         <i class="fas fa-caret-down"></i></a>
                                     <ul class="sub-menu shop d-flex">
                                         <div class="nav-column">
-                                            <li><a href="shop_grid+list_fullwidth.html">Меню кухни</a></li>
+                                            <li><a href="/">Категории</a></li>
                                             <li><a href="shop_grid+list_fullwidth.html">Меню напитков б/а</a></li>
                                         </div>
                                     </ul>
@@ -117,12 +117,12 @@
                                 <div class="mobile-menu_items">
                                     <ul class="mb-0 d-flex flex-column">
                                         <li class="toggleable"><a class="menu-item"
-                                                                  href="index.php"><img
+                                                                  href="/"><img
                                                     src="{{asset('frontend/images/icon/restaurant-menu.png')}}"
                                                     style="width: 30px; margin-right: 5px;">Меню</a><span
                                                 class="sub-menu--expander"><i class="icon_plus"></i></span>
                                             <ul class="sub-menu">
-                                                <li><a href="index.php">Меню Кухни</a></li>
+                                                <li><a href="/">Категории</a></li>
                                                 <li><a href="index.php">Меню Напитков Б/А</a>
                                                 </li>
                                             </ul>
@@ -192,7 +192,7 @@
                     </div>
                     <div class="col-6">
                         <div class="mobile-menu_logo text-center d-flex justify-content-center align-items-center">
-                            <a href="index.php"><img src="{{asset('frontend/images/JBS_Logo.png')}}" style="width: 90%"
+                            <a href="/"><img src="{{asset('frontend/images/JBS_Logo.png')}}" style="width: 90%"
                                                      alt=""></a>
                         </div>
                     </div>
