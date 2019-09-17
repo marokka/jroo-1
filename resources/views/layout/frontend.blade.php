@@ -129,17 +129,17 @@
                                         </li>
 
                                         <li class="toggleable"><a class="menu-item"
-                                                                  href="#"><img
+                                                                  href="{{route('pay')}}"><img
                                                     src="{{asset('frontend/images/icon/money.png')}}"
                                                     style="width: 30px; margin-right: 5px;">Оплата</a>
 
                                         </li>
-                                        <li class="toggleable"><a class="menu-item" href="#"><img
+                                        <li class="toggleable"><a class="menu-item" href="{{route('delivery')}}"><img
                                                     src="{{asset('frontend/images/icon/delivery.png')}}"
                                                     style="width: 30px; margin-right: 5px;">Доставка</a>
 
                                         </li>
-                                        <li class="toggleable"><a class="menu-item" href="contact.php"><img
+                                        <li class="toggleable"><a class="menu-item" href="{{route('contact')}}"><img
                                                     src="{{asset('frontend/images/icon/contact-card.png')}}"
                                                     style="width: 30px; margin-right: 5px;">Контакты</a>
 
