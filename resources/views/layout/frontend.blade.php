@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{asset('frontend/css/scroll.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/jquery.fancybox.min.css')}}">
-    <link rel="shortcut icon" href="{{asset('frontend/images/JBS_Logo.png')}}')}}">
+    <link rel="shortcut icon" href="{{asset('frontend/images/JBS_Logo.png')}}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
@@ -37,15 +37,15 @@
                     <div class="col-12 col-md-8">
                         <div class="header-left d-flex flex-column flex-md-row align-items-center">
                             <p class="d-flex align-items-center"><img
-                                    src="https://img.icons8.com/bubbles/50/000000/map-marker.png" style="width: 3em">Крым,
+                                    src="{{asset('frontend/images/icon/map-marker.png')}}" style="width: 3em">Крым,
                                 г. Ялта,
                                 ул.
                                 Игнатенко дом 3</p>
                             <p class="d-flex align-items-center"><img
-                                    src="https://img.icons8.com/bubbles/50/000000/phone.png" style="width: 3em">+7(978)087-33-37
+                                    src="{{asset('frontend/images/icon/phone.png')}}" style="width: 3em">+7(978)087-33-37
                             </p>
                             <p class="d-flex align-items-center"><img
-                                    src="https://img.icons8.com/bubbles/50/000000/time-machine.png" style="width: 3em">с
+                                    src="{{asset('frontend/images/icon/time-machine.png')}}" style="width: 3em">с
                                 9:00 до 23:30</p>
                         </div>
                     </div>
@@ -53,16 +53,16 @@
                         <div
                             class="header-right d-flex flex-column flex-md-row justify-content-md-end justify-content-center align-items-center">
                             <div class="social-link d-flex"><a href=""><img
-                                        src="https://img.icons8.com/bubbles/50/000000/vk-com.png"
+                                        src="{{asset('frontend/images/icon/vk-com.png')}}"
                                         style="width: 3em"> </a><a
                                     href="">
-                                    <img src="https://img.icons8.com/bubbles/50/000000/facebook-new.png"
+                                    <img src="{{asset('frontend/images/icon/facebook-new.png')}}"
                                          style="width: 3em"></a><a href=""><img
-                                        src="https://img.icons8.com/bubbles/50/000000/instagram.png" style="width: 3em">
+                                        src="{{asset('frontend/images/icon/instagram.png')}}" style="width: 3em">
                                 </a>
                             </div>
                             <div class="login d-flex"><a href="login.php"><img
-                                        src="https://img.icons8.com/bubbles/50/000000/gender-neutral-user.png"
+                                        src="{{asset('frontend/images/icon/gender-neutral-user.png')}}"
                                         style="width: 3em">Вход</a></div>
                         </div>
                     </div>
@@ -79,11 +79,11 @@
                         <div class="navgition-menu d-flex align-items-center justify-content-center">
                             <ul class="mb-0">
                                 <li class="toggleable"><a class="menu-item active"
-                                                          href="shop_grid+list_3col.html">Меню
+                                                          href="/">Меню
                                         <i class="fas fa-caret-down"></i></a>
                                     <ul class="sub-menu shop d-flex">
                                         <div class="nav-column">
-                                            <li><a href="shop_grid+list_fullwidth.html">Меню кухни</a></li>
+                                            <li><a href="/">Категории</a></li>
                                             <li><a href="shop_grid+list_fullwidth.html">Меню напитков б/а</a></li>
                                         </div>
                                     </ul>
@@ -117,30 +117,30 @@
                                 <div class="mobile-menu_items">
                                     <ul class="mb-0 d-flex flex-column">
                                         <li class="toggleable"><a class="menu-item"
-                                                                  href="index.php"><img
-                                                    src="https://img.icons8.com/dusk/64/000000/restaurant-menu.png"
+                                                                  href="/"><img
+                                                    src="{{asset('frontend/images/icon/restaurant-menu.png')}}"
                                                     style="width: 30px; margin-right: 5px;">Меню</a><span
                                                 class="sub-menu--expander"><i class="icon_plus"></i></span>
                                             <ul class="sub-menu">
-                                                <li><a href="index.php">Меню Кухни</a></li>
+                                                <li><a href="/">Категории</a></li>
                                                 <li><a href="index.php">Меню Напитков Б/А</a>
                                                 </li>
                                             </ul>
                                         </li>
 
                                         <li class="toggleable"><a class="menu-item"
-                                                                  href="#"><img
-                                                    src="https://img.icons8.com/bubbles/50/000000/money.png"
+                                                                  href="{{route('pay')}}"><img
+                                                    src="{{asset('frontend/images/icon/money.png')}}"
                                                     style="width: 30px; margin-right: 5px;">Оплата</a>
 
                                         </li>
-                                        <li class="toggleable"><a class="menu-item" href="#"><img
-                                                    src="https://img.icons8.com/cotton/64/000000/delivery.png"
+                                        <li class="toggleable"><a class="menu-item" href="{{route('delivery')}}"><img
+                                                    src="{{asset('frontend/images/icon/delivery.png')}}"
                                                     style="width: 30px; margin-right: 5px;">Доставка</a>
 
                                         </li>
-                                        <li class="toggleable"><a class="menu-item" href="contact.php"><img
-                                                    src="https://img.icons8.com/bubbles/50/000000/contact-card.png"
+                                        <li class="toggleable"><a class="menu-item" href="{{route('contact')}}"><img
+                                                    src="{{asset('frontend/images/icon/contact-card.png')}}"
                                                     style="width: 30px; margin-right: 5px;">Контакты</a>
 
                                         </li>
@@ -148,18 +148,17 @@
                                 </div>
                                 <div class="mobile-login">
                                     <h2>Личный кабинет</h2><a href="login.php"><img
-                                            src="https://img.icons8.com/bubbles/50/000000/gender-neutral-user.png"
+                                            src="{{asset('frontend/images/icon/gender-neutral-user.png')}}"
                                             style="width: 30px; margin-right: 5px;">Вход</a><a
                                         href="register.php"><img
-                                            src="https://img.icons8.com/clouds/100/000000/add-user-male.png"
+                                            src="{{asset('frontend/images/icon/add-user-male.png')}}"
                                             style="width: 30px; margin-right: 5px;">Регистрация</a>
                                 </div>
                                 <div class="mobile-social"><a href=""><img
-                                            src="https://img.icons8.com/bubbles/50/000000/vk-com.png"></a><a
-                                        href=""><img
-                                            src="https://img.icons8.com/bubbles/50/000000/facebook-new.png"></a><a
-                                        href=""><img
-                                            src="https://img.icons8.com/bubbles/50/000000/instagram-new.png"></a>
+                                            src="{{asset('frontend/images/icon/vk-com.png')}}" style="width: 40px; margin-right: 5px;"></a><a
+                                        href="" ><img
+                                            src="{{asset('frontend/images/icon/facebook-new.png')}}"style="width: 40px; margin-right: 5px;"></a><a
+                                        href="" ><img src="{{asset('frontend/images/icon/instagram.png')}}" style="width: 40px; margin-right: 5px;" ></a>
                                 </div>
 
 
@@ -193,13 +192,13 @@
                     </div>
                     <div class="col-6">
                         <div class="mobile-menu_logo text-center d-flex justify-content-center align-items-center">
-                            <a href="index.php"><img src="{{asset('frontend/images/JBS_Logo.png')}}" style="width: 90%"
+                            <a href="/"><img src="{{asset('frontend/images/JBS_Logo.png')}}" style="width: 90%"
                                                      alt=""></a>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="mobile-product_function d-flex align-items-center justify-content-end"><a
-                                class="function-icon" href="cart.php"><i class="fas fa-shopping-basket"
+                                class="function-icon" href="{{route('cart')}}"><i class="fas fa-shopping-basket"
                                                                          style="font-size: 2.9em"></i> </a>
                         </div>
                     </div>
@@ -217,25 +216,25 @@
                             <div class="department-dropdown-menu">
                                 <ul>
                                     <li><a class="department-link" href="shop_grid+list_3col.html">
-                                            <img src="https://img.icons8.com/color/48/000000/steak-medium.png"
+                                            <img src="{{asset('frontend/images/icon/steak-medium.png')}}"
                                                  style="width: 35px;">Стейк (на выбор) + <img
-                                                src="https://img.icons8.com/dusk/64/000000/porridge.png"
+                                                src="{{asset('frontend/images/icon/porridge.png')}}"
                                                 style="width: 35px;">гарнир (на выбор) + <img
-                                                src="https://img.icons8.com/color/96/000000/sauce.png"
+                                                src="{{asset('frontend/images/icon/sauce.png')}}"
                                                 style="width: 35px;">соус (на выбор)</a></li>
                                     <li><a class="department-link" href="shop_grid+list_3col.html">
-                                            <img src="https://img.icons8.com/plasticine/100/000000/hamburger.png"
+                                            <img src="{{asset('frontend/images/icon/beefburger.png')}}"
                                                  style="width: 35px;">Бургер (на выбор) + <img
-                                                src="https://img.icons8.com/plasticine/100/000000/french-fries.png"
+                                                src="{{asset('frontend/images/icon/french-fries.png')}}"
                                                 style="width: 35px;">фри + <img
-                                                src="https://img.icons8.com/color/96/000000/sauce.png"
+                                                src="{{asset('frontend/images/icon/sauce.png')}}"
                                                 style="width: 35px;">(соус на выбор)</a></li>
                                     <li><a class="department-link" href="shop_grid+list_3col.html">
-                                            <img src="https://img.icons8.com/plasticine/100/000000/hamburger.png"
+                                            <img src="{{asset('frontend/images/icon/beefburger.png')}}"
                                                  style="width: 35px;">Бургер (на выбор) + <img
-                                                src="https://img.icons8.com/office/30/000000/sweet-potato.png"
+                                                src="{{asset('frontend/images/icon/sweet-patato.png')}}"
                                                 style="width: 35px;">картофельные дольки + <img
-                                                src="https://img.icons8.com/color/96/000000/sauce.png"
+                                                src="{{asset('frontend/images/icon/sauce.png')}}"
                                                 style="width: 35px;">(соус на выбор)</a></li>
                                 </ul>
                             </div>

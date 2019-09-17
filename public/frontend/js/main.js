@@ -385,6 +385,7 @@ window.onload = function () {
             event.preventDefault
             $grid.removeClass('active')
             $(this).addClass('active')
+            $('.grid-buttons').toggleClass('d-none');
             $('.shop-products_bottom .product').removeClass('grid-view zoomIn').addClass('list-view animated fadeInUp')
             $('.shop-products_bottom--fullwidth .product').removeClass('grid-view zoomIn').addClass('full-list-view animated fadeInUp')
             $('.shop-products_bottom .col-6.col-md-4').removeClass('col-6 col-md-4').addClass('col-12')
@@ -395,6 +396,7 @@ window.onload = function () {
             event.preventDefault
             $list.removeClass('active')
             $(this).addClass('active')
+            $('.grid-buttons').toggleClass('d-none');
             $('.shop-products_bottom .product').removeClass('list-view fadeInUp').addClass('grid-view animated zoomIn')
             $('.shop-products_bottom--fullwidth .product').removeClass('full-list-view fadeInUp').addClass('grid-view animated zoomIn')
             $('.shop-products_bottom .col-12').removeClass('col-12').addClass('col-6 col-md-4')

@@ -40,3 +40,9 @@ Route::get('/console', function (){
     Artisan::call("cache:clear");
     Artisan::call("storage:link");
 });
+
+
+Route::get('/console/cache-clear', function ()
+{
+    Artisan::call("cache:clear");
+});
