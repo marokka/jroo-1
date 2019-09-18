@@ -48,9 +48,16 @@ function addToCart() {
         url: '/api/cart/add-to-cart',
         method: "POST",
         data: {foodPropertyId: elem.data('food-property-id')},
+        success: function () {
+            getCart();
+        },
+
+        error: function () {
+            getCart();
+        }
     });
 
-    getCart();
+
 }
 
 
