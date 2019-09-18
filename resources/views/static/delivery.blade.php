@@ -30,6 +30,11 @@
                     </div>
                 </div>
             </div>
+
+        </div>
+    </div>
+    <div class="faq">
+        <div class="container">
             <div id="accordion">
                 <div class="faq-question"><i class="icon_plus"></i>
                     <h3 class="faq-question">Is there anything I should bring?</h3>
