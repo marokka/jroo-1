@@ -5,27 +5,10 @@
     <title>JROO</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <meta name="keywords"
-          content="blog, business, clean, clear, cooporate, creative, design web, flat, marketing, minimal, portfolio, shop, shopping, unique">
-    <meta name="author" content="MARTECH | Deer Creative Theme">
-    <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/custom_bootstrap.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/normalize.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/fontawesome.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/elegant.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/slick.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/scroll.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/jquery.fancybox.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/all.css')}}">
     <link rel="shortcut icon" href="{{asset('frontend/images/JBS_Logo.png')}}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
-    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v4.0">
-    </script>
 </head>
 
 <body>
@@ -213,7 +196,7 @@
                             <div class="department-menu d-flex justify-content-between align-items-center"><i
                                     class="fas fa-bars"></i>Рекомендуем наборы<span><i
                                         class="arrow_carrot-down"></i></span></div>
-                            <div class="department-dropdown-menu">
+                            <div class="department-dropdown-menu" style="display: none;">
                                 <ul>
                                     <li><a class="department-link" href="shop_grid+list_3col.html">
                                             <img src="{{asset('frontend/images/icon/steak-medium.png')}}"
@@ -332,36 +315,9 @@
 </footer>
 <!-- End footer-->
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="{{ asset('admin_assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
-<script src="{{asset('frontend/js/jquery-ui.min.js')}}"></script>
-<script src="{{asset('frontend/js/jquery.countdown.min.js')}}"></script>
-<script src="{{asset('frontend/js/slick.min.js')}}"></script>
-<script src="{{asset('frontend/js/jquery.easing.js')}}"></script>
-<script src="{{asset('frontend/js/jquery.scrollUp.min.js')}}"></script>
-<script src="{{asset('frontend/js/jquery.zoom.min.js')}}"></script>
-<script src="{{asset('frontend/js/parallax.js')}}"></script>
-<script src="{{asset('frontend/js/jquery.fancybox.js')}}"></script>
-<script src="{{asset('frontend/js/numscroller-1.0.js')}}"></script>
-<script src="{{asset('frontend/js/vanilla-tilt.min.js')}}"></script>
-<script src="{{asset('frontend/js/main.js')}}"></script>
-<script src="{{asset('frontend/js/jquery.maskedinput.min.js')}}"></script>
-<script src="{{asset('frontend/js/cart.js')}}"></script>
-
-
-<script src="{{asset('admin_assets/js/bootbox.all.min.js')}}"></script>
+<script defer src="{{asset('frontend/js/all.js')}}"></script>
 
 <script src="{{ asset('admin_assets/js/custom.js')}}"></script>
 
-
-<script>
-    //Код jQuery, установливающий маску для ввода телефона элементу input
-    //1. После загрузки страницы,  когда все элементы будут доступны выполнить...
-    $(function () {
-        //2. Получить элемент, к которому необходимо добавить маску
-        $("#phone").mask("+7(999) 999-99-99");
-    });
-</script>
 </body>
 </html>

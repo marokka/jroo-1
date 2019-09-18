@@ -1,3 +1,5 @@
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
+
 <div class="col-md-8">
     <div class="row">
         <div class="col-12 col-sm-4 text-sm-center text-md-left">
@@ -32,3 +34,8 @@
         </div>
     </div>
 </div>
+
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v4.0">
+</script>

@@ -1,13 +1,10 @@
 //Add preload to DOM
-$('body').prepend('<div id="preload"><div class="preload-box"><div class="line"></div><div class="line"></div><div class="line"></div></div></div>')
+$('body').prepend('<div id="preload" class="d-none"><div class="preload-box"><div class="line"></div><div class="line"></div><div class="line"></div></div></div>')
 
 //Wait for document loaded
 window.onload = function () {
 
-    //Remove preload from DOM
-    $('#preload').fadeOut('400', function () {
-        //$(this).remove();
-    });
+
 
     //Main js file
     $(document).ready(function () {
@@ -15,6 +12,8 @@ window.onload = function () {
         /****************************************************
          Scroll up button
          ****************************************************/
+
+        $("#phone").mask("+7(999) 999-99-99");
         $.scrollUp({
             scrollName: 'scrollUp',
             scrollDistance: 700,
