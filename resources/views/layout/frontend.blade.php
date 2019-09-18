@@ -33,7 +33,7 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <div
-                            class="header-right d-flex flex-column flex-md-row justify-content-md-end justify-content-center align-items-center">
+                            class="header-right d-flex justify-content-around">
                             <div class="social-link d-flex"><a href=""><img
                                         src="{{asset('frontend/images/icon/vk-com.png')}}"
                                         style="width: 3em"> </a><a
