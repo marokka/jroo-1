@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class="our-story_text">
-                            <h1 class="title green-underline">The Story About Us</h1>
+                            <h1 class="title green-underline">О нашей доставке</h1>
                             <p>Tyna Giang's integrated agro-forestry farming model is the first project in Vietnam to achieve the highest ranking in the "100 projects to combat climate change" by the Ministry of Environment, Energy and Sea. France organized in 2016 ...</p>
                             <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Neque porro quisquam est, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem</p>
                         </div>
