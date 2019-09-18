@@ -15,7 +15,7 @@
                     </div>
                     <div class="product-info_block">
                         <h5 class="product-type">{{$food->categoryCache()->name}}</h5>
-                        <a class="product-name" href="javascript:;" data-id="{{$food->id}}">{{$food->name}}</a>
+                        <a class="view product-name" href="javascript:;" data-id="{{$food->id}}">{{$food->name}}</a>
                         <h3 class="product-price">₽{{$food->propertyCache()->price}}
                             @if($food->propertyCache()->old_price)
                                 <del>₽{{$food->propertyCache()->old_price}}</del>
