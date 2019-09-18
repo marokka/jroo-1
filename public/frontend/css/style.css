@@ -2464,7 +2464,7 @@ header .header-block {
   header .header-block .header-right .social-link:after {
     content: "|";
     padding: 0 10px;
-    line-height: 1;
+    line-height: 3;
     color: #ebebeb; }
   header .header-block .header-right .language .selected-language, header .header-block .header-right .language .selected-language .list-language li {
     font-family: "Cera Pro Regular";
