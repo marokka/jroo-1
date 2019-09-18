@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Filters\FoodFilter;
 use App\Models\Category\Category;
 use App\Models\Food\Food;
+use App\Models\Food\models\FoodViewModel;
 use App\Repositories\Category\CategoryRepository;
 use App\Repositories\Food\FoodReadRepository;
 use Illuminate\Http\Request;
@@ -42,7 +43,14 @@ class FoodController extends Controller
 
         $breadcumb = 'Все блюда';
 
-        return view('food.index', ['model' => $foods, 'breadcumb' => $breadcumb]);
+        $model = [];
+
+        foreach ($foods as $food) {
+            $model[] = new FoodViewModel($food);
+        }
+
+
+        return view('food.index', ['model' => $model, 'foods' => $foods, 'breadcumb' => $breadcumb]);
     }
 
     public function byCategorySlug(string $slug, FoodFilter $filter)
@@ -54,21 +62,34 @@ class FoodController extends Controller
                 ->where(Food::ATTR_CATEGORY_ID, $category->id)
                 ->paginate(15);
 
+        $model = [];
+
+        foreach ($foods as $food) {
+            $model[] = new FoodViewModel($food);
+        }
+
         $breadcumb = $category->name;
 
-        return view('food.index', ['model' => $foods, 'category' => $category, 'breadcumb' => $breadcumb]);
+        return view('food.index',
+            ['model' => $model, 'foods' => $foods, 'category' => $category, 'breadcumb' => $breadcumb]);
     }
 
     public function bySearch(FoodFilter $filter)
     {
         $foods = $this->foodReadRepository->get()->filter($filter)->paginate(9);
 
-        return view('food.index', ['model' => $foods, 'breadcumb' => "Поиск"]);
+        $model = [];
+
+        foreach ($foods as $food) {
+            $model[] = new FoodViewModel($food);
+        }
+
+        return view('food.index', ['model' => $model, 'foods' => $foods, 'breadcumb' => "Поиск"]);
     }
 
     public function byId(Request $request, $id)
     {
-        $model = $this->foodReadRepository->byId($id);
+        $model = new FoodViewModel($this->foodReadRepository->byId($id));
         return $request->get('show') ? view('food.api.quicview', compact('model')) : $model;
     }
 
