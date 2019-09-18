@@ -12,11 +12,10 @@
                         <a class="view product-img"  data-id="{{$food->id}}" href="javascript:;">
                             <img src="{{$food->img}}" alt="">
                         </a>
-                        <button class="quickview view no-round-btn smooth" data-id="{{$food->id}}">Быстрый просмотр</button>
                     </div>
                     <div class="product-info_block">
                         <h5 class="product-type">{{$food->categoryCache()->name}}</h5>
-                        <a class="product-name" href="#">{{$food->name}}</a>
+                        <a class="product-name" href="javascript:;" data-id="{{$food->id}}">{{$food->name}}</a>
                         <h3 class="product-price">₽{{$food->propertyCache()->price}}
                             @if($food->propertyCache()->old_price)
                                 <del>₽{{$food->propertyCache()->old_price}}</del>
