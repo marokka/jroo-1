@@ -8,8 +8,8 @@
         @foreach($foods as $food)
             <div class="col-6 col-md-4">
                 <div class="product">
-                    <div class="product-img_block"><a class="product-img" href="">
-                            <img src="{{$food->img}}" alt="" class="quickview">
+                    <div class="product-img_block"><a class="product-img quickview" href="" data-id="{{$food->id}}">
+                            <img src="{{$food->img}}" alt="">
                         </a>
                         <button class="quickview no-round-btn smooth">Быстрый просмотр</button>
                     </div>
