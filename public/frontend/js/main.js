@@ -525,7 +525,7 @@ window.onload = function () {
          Quick view
          ****************************************************/
 
-        $(document).on('click', '.quickview', function (event) {
+        $(document).on('click', '.view', function (event) {
             event.preventDefault();
             const id = $(this).attr('data-id');
 

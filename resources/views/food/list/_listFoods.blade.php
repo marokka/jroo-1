@@ -9,10 +9,10 @@
             <div class="col-6 col-md-4">
                 <div class="product">
                     <div class="product-img_block">
-                        <a class="quickview product-img"  data-id="{{$food->id}}" href="javascript:;">
+                        <a class="view product-img"  data-id="{{$food->id}}" href="javascript:;">
                             <img src="{{$food->img}}" alt="">
                         </a>
-                        <button class="quickview no-round-btn smooth" data-id="{{$food->id}}">Быстрый просмотр</button>
+                        <button class="view no-round-btn smooth" data-id="{{$food->id}}">Быстрый просмотр</button>
                     </div>
                     <div class="product-info_block">
                         <h5 class="product-type">{{$food->categoryCache()->name}}</h5>
@@ -36,7 +36,7 @@
                                 {{--class="icon_heart_alt"></i></button>--}}
                         <button data-food-property-id="{{$food->property->id}}" class="add-to-cart round-icon-btn"><i class="fas fa-shopping-basket"></i>
                         </button>
-                        <button class="quickview round-icon-btn" data-id="{{$food->id}}"><i class="far fa-eye"></i>
+                        <button class="view round-icon-btn" data-id="{{$food->id}}"><i class="far fa-eye"></i>
                         </button>
                     </div>
                     <div class="product-select_list">
