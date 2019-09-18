@@ -11,7 +11,7 @@
                     <div class="product-img_block"><a class="product-img" href="">
                             <img src="{{$food->img}}" alt="">
                         </a>
-                        <button class="quickview no-round-btn smooth">Быстрый просмотр</button>
+                        <button class="quickview no-round-btn smooth" data-id="{{$food->id}}">Быстрый просмотр</button>
                     </div>
                     <div class="product-info_block">
                         <h5 class="product-type">{{$food->categoryCache()->name}}</h5>
