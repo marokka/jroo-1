@@ -61,9 +61,17 @@ class FoodViewModel
 
     public $foodInfo;
 
+    /**
+     * @var Food
+     */
+    public $food;
+
 
     public function __construct(Food $food)
     {
+        $this->food = $food;
+
+
         $this->id          = $food->id;
         $this->name        = $food->name;
         $this->description = $food->description;
@@ -81,5 +89,6 @@ class FoodViewModel
         $this->foodInfo = new FoodInfoItem($food->foodInfo);
 
 
+        $this->food = $food;
     }
 }

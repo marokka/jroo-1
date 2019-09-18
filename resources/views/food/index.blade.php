@@ -2,7 +2,7 @@
 /**
  * @var \App\Models\Category\Category[] $categories
  * @var \App\Models\Category\Category $category
- * @var \App\Models\Food\Food[] $model
+ * @var \App\Models\Food\models\FoodViewModel[] $model
  */
 ?>
 @extends('layout.frontend')
@@ -70,7 +70,7 @@
                             </div>
                             @include('food.list._listFoods', ['foods' => $model])
                             <div class="shop-pagination">
-                                {{$model->links('components.paginate')}}
+                                {{$foods->links('components.paginate')}}
                             </div>
                         </div>
                     </div>
