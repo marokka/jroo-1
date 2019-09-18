@@ -30,6 +30,26 @@
                     </div>
                 </div>
             </div>
+            <div id="accordion">
+                <div class="faq-question"><i class="icon_plus"></i>
+                    <h3 class="faq-question">Is there anything I should bring?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="faq-question"><i class="icon_plus"></i>
+                    <h3 class="faq-question">Where can I find market research reports?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="faq-question"><i class="icon_plus"></i>
+                    <h3 class="faq-question">Where can I find the Wall Street Journal ?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
         </div>
     </div>
 
