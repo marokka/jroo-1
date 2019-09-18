@@ -9,7 +9,7 @@
             <div class="col-6 col-md-4">
                 <div class="product">
                     <div class="product-img_block"><a class="product-img" href="">
-                            <img src="{{$food->img}}" alt="">
+                            <img src="{{$food->img}}" alt="" class="quickview round-icon-btn">
                         </a>
                         <button class="quickview no-round-btn smooth" data-id="{{$food->id}}">Быстрый просмотр</button>
                     </div>
