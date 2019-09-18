@@ -14,7 +14,24 @@
                 \App\Widgets\Breadcumb\models\Breadcrumb::create('Доставка', '#'),
             ]])
         }}
+    <div class="about-us">
+        <div class="container">
+            <div class="our-story">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="our-story_text">
+                            <h1 class="title green-underline">The Story About Us</h1>
+                            <p>Tyna Giang's integrated agro-forestry farming model is the first project in Vietnam to achieve the highest ranking in the "100 projects to combat climate change" by the Ministry of Environment, Energy and Sea. France organized in 2016 ...</p>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Neque porro quisquam est, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="our-story_video"><img src="{{asset('frontend/images/pages/video_play.png')}}" alt="play video"><a class="play-btn" href="https://www.youtube.com/watch?v=7e90gBu4pas" target="_blank"><i class="fas fa-play"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
- 
 
 @endsection
