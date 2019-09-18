@@ -7,6 +7,7 @@ use App\Http\Requests\Foods\FoodRequest;
 use App\Models\Category\Category;
 use App\Models\Food\Food;
 use App\Models\Food\FoodProperty;
+use App\Models\Food\models\FoodViewModel;
 use App\Repositories\Food\FoodReadRepository;
 use App\Services\Food\FoodService;
 use Illuminate\Http\Request;
@@ -94,7 +95,10 @@ class FoodController extends Controller
     {
         $food = Food::findOrFail($id);
 
-        return view("admin.food.show", ['model' => $food]);
+        $model = new FoodViewModel($food);
+
+
+        return view("admin.food.show", ['model' => $model]);
     }
 
     /**
@@ -109,9 +113,11 @@ class FoodController extends Controller
          * @var Food $food
          */
         $food          = $this->model->findOrFail($id);
+        $model         = new FoodViewModel($food);
         $categories    = Category::get();
         $variants      = Food::getStatusVariants();
-        $foodPropeties = $food->properties->toArray();
+        $foodPropeties = $model->properties;
+
 
         return view('admin.food.edit', [
             'model'          => $food,

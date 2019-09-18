@@ -6,6 +6,7 @@ namespace App\Services\Food;
 
 use App\Http\Requests\Foods\FoodRequest;
 use App\Models\Food\Food;
+use App\Models\Food\FoodInfo;
 use App\Models\Food\FoodProperty;
 
 class FoodService
@@ -28,6 +29,7 @@ class FoodService
         if ($request->file('img')) {
             $food->img = $request->file('img')->store('foods', 'public');
         }
+
         $food->save();
 
         // ==== Добавление вариаций
@@ -38,6 +40,15 @@ class FoodService
             $foodProperty->sort    = $key;
             $foodProperty->food_id = $food->id;
             $foodProperty->save();
+        }
+
+
+        if ($request->post('FoodInfo')) {
+            $foodInfo = FoodInfo::find($food->id) ?? new FoodInfo();
+            $foodInfo->fill($request->post('FoodInfo'));
+            $foodInfo->food_id = $food->id;
+            $foodInfo->save();
+
         }
 
         return $food;
@@ -51,6 +62,7 @@ class FoodService
      */
     public function edit(FoodRequest $request, $id): Food
     {
+
         $model = Food::findOrFail($id);
         $model->fill($request->all([
             Food::ATTR_NAME,
@@ -72,6 +84,14 @@ class FoodService
             $foodProperty->food_id = $model->id;
 
             $foodProperty->save();
+        }
+
+        if ($request->post('FoodInfo')) {
+            $foodInfo = FoodInfo::find($model->id) ?? new FoodInfo();
+            $foodInfo->fill($request->post('FoodInfo'));
+            $foodInfo->food_id = $model->id;
+            $foodInfo->save();
+
         }
 
         return $model;

@@ -1,6 +1,9 @@
 <?php
+
+use App\Models\Food\models\FoodViewModel;
+
 /**
- * @var \App\Models\Food\Food|null $model
+ * @var FoodViewModel|null $model
  */
 ?>
 <div class="row">
@@ -64,7 +67,8 @@
                     <label>Статус</label>
                     <select name="status" class="form-control">
                         @foreach($variants as $key => $statusVariant)
-                            <option value="{{$key}}" {{isset($model) && $model->status == $statusVariant ? 'selected' : ''}} >{{$statusVariant}}</option>
+                            <option
+                                value="{{$key}}" {{isset($model) && $model->status == $statusVariant ? 'selected' : ''}} >{{$statusVariant}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -81,6 +85,69 @@
             </div>
         </div>
         <!-- /row-->
+
+        <div class="row">
+            <div class="col-2">
+                <div class="form-group field-dishes-title required">
+
+                    <label class="control-label" for="weight">Вес</label>
+
+                    <input type="text" class="form-control" name="FoodInfo[weight]"
+                           value="{{old('weight', $model->foodInfo->weight ?? '')}}">
+
+                    <div class="help-block"></div>
+
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group field-dishes-title required">
+
+                    <label class="control-label" for="dishes-title" name="FoodInfo[carbohydrates]">Углеводы</label>
+
+                    <input type="text" class="form-control" name="FoodInfo[carbohydrates]"
+                           value="{{old('FoodInfo[carbohydrates]', $model->foodInfo->carbohydrates ?? '')}}">
+
+                    <div class="help-block"></div>
+
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group field-dishes-title required">
+
+                    <label class="control-label">Белки</label>
+
+                    <input type="text" class="form-control" name="FoodInfo[protein]"
+                           value="{{old('FoodInfo[protein]', $model->foodInfo->protein ?? '')}}">
+
+                    <div class="help-block"></div>
+
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group field-dishes-title required">
+
+                    <label class="control-label">Жиры</label>
+
+                    <input type="text" class="form-control" name="FoodInfo[fat]" value="{{old('FoodInfo[fat]', $model->foodInfo->fat ?? '')}}">
+
+                    <div class="help-block"></div>
+
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="form-group field-dishes-title required">
+
+                    <label class="control-label">Калории</label>
+
+                    <input type="text" class="form-control" name="FoodInfo[calories]" value="{{old('FoodInfo[calories]', $model->foodInfo->calories ?? '')}}">
+
+                    <div class="help-block"></div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
 
 

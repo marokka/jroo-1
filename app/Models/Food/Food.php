@@ -65,12 +65,14 @@ class Food extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function property() {
+    public function property()
+    {
         return $this->hasOne(FoodProperty::class);
     }
 
-    public function propertyCache() {
-        return Cache::remember(__CLASS__.__METHOD__.$this->id, 5000, function (){
+    public function propertyCache()
+    {
+        return Cache::remember(__CLASS__ . __METHOD__ . $this->id, 5000, function () {
             return $this->property()->first();
         });
     }
@@ -85,8 +87,9 @@ class Food extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function categoryCache() {
-        return Cache::remember($this->id . "-category", 5000, function (){
+    public function categoryCache()
+    {
+        return Cache::remember($this->id . "-category", 5000, function () {
             return $this->category()->first();
         });
     }
@@ -121,10 +124,14 @@ class Food extends Model
         return true === empty($value) ? "Не заполнено" : $value;
     }
 
-    public function getStatusAttribute($value) {
+    public function getStatusAttribute($value)
+    {
         return static::getStatusVariants()[$value];
     }
 
 
-
+    public function foodInfo()
+    {
+        return $this->hasOne(FoodInfo::class, 'food_id', 'id');
+    }
 }

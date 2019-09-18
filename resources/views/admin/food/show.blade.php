@@ -2,9 +2,10 @@
 
 use App\Models\Food\Food;
 use App\Http\Controllers\Admin\FoodController as Controller;
+use App\Models\Food\models\FoodViewModel;
 
 /**
- * @var Food $model
+ * @var FoodViewModel $model
  */
 ?>
 @extends('admin.layout.main')
@@ -59,9 +60,34 @@ use App\Http\Controllers\Admin\FoodController as Controller;
                             </tr>
 
                             <tr>
+                                <th>Вес</th>
+                                <td>{{$model->foodInfo->weight}}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Жиры</th>
+                                <td>{{$model->foodInfo->fat}}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Белки</th>
+                                <td>{{$model->foodInfo->protein}}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Калории</th>
+                                <td>{{$model->foodInfo->calories}}</td>
+                            </tr>
+
+                            <tr>
+                                <th>Углеводы</th>
+                                <td>{{$model->foodInfo->carbohydrates}}</td>
+                            </tr>
+
+                            <tr>
                                 <th>Категория</th>
                                 <td>
-                                    {{$model->categoryCache()['name']}}
+                                    {{$model->category}}
                                 </td>
                             </tr>
 
