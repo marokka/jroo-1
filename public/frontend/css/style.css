@@ -1,9 +1,9 @@
 /*
 	*****************************************************************
-	*	Theme Name: Ogami											
-	*	Author: DeerCreative 										
-	*	Author URL: https://themeforest.net/user/deercreative 		
-	*	Version: 1.0.0												
+	*	Theme Name: Ogami
+	*	Author: DeerCreative
+	*	Author URL: https://themeforest.net/user/deercreative
+	*	Version: 1.0.0
 	*****************************************************************
 */
 /************************************
@@ -2446,7 +2446,7 @@ header .header-block {
     font-family: "Cera Pro Regular";
     font-size: 16px;
     color: #252525;
-    line-height: 1;
+    line-height: 3;
     display: inline-block;
     -webkit-transition: 0.3s ease;
     -moz-transition: 0.3s ease;
@@ -2738,7 +2738,7 @@ header .navigation-filter .website-search, header .navigation-filter .navigation
             text-decoration: none; }
   header .navigation-filter .website-search button, header .navigation-filter .navigation_v2 .website-search_v2 button, header .navigation_v2 .navigation-filter .website-search_v2 button {
     height: 100%;
-    width: 100%; 
+    width: 100%;
     border-radius: 0px 14px 14px 0px;
   }
 
