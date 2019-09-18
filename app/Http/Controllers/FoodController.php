@@ -32,6 +32,19 @@ class FoodController extends Controller
         $this->categoryRepository = $categoryRepository;
     }
 
+
+    public function index(Request $request, FoodFilter $filter)
+    {
+        $foods =
+            $this->foodReadRepository
+                ->get()->filter($filter)
+                ->paginate(15);
+
+        $breadcumb = 'Все блюда';
+
+        return view('food.index', ['model' => $foods, 'breadcumb' => $breadcumb]);
+    }
+
     public function byCategorySlug(string $slug, FoodFilter $filter)
     {
         $category = $this->categoryRepository->findBySlug($slug);

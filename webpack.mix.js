@@ -26,9 +26,10 @@ mix.styles([
     'public/frontend/css/scroll.css',
     'public/frontend/css/slick.css',
     'public/frontend/css/style.css',
+    'public/frontend/css/main.css',
     'public/frontend/css/layout/coming_soon.css',
     'public/frontend/css/layout/faq.css',
-], 'public/frontend/css/all.css');
+], 'public/frontend/css/all.css').version();
 
 mix.scripts([
     'public/frontend/js/jquery.min.js',
@@ -46,4 +47,4 @@ mix.scripts([
     'public/frontend/js/main.js',
     'public/frontend/js/jquery.maskedinput.min.js',
     'public/frontend/js/cart.js'
-], 'public/frontend/js/all.js')
+], 'public/frontend/js/all.js').version();

@@ -2,13 +2,12 @@
 <html>
 
 <head>
-    <title>JROO</title>
+    <title>@yield('title', "Jroo - Доставка еды")</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <link rel="stylesheet" href="{{asset('frontend/css/all.css')}}">
+    <link rel="stylesheet" href="{{mix('frontend/css/all.css')}}">
     <link rel="shortcut icon" href="{{asset('frontend/images/JBS_Logo.png')}}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="{{asset('css/main.css')}}">
 </head>
 
 <body>
@@ -73,14 +72,17 @@
                                 </li>
                                 <li class="toggleable"><a class="menu-item" href="{{route('pay')}}">Оплата</a>
                                 </li>
-                                <li class="toggleable"><a class="menu-item" href="{{route('delivery')}}">Доставка</a></li>
-                                <li class="toggleable"><a class="menu-item" href="{{route('contact')}}">Контакты</a></li>
+                                <li class="toggleable"><a class="menu-item" href="{{route('delivery')}}">Доставка</a>
+                                </li>
+                                <li class="toggleable"><a class="menu-item" href="{{route('contact')}}">Контакты</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-2">
                         <div class="product-function d-flex align-items-center justify-content-end">
-                            <div id="cart"><a class="function-icon " style="font-size: 1.6em" href="{{route('cart')}}"><i
+                            <div id="cart"><a class="function-icon " style="font-size: 1.6em"
+                                              href="{{route('cart')}}"><i
                                         class="fas fa-shopping-basket"></i><span
                                         style="font-size: 1em" class="total">₽ 0.00</span></a></div>
                         </div>
@@ -138,10 +140,13 @@
                                             style="width: 30px; margin-right: 5px;">Регистрация</a>
                                 </div>
                                 <div class="mobile-social"><a href=""><img
-                                            src="{{asset('frontend/images/icon/vk-com.png')}}" style="width: 40px; margin-right: 5px;"></a><a
-                                        href="" ><img
-                                            src="{{asset('frontend/images/icon/facebook-new.png')}}"style="width: 40px; margin-right: 5px;"></a><a
-                                        href="" ><img src="{{asset('frontend/images/icon/instagram.png')}}" style="width: 40px; margin-right: 5px;" ></a>
+                                            src="{{asset('frontend/images/icon/vk-com.png')}}"
+                                            style="width: 40px; margin-right: 5px;"></a><a
+                                        href=""><img
+                                            src="{{asset('frontend/images/icon/facebook-new.png')}}"
+                                            style="width: 40px; margin-right: 5px;"></a><a
+                                        href=""><img src="{{asset('frontend/images/icon/instagram.png')}}"
+                                                     style="width: 40px; margin-right: 5px;"></a>
                                 </div>
 
 
@@ -176,13 +181,13 @@
                     <div class="col-6">
                         <div class="mobile-menu_logo text-center d-flex justify-content-center align-items-center">
                             <a href="/"><img src="{{asset('frontend/images/JBS_Logo.png')}}" style="width: 90%"
-                                                     alt=""></a>
+                                             alt=""></a>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="mobile-product_function d-flex align-items-center justify-content-end"><a
                                 class="function-icon" href="{{route('cart')}}"><i class="fas fa-shopping-basket"
-                                                                         style="font-size: 2.9em"></i> </a>
+                                                                                  style="font-size: 2.9em"></i> </a>
                         </div>
                     </div>
                 </div>
@@ -243,7 +248,8 @@
                                     </div>
                                     <div class="col-8 col-md-8 col-lg-5 col-xl-7">
                                         <div class="search-input">
-                                            <input name="name" value="{{request('name')}}" required class="no-round-input no-border" type="text"
+                                            <input name="name" value="{{request('name')}}" required
+                                                   class="no-round-input no-border" type="text"
                                                    placeholder="Поиск по блюдам">
                                         </div>
                                     </div>
@@ -315,7 +321,7 @@
 </footer>
 <!-- End footer-->
 </div>
-<script defer src="{{asset('frontend/js/all.js')}}"></script>
+<script defer src="{{mix('frontend/js/all.js')}}"></script>
 
 <script src="{{ asset('admin_assets/js/custom.js')}}"></script>
 

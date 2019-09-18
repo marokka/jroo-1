@@ -32,6 +32,8 @@ Route::get('/checkout', 'CartController@checkout')->name('checkout');
 Route::get('/complete/{id}', 'CartController@complete')->name('complete');
 
 
+Route::get('/foods', 'FoodController@index')->name('foods.index');
+
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', 'Admin\AdminController@index')->name('admin.index');
     Route::resources([
