@@ -7,7 +7,7 @@
     <div class="row no-gutters-sm">
         @foreach($foods as $food)
             <div class="col-6 col-md-4">
-                <div class="product">
+                <div class="product animated grid-view zoomIn">
                     <div class="product-img_block">
                         <a class="view product-img"  data-id="{{$food->id}}" href="javascript:;">
                             <img src="{{$food->img}}" alt="">
