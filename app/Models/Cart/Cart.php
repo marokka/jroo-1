@@ -3,6 +3,7 @@
 namespace App\Models\Cart;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @property integer $id
@@ -13,6 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Cart extends Model
 {
+    use SoftDeletes;
     const SESSION_KEY = '_token';
 
     const ATTR_ID        = 'id';

@@ -47,6 +47,7 @@ class OrderService
             $attributes['total']   = $cart->total;
 
             $order = $this->orderRepository->store($attributes);
+            $cart->delete();
             return $order;
         } catch (\Throwable $exception) {
             throw new \Exception('Возникла непридвиденная ошибка');

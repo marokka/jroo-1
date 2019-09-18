@@ -35,14 +35,14 @@ Route::group(['prefix' => 'cart'], function () {
 
 });
 
-Route::get('/console', function (){
+Route::get('/console', function () {
     Artisan::call("migrate");
     Artisan::call("cache:clear");
     Artisan::call("storage:link");
 });
 
 
-Route::get('/console/cache-clear', function ()
-{
+Route::get('/console/cache-clear', function () {
     Artisan::call("cache:clear");
+    Artisan::call('migrate');
 });
