@@ -45,7 +45,7 @@
                             </div>
                             <div class="login d-flex"><a href="login.php"><img
                                         src="{{asset('frontend/images/icon/gender-neutral-user.png')}}"
-                                        style="width: 3em">Вход</a></div>
+                                        style="width: 3em"></a></div>
                         </div>
                     </div>
                 </div>
