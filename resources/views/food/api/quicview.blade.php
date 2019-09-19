@@ -19,16 +19,16 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="shop-detail_info"><h5 class="product-type color-type">{{$model->categoryCache()->name}}</h5>
+                <div class="shop-detail_info"><h5 class="product-type color-type">{{$model->category}}</h5>
                     <a class="product-name"
                        href="javascript:;">{{$model->name}}
                     </a>
                     <div class="price-rate">
                         <h3 class="product-price">
-                            @if($model->propertyCache()->old_price)
-                                <del>₽{{$model->propertyCache()->old_price}}</del>
+                            @if($model->properties[0]->old_price)
+                                <del>₽{{$model->properties[0]->old_price}}</del>
                             @endif
-                            ₽{{$model->propertyCache()->price}}
+                            ₽{{$model->properties[0]->price}}
                         </h3>
                     </div>
                     <p class="product-describe">{{$model->description}}</p>
