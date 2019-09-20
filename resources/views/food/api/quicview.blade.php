@@ -32,7 +32,7 @@
                         </h3>
                     </div>
                     <p class="product-describe">{{$model->description}}</p>
-                    
+
                     <div class="quantity-select"><label for="quantity">Количество:</label>
                         <input class="no-round-input"
                                id="quantity"

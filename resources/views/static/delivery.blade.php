@@ -26,7 +26,9 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <div class="our-story_video"><img src="{{asset('frontend/images/pages/video_play.png')}}" alt="play video"><a class="play-btn" href="https://www.youtube.com/watch?v=7e90gBu4pas" target="_blank"><i class="fas fa-play"></i></a></div>
+                        <script type="text/javascript" charset="utf-8" async
+                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af79795d31041e3753d776317e3b86ae6a68cf6fbff5bb1f57d65e5cbdca6fb95&amp;width=800&amp;height=450&amp;lang=ru_RU&amp;scroll=true&amp;apikey=<67204859-3988-4a79-9725-8c4783ea8019>">
+                        </script>
                     </div>
                 </div>
             </div>
