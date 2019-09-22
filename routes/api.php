@@ -44,6 +44,7 @@ Route::get('/console', function () {
 
 
 Route::get('/console/cache-clear', function () {
+    dd(123);
     Artisan::call("cache:clear");
     Artisan::call('migrate');
 });
