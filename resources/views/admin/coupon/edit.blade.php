@@ -3,7 +3,7 @@
  * @var Food $model
  */
 
-use App\Http\Controllers\Admin\FoodController as Controller;
+use App\Http\Controllers\Admin\CouponController as Controller;
 
 ?>
 @extends('admin.layout.main')

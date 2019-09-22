@@ -36,6 +36,7 @@ mix.scripts([
     'public/frontend/js/bootstrap.js',
     'public/frontend/js/jquery-ui.min.js',
     'public/frontend/js/jquery.countdown.min.js',
+    'public/frontend/js/bootbox.all.min.js',
     'public/frontend/js/slick.min.js',
     'public/frontend/js/jquery.easing.js',
     'public/frontend/js/jquery.scrollUp.min.js',

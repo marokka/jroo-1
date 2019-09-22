@@ -33,6 +33,7 @@ Route::group(['prefix' => 'cart'], function () {
         'CartController@destroyProperty')->name('cart.destroyProperty'); // Удаление проперти у корзины
 
 
+
 });
 
 Route::get('/console', function () {

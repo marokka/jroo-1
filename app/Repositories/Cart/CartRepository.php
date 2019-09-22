@@ -141,7 +141,11 @@ class CartRepository
     public function destroy($id)
     {
         CartProperty::where(CartProperty::ATTR_CART_ID, $id)->delete();
-        $cart = Cart::findOrFail($id)->delete();
+        /**
+         * @var Cart $cart
+         */
+        $cart = Cart::findOrFail($id);
+        $cart->unAssignCoupon();
         return $cart;
     }
 

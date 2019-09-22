@@ -40,6 +40,17 @@ class Coupon extends Model
         self::ATTR_COUPON => '',
     ];
 
+    protected $fillable = [
+        self::ATTR_ID,
+        self::ATTR_COUPON,
+        self::ATTR_VALUE,
+        self::ATTR_TYPE,
+        self::ATTR_QUANTITY,
+        self::ATTR_STATUS,
+        self::ATTR_NUMBER_OF_ACTIVATIONS,
+        self::ATTR_EXPIRED_AT,
+    ];
+
     public static function getStatusesVariants()
     {
         return [
@@ -55,6 +66,13 @@ class Coupon extends Model
             static::TYPE_PERCENT => 'Процент от суммы',
             static::TYPE_VALUE   => 'Значение от суммы',
         ];
+    }
+
+
+    public function incrementNumberOfActiovations()
+    {
+        $this->number_of_activations += 1;
+        $this->save();
     }
 
 

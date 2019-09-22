@@ -101,4 +101,15 @@ class CartController extends Controller
 
         return $cartProperty;
     }
+
+    public function activateCoupon(Request $request)
+    {
+        $message = $this->cartService->activateCoupon($request);
+
+        $request->session()->flash('message',
+            ['class' => 'alert-info', 'message' => $message['message']]);
+
+
+        return redirect()->route('cart');
+    }
 }

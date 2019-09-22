@@ -3,6 +3,7 @@
  * @var \App\Models\Cart\models\CartViewModel $model
  */
 
+
 ?>
 
 @extends('layout.frontend')
@@ -89,8 +90,14 @@
                 </div>
                 <div class="col-12 col-sm-8">
                     <div class="coupon">
-                        <form action="" method="post">
-                            <input class="no-round-input" type="text" placeholder="ВАШ купон">
+                        @if(Session::has('message'))
+                            <div class="alert {{Session::get('message')['class']}}">
+                                {{Session::get('message')['message']}}
+                            </div>
+                        @endif
+                        <form action="{{route('cart.activate-coupon')}}" method="post">
+                            @csrf
+                            <input class="no-round-input" name="coupon" type="text" placeholder="ВАШ купон">
                             <button class="no-round-btn smooth">Активировать купон</button>
                         </form>
                     </div>

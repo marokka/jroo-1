@@ -43,14 +43,20 @@
                                         src="{{asset('frontend/images/icon/instagram.png')}}" style="width: 3em">
                                 </a>
                             </div>
-                            <div class="login d-flex">
-                                <a href="login.php">
-                                    <img src="{{asset('frontend/images/icon/gender-neutral-user.png')}}" style="width: 3em">
-                                </a>
-                                <a href="login.php">
-                                    <img src="{{asset('frontend/images/icon/add-user-male.png')}}" style="width: 3em">
-                                </a>
-                            </div>
+
+                            @guest
+                                <div class="login d-flex">
+                                    <a href="{{route('login')}}">
+                                        <img src="{{asset('frontend/images/icon/gender-neutral-user.png')}}"
+                                             style="width: 3em">
+                                    </a>
+                                    <a href="{{route('register')}}">
+                                        <img src="{{asset('frontend/images/icon/add-user-male.png')}}"
+                                             style="width: 3em">
+                                    </a>
+                                </div>
+                            @endguest
+
                         </div>
                     </div>
                 </div>

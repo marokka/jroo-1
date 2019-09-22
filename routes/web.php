@@ -34,7 +34,7 @@ Route::get('/complete/{id}', 'CartController@complete')->name('complete');
 
 Route::get('/foods', 'FoodController@index')->name('foods.index');
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'check.admin']], function () {
     Route::get('/', 'Admin\AdminController@index')->name('admin.index');
     Route::resources([
         'categories' => 'Admin\CategoryController',
@@ -54,5 +54,6 @@ Route::group(['prefix' => 'api'], function () {
         Route::post('/add-to-cart', 'CartController@store')->name('cart.add-to-cart');
         Route::post('/get', 'CartController@show')->name('cart.get');
         Route::post('/add-order', 'OrderController@addOrder')->name('cart.addOrder');
+        Route::post('/activate-coupon', 'CartController@activateCoupon')->name('cart.activate-coupon');
     });
 });

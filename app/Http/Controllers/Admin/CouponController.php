@@ -51,7 +51,24 @@ class CouponController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            Coupon::ATTR_COUPON => 'required',
+            Coupon::ATTR_TYPE   => 'required',
+            Coupon::ATTR_VALUE  => 'required',
+            Coupon::ATTR_TYPE   => 'required',
+            Coupon::ATTR_STATUS => 'required',
+        ]);
+
+        $coupon = new Coupon();
+        $coupon->fill($request->all());
+
+        if ($coupon->save()) {
+            return redirect()->route('coupon.index');
+        }
+
+        return redirect()->route('coupon.index');
+
+
     }
 
     /**
@@ -75,7 +92,8 @@ class CouponController extends Controller
     {
         $statusVariants = Coupon::getStatusesVariants();
         $typeVariants   = Coupon::getTypesVariants();
-        return view('admin.coupon.edit', compact('statusVariants', 'typeVariants'));
+        $model          = Coupon::findOrFail($id);
+        return view('admin.coupon.edit', compact('statusVariants', 'typeVariants', 'model'));
     }
 
     /**
@@ -87,7 +105,19 @@ class CouponController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            Coupon::ATTR_COUPON => 'required',
+            Coupon::ATTR_TYPE   => 'required',
+            Coupon::ATTR_VALUE  => 'required',
+            Coupon::ATTR_TYPE   => 'required',
+            Coupon::ATTR_STATUS => 'required',
+        ]);
+
+        $coupon = Coupon::findOrFail($id);
+        $coupon->fill($request->all());
+        $coupon->save();
+
+        return redirect()->route('coupon.index');
     }
 
     /**
@@ -98,6 +128,8 @@ class CouponController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Coupon::findOrFail($id)->delete();
+
+        return redirect()->route('coupon.index');
     }
 }

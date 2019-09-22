@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -25,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -35,5 +38,25 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+
+    public function login(Request $request)
+    {
+        $login    = $request->post('login');
+        $password = $request->post('password');
+        $field    = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'phone';
+
+
+        if (Auth::attempt([$field => $login, User::ATTR_PASSWORD => $password],
+            $request->post('remember') ? true : false)) {
+            return redirect()->route('home');
+        }
+
+
+        return view('auth.login')->withErrors([
+            'message' => 'Неверный логин или пароль!'
+        ]);
+
     }
 }

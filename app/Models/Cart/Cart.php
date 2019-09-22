@@ -2,6 +2,7 @@
 
 namespace App\Models\Cart;
 
+use App\Models\Coupon\CouponCart;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -31,4 +32,28 @@ class Cart extends Model
         return $this->hasMany(CartProperty::class);
     }
 
+    public function assignCoupon($couponID)
+    {
+        $checkExist = CouponCart::where([
+            [CouponCart::ATTR_COUPON_ID, $couponID],
+            [CouponCart::ATTR_CART_ID, $this->id]
+        ])->first();
+
+        if (null === $checkExist) {
+            CouponCart::create([
+                CouponCart::ATTR_COUPON_ID => $couponID,
+                CouponCart::ATTR_CART_ID   => $this->id
+            ]);
+
+            return true;
+        }
+
+        return false;
+
+    }
+
+    public function unAssignCoupon()
+    {
+        CouponCart::where(CouponCart::ATTR_CART_ID, $this->id)->delete();
+    }
 }

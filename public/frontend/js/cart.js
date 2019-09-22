@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
             method: "PUT",
             data: {quantitiesInfo: data},
             success: function () {
-                getCart();
+                location.reload();
             }
         })
 
@@ -49,6 +49,24 @@ function addToCart() {
         method: "POST",
         data: {foodPropertyId: elem.data('food-property-id')},
         success: function () {
+            bootbox.confirm({
+                message: "Товар успешно добавлен в корзину! Перейти к оплате?",
+                buttons: {
+                    confirm: {
+                        label: 'Да',
+                        className: 'btn-success'
+                    },
+                    cancel: {
+                        label: 'Нет',
+                        className: 'btn-danger'
+                    }
+                },
+                callback: function (result) {
+                    if (true === result) {
+                        location.href = '/cart';
+                    }
+                }
+            });
             getCart();
         },
 

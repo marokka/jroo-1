@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace App;
 
@@ -19,6 +19,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @property string $avatar
  * @property string $password
  * @property string $remember_token
+ * @property integer $role
  */
 class User extends Authenticatable
 {
@@ -33,19 +34,28 @@ class User extends Authenticatable
     const ATTR_EMAIL           = 'email';
     const ATTR_EMAIL_VERIFY_AT = 'email_verify_at';
     const ATTR_AVATAR          = 'avatar';
+    const ATTR_ROLE            = 'role';
     const ATTR_PASSWORD        = 'password';
     const ATTR_REMEMBER_TOKEN  = 'remember_token';
     const ATTR_CREATED_AT      = 'created_at';
     const ATTR_UPDATED_AT      = 'updated_at';
 
+    const ROLE_ADMIN = 1;
+    const ROLE_USER  = 0;
+
     protected $table = self::TABLE_NAME;
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'phone', 'avatar'
+        'name',
+        'email',
+        'password',
+        'phone',
+        'avatar'
     ];
 
     /**
@@ -54,7 +64,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
 
     /**
