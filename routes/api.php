@@ -33,7 +33,6 @@ Route::group(['prefix' => 'cart'], function () {
         'CartController@destroyProperty')->name('cart.destroyProperty'); // Удаление проперти у корзины
 
 
-
 });
 
 Route::get('/console', function () {
@@ -43,8 +42,5 @@ Route::get('/console', function () {
 });
 
 
-Route::get('/console/cache-clear', function () {
-    dd(123);
-    Artisan::call("cache:clear");
-    Artisan::call('migrate');
-});
+Route::get('/console/cache-clear', 'ConsoleController@cacheClear');
+Route::get('/console/migrate', 'ConsoleController@migrate');
