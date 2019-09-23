@@ -14,13 +14,13 @@ class CreateCouponCartTable extends Migration
     public function up()
     {
         Schema::create('coupon_cart', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedInteger('cart_id')->index();
-            $table->unsignedInteger('coupon_id')->index();
-
-//            $table->foreign('cart_id')->references('id')->on('carts');
-//            $table->foreign('coupon_id')->references('id')->on('coupons');
-            $table->timestamps();
+//            $table->bigIncrements('id');
+//            $table->unsignedInteger('cart_id')->index();
+//            $table->unsignedInteger('coupon_id')->index();
+//
+////            $table->foreign('cart_id')->references('id')->on('carts');
+////            $table->foreign('coupon_id')->references('id')->on('coupons');
+//            $table->timestamps();
         });
     }
 
@@ -31,6 +31,6 @@ class CreateCouponCartTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coupon_cart');
+        //Schema::dropIfExists('coupon_cart');
     }
 }
