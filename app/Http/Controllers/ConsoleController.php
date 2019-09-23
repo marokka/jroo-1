@@ -16,5 +16,6 @@ class ConsoleController extends Controller
     public function migrate()
     {
         Artisan::call('migrate');
+        Artisan::call('db:seed');
     }
 }
