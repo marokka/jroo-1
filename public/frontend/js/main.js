@@ -365,7 +365,7 @@ window.onload = function () {
                 url: location.href,
                 data: {prices: values},
                 success: function (html) {
-                    let products = $(html).find(".row.no-gutters-sm .col-6.col-md-4");
+                    let products = $(html).find(".row.no-gutters-sm .col-12.col-md-4");
                     //products.addClass('grid-view')
                     $(".row.no-gutters-sm").html(products);
                     $('#preload').fadeOut('400');
