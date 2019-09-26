@@ -39,6 +39,7 @@ class FoodController extends Controller
         $foods =
             $this->foodReadRepository
                 ->get()->filter($filter)
+                ->orderBy('category_id', 'asc')
                 ->paginate(15);
         $breadcumb = 'Все блюда';
 
