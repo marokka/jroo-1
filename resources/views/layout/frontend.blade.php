@@ -34,7 +34,7 @@
                     <div class="col-12 col-md-4">
                         <div
                             class="header-right d-flex justify-content-around">
-                            <div class="social-link d-flex"><a href="" target="_blank"><img
+                            <div class="social-link d-flex"><a href="https://vk.com/club136274972" target="_blank"><img
                                         src="{{asset('frontend/images/icon/vk-com.png')}}"
                                         style="width: 3em"> </a><a
                                     href="https://www.facebook.com/jrooburgersteak/" target="_blank">
@@ -52,6 +52,13 @@
                                     </a>
                                     <a href="{{route('register')}}">
                                         <img src="{{asset('frontend/images/icon/add-user-male.png')}}"
+                                             style="width: 3em">
+                                    </a>
+                                </div>
+                            @else
+                                <div class="login d-flex">
+                                    <a href="#">
+                                        <img src="{{asset('frontend/images/icon/gender-neutral-user.png')}}"
                                              style="width: 3em">
                                     </a>
                                 </div>
