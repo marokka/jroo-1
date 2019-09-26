@@ -125,6 +125,7 @@ class CartRepository
             DB::raw(CartProperty::TABLE_NAME . '.' . CartProperty::ATTR_PRICE . '*' . CartProperty::TABLE_NAME . '.' . CartProperty::ATTR_QUANTITY . ' as total_sum'),
             Food::TABLE_NAME . '.' . Food::ATTR_IMG,
             Food::TABLE_NAME . '.' . Food::ATTR_NAME,
+            Food::TABLE_NAME . '.' . Food::ATTR_MITM_ID,
         ])
             ->join(FoodProperty::TABLE_NAME, FoodProperty::TABLE_NAME . '.' . FoodProperty::ATTR_ID, '=',
                 CartProperty::TABLE_NAME . '.' . CartProperty::ATTR_FOOD_PROPERTY_ID)
