@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Aushev">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>DIS - Админка</title>
+    <title>Jroo - Админ панель</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="{{ asset('admin_assets/img/favicon.ico')}}" type="image/x-icon">
@@ -229,7 +229,7 @@
 {{--            </li>--}}
 {{--            <li class="nav-item">--}}
                 <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-                    <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+                    <i class="fa fa-fw fa-sign-out"></i>ВЫХОД</a>
             </li>
         </ul>
     </div>
@@ -240,7 +240,7 @@
 <footer class="sticky-footer">
     <div class="container">
         <div class="text-center">
-            <small>Copyright © DIS {{date("Y")}}</small>
+            <small>Copyright © JROO {{date("Y")}}</small>
         </div>
     </div>
 </footer>
