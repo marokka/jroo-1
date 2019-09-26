@@ -146,7 +146,6 @@ class CartRepository
          * @var Cart $cart
          */
         $cart = Cart::findOrFail($id);
-        $cart->unAssignCoupon();
         $cart->delete();
         return $cart;
     }
