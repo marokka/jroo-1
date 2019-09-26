@@ -84,15 +84,22 @@ use App\Models\Order\Order;
                                 </select>
                              </div>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputStreet">Сдача с</label>
+                                <input class="no-round-input-bg" id="inputStreet" name="change" type="text" required="">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputStreet">Кол-во приборов</label>
+                                <input class="no-round-input-bg" id="inputStreet" name="change" type="text" required="">
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="inputCompanyName">Адрес*</label>
                             <input class="no-round-input-bg" name="address" id="address" type="text">
                         </div>
 
-                        <div class="form-group">
-                            <label for="inputStreet">Сдача с</label>
-                            <input class="no-round-input-bg" id="inputStreet" name="change" type="text" required="">
-                        </div>
+
                         <div class="form-group">
                             <label for="inputNote">Коментарий к заказу (укажите степень прожарки, остроту блюда)</label>
                             <textarea class="textarea-form-bg" id="coment" name="comment" cols="30" rows="7"></textarea>
