@@ -68,9 +68,9 @@
                                         </a>
 
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                            <a class="dropdown-item" href="#">Главная</a>
-                                            <a class="dropdown-item" href="#">Настройки</a>
-                                            <a class="dropdown-item" href="#">Выход</a>
+                                            <a class="dropdown-item" href="#"><i class="fas fa-user"></i>Главная</a>
+                                            <a class="dropdown-item" href="#"><i class="fas fa-edit"></i>Настройки</a>
+                                            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Выход</a>
                                         </div>
                                     </div>
                                 </div>
