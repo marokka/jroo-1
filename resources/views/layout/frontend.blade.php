@@ -284,7 +284,7 @@
                 <div class="footer-contact text-center">
                     <p>Адрес: Крым, г. Ялта, ул. Игнатенко дом 3, </p>
                     <p>Телефон: <a href="tel:+79780873337" style="color: #0b0b0b"> +7 (978) 087-33-37</a></p>
-                    <p>Email: jroo@site.com</p>
+                    <p>Email: <a href="mailto:jroo90@mail.ru" style="color: #0b0b0b">jroo90@mail.ru</a></p>
                 </div>
                 <div class="footer-social text-center"><a class="round-icon-btn"
                                                           href="https://www.facebook.com/jrooburgersteak/"
