@@ -13,7 +13,7 @@ use App\Models\Order\Order;
 
 @section('content')
     {{ Widget::run('breadcumb.breadcumbWidget', ['items' => [
-                    \App\Widgets\Breadcumb\models\Breadcrumb::create('Основной сайт', '#', 'fas fa-home'),
+                    \App\Widgets\Breadcumb\models\Breadcrumb::create('Главная', '/', 'fas fa-home'),
                     \App\Widgets\Breadcumb\models\Breadcrumb::create('Корзина', route('cart')),
                     \App\Widgets\Breadcumb\models\Breadcrumb::create('Оформление заказа', '#'),
                 ]])
@@ -70,19 +70,26 @@ use App\Models\Order\Order;
                                 <input class="no-round-input-bg" name="phone" id="phone" type="text" required="">
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputFirstName">Кол-во перчаток</label>
-                                <input class="no-round-input-bg" name="name" type="text" required="">
+                        <div class="gloves">
+                            <div class="form-row align-items-center">
+                                <div class="form-group col-md-5">
+                                    <label for="inputFirstName">Кол-во перчаток</label>
+                                    <input class="no-round-input-bg" name="glovesCount[]" type="text" required="">
+                                </div>
+                                <div class="form-group col-md-5">
+                                    <label for="inputCountry">Размер</label>
+                                    <select class="no-round-input-bg" name="glovesSize[]" id="inputContry">
+                                        <option value="1">S</option>
+                                        <option value="2">M</option>
+                                        <option value="3">L</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2 text-center">
+                                    <button type="button" class="btn btn-primary mt-3 gloves-add" style="background: #662c00; border: none;">+
+                                    </button>
+                                </div>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputCountry">Размер</label>
-                                <select class="no-round-input-bg" id="inputContry">
-                                    <option value="1">S</option>
-                                    <option value="2">M</option>
-                                    <option value="3">L</option>
-                                </select>
-                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">

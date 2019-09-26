@@ -9,7 +9,7 @@
 
 @section('content')
     {{ Widget::run('breadcumb.breadcumbWidget', ['items' => [
-                \App\Widgets\Breadcumb\models\Breadcrumb::create('Основной сайт', '#', 'fas fa-home'),
+                \App\Widgets\Breadcumb\models\Breadcrumb::create('Главная', '/', 'fas fa-home'),
                 \App\Widgets\Breadcumb\models\Breadcrumb::create('Категории', route('home')),
                 \App\Widgets\Breadcumb\models\Breadcrumb::create($breadcumb, '#'),
             ]])
@@ -23,21 +23,7 @@
                     <div class="shop-sidebar">
                         <button class="no-round-btn" id="filter-sidebar--closebtn">Закрыть</button>
                         @widget('category.categoryWidget')
-                        <div class="shop-sidebar_price-filter">
-                            <div class="price-filter_top mini-tab-title underline">
-                                <h2 class="title">Фильтр стоимости</h2>
-                            </div>
-                            <div class="price-filter_bottom">
-                                <p>
-                                    <label for="amount">По цене:</label>
-                                <div class="filter-group">
-                                    <input id="amount" type="text" readonly="">
-                                    <button class="normal-btn filter">Показать</button>
-                                </div>
-                                </p>
-                                <div id="slider-range"></div>
-                            </div>
-                        </div>
+                        @widget('filter.filterPriceWidget')
                     </div>
                     <div class="filter-sidebar--background" style="display: none"></div>
                 </div>

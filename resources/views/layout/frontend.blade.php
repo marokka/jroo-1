@@ -39,7 +39,8 @@
                                         style="width: 3em"> </a><a
                                     href="https://www.facebook.com/jrooburgersteak/" target="_blank">
                                     <img src="{{asset('frontend/images/icon/facebook-new.png')}}"
-                                         style="width: 3em"></a><a href="https://www.instagram.com/jroo_burger_steak/" target="_blank"><img
+                                         style="width: 3em"></a><a href="https://www.instagram.com/jroo_burger_steak/"
+                                                                   target="_blank"><img
                                         src="{{asset('frontend/images/icon/instagram.png')}}" style="width: 3em">
                                 </a>
                             </div>
@@ -78,19 +79,22 @@
                     <div class="col-8">
                         <div class="navgition-menu d-flex align-items-center justify-content-center">
                             <ul class="mb-0">
-                                <li class="toggleable"><a class="menu-item active"href="/">Меню</a>
-{{--                                    <ul class="sub-menu shop d-flex">--}}
-{{--                                        <div class="nav-column">--}}
-{{--                                            <li><a href="/">Категории</a></li>--}}
-{{--                                            <li><a href="shop_grid+list_fullwidth.html">Меню напитков б/а</a></li>--}}
-{{--                                        </div>--}}
-{{--                                    </ul>--}}
+                                <li class="toggleable">
+                                    <a class="menu-item {{request()->is('/') ? 'active' : ''}}"
+                                       href="/">Меню</a>
                                 </li>
-                                <li class="toggleable"><a class="menu-item" href="{{route('pay')}}">Оплата</a>
+                                <li class="toggleable">
+                                    <a class="menu-item {{request()->is('pay') ? 'active' : ''}}"
+                                       href="{{route('pay')}}">Оплата</a>
                                 </li>
-                                <li class="toggleable"><a class="menu-item" href="{{route('delivery')}}">Доставка</a>
+                                <li class="toggleable">
+                                    <a
+                                        class="menu-item {{request()->is('delivery') ? 'active' : ''}}"
+                                        href="{{route('delivery')}}">Доставка</a>
                                 </li>
-                                <li class="toggleable"><a class="menu-item" href="{{route('contact')}}">Контакты</a>
+                                <li class="toggleable">
+                                    <a class="menu-item {{request()->is('contact') ? 'active' : ''}}"
+                                       href="{{route('contact')}}">Контакты</a>
                                 </li>
                             </ul>
                         </div>
@@ -159,8 +163,9 @@
                                         href="https://www.facebook.com/jrooburgersteak/" target="_blank"><img
                                             src="{{asset('frontend/images/icon/facebook-new.png')}}"
                                             style="width: 40px; margin-right: 5px;"></a><a
-                                        href="https://www.instagram.com/jroo_burger_steak/" target="_blank"><img src="{{asset('frontend/images/icon/instagram.png')}}"
-                                                     style="width: 40px; margin-right: 5px;"></a>
+                                        href="https://www.instagram.com/jroo_burger_steak/" target="_blank"><img
+                                            src="{{asset('frontend/images/icon/instagram.png')}}"
+                                            style="width: 40px; margin-right: 5px;"></a>
                                 </div>
 
 
@@ -245,15 +250,15 @@
                     <div class="col-12 col-md-8 col-lg-8 col-xl-9 order-1 order-md-2">
                         <form action="{{route('food.by-search')}}">
                             <div class="website-search">
-                                <div class="row no-gutters">
-                                    <div class="col-8 col-md-8 col-lg-8 col-xl-8">
+                                <div class="d-flex justify-content-between">
+                                    <div>
                                         <div class="search-input">
                                             <input name="name" value="{{request('name')}}" required
                                                    class="no-round-input no-border" type="text"
                                                    placeholder="Поиск по блюдам">
                                         </div>
                                     </div>
-                                    <div class="col-4 col-md-4 col-lg-4 col-xl-4">
+                                    <div>
                                         <button class="no-round-btn">Поиск</button>
                                     </div>
                                 </div>
@@ -281,9 +286,14 @@
                     <p>Телефон: +7 (978) 087-33-37</p>
                     <p>Email: jroo@site.com</p>
                 </div>
-                <div class="footer-social text-center"><a class="round-icon-btn" href="https://www.facebook.com/jrooburgersteak/" target="_blank"><i
-                            class="fab fa-facebook-f"> </i></a><a class="round-icon-btn" href="https://www.instagram.com/jroo_burger_steak/" target="_blank"><i
-                            class="fab fa-instagram"></i></a><a class="round-icon-btn" href="https://vk.com/club136274972" target="_blank"><i
+                <div class="footer-social text-center"><a class="round-icon-btn"
+                                                          href="https://www.facebook.com/jrooburgersteak/"
+                                                          target="_blank"><i
+                            class="fab fa-facebook-f"> </i></a><a class="round-icon-btn"
+                                                                  href="https://www.instagram.com/jroo_burger_steak/"
+                                                                  target="_blank"><i
+                            class="fab fa-instagram"></i></a><a class="round-icon-btn"
+                                                                href="https://vk.com/club136274972" target="_blank"><i
                             class="fab fa-vk"> </i></a></div>
             </div>
 

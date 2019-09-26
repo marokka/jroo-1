@@ -2,7 +2,7 @@
 
 @section('content')
     {{ Widget::run('breadcumb.breadcumbWidget', ['items' => [
-                       \App\Widgets\Breadcumb\models\Breadcrumb::create('Основной сайт', '#', 'fas fa-home'),
+                       \App\Widgets\Breadcumb\models\Breadcrumb::create('Главная', '/', 'fas fa-home'),
                        \App\Widgets\Breadcumb\models\Breadcrumb::create('Корзина', route('cart')),
                        \App\Widgets\Breadcumb\models\Breadcrumb::create('Оформление заказа', route('checkout')),
                         \App\Widgets\Breadcumb\models\Breadcrumb::create('Завершение', '#'),

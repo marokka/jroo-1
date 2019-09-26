@@ -5,10 +5,19 @@ $('body').prepend('<div id="preload" class="d-none"><div class="preload-box"><di
 window.onload = function () {
 
 
-
     //Main js file
     $(document).ready(function () {
         "use strict";
+
+        $(document).on('click', '.gloves-add', function () {
+            const elem = document.createElement("div");
+            elem.classList.add('form-row');
+            elem.classList.add('align-items-center');
+            elem.innerHTML = $($(".gloves > .form-row.align-items-center")[0]).html();
+            $('.gloves').append(elem);
+        })
+
+
         /****************************************************
          Scroll up button
          ****************************************************/
@@ -341,16 +350,18 @@ window.onload = function () {
         /****************************************************
          Shop Price filter
          ****************************************************/
+        const min = $("#slider-range").data('min');
+        const max = $("#slider-range").data('max');
         $("#slider-range").slider({
             range: true,
-            min: 0,
-            max: 2500,
+            min: min,
+            max: max,
             classes: {
                 "ui-slider": "slider-bar",
                 "ui-slider-range": "range-bar",
                 "ui-slider-handle": "handle"
             },
-            values: [75, 300],
+            values: [min, max],
             slide: function (event, ui) {
                 $("#amount").val("₽" + ui.values[0] + " - ₽" + ui.values[1]);
             }
