@@ -28,18 +28,18 @@
                             </p>
                             <p class="d-flex align-items-center"><img
                                     src="{{asset('frontend/images/icon/time-machine.png')}}" style="width: 3em">с
-                                9:00 до 23:30</p>
+                                10:00 до 23:30</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
                         <div
                             class="header-right d-flex justify-content-around">
-                            <div class="social-link d-flex"><a href=""><img
+                            <div class="social-link d-flex"><a href="" target="_blank"><img
                                         src="{{asset('frontend/images/icon/vk-com.png')}}"
                                         style="width: 3em"> </a><a
-                                    href="">
+                                    href="https://www.facebook.com/jrooburgersteak/" target="_blank">
                                     <img src="{{asset('frontend/images/icon/facebook-new.png')}}"
-                                         style="width: 3em"></a><a href=""><img
+                                         style="width: 3em"></a><a href="https://www.instagram.com/jroo_burger_steak/" target="_blank"><img
                                         src="{{asset('frontend/images/icon/instagram.png')}}" style="width: 3em">
                                 </a>
                             </div>
@@ -146,13 +146,13 @@
                                             src="{{asset('frontend/images/icon/add-user-male.png')}}"
                                             style="width: 30px; margin-right: 5px;">Регистрация</a>
                                 </div>
-                                <div class="mobile-social"><a href=""><img
+                                <div class="mobile-social"><a href="https://vk.com/club136274972" target="_blank"><img
                                             src="{{asset('frontend/images/icon/vk-com.png')}}"
                                             style="width: 40px; margin-right: 5px;"></a><a
-                                        href=""><img
+                                        href="https://www.facebook.com/jrooburgersteak/" target="_blank"><img
                                             src="{{asset('frontend/images/icon/facebook-new.png')}}"
                                             style="width: 40px; margin-right: 5px;"></a><a
-                                        href=""><img src="{{asset('frontend/images/icon/instagram.png')}}"
+                                        href="https://www.instagram.com/jroo_burger_steak/" target="_blank"><img src="{{asset('frontend/images/icon/instagram.png')}}"
                                                      style="width: 40px; margin-right: 5px;"></a>
                                 </div>
 
@@ -288,9 +288,9 @@
                     <p>Телефон: +7 (978) 087-33-37</p>
                     <p>Email: jroo@site.com</p>
                 </div>
-                <div class="footer-social text-center"><a class="round-icon-btn" href=""><i
-                            class="fab fa-facebook-f"> </i></a><a class="round-icon-btn" href=""><i
-                            class="fab fa-instagram"></i></a><a class="round-icon-btn" href=""><i
+                <div class="footer-social text-center"><a class="round-icon-btn" href="https://www.facebook.com/jrooburgersteak/" target="_blank"><i
+                            class="fab fa-facebook-f"> </i></a><a class="round-icon-btn" href="https://www.instagram.com/jroo_burger_steak/" target="_blank"><i
+                            class="fab fa-instagram"></i></a><a class="round-icon-btn" href="https://vk.com/club136274972" target="_blank"><i
                             class="fab fa-vk"> </i></a></div>
             </div>
 
