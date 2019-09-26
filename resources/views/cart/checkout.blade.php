@@ -72,11 +72,11 @@ use App\Models\Order\Order;
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputFirstName">Кол-во перчаток*</label>
+                                <label for="inputFirstName">Кол-во перчаток</label>
                                 <input class="no-round-input-bg" name="name" type="text" required="">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputCountry">Размер*</label>
+                                <label for="inputCountry">Размер</label>
                                 <select class="no-round-input-bg" id="inputContry">
                                     <option value="1">S</option>
                                     <option value="2">M</option>
@@ -86,7 +86,7 @@ use App\Models\Order\Order;
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputStreet">Сдача с</label>
+                                <label for="inputStreet">Сдача с*</label>
                                 <input class="no-round-input-bg" id="inputStreet" name="change" type="text" required="">
                             </div>
                             <div class="form-group col-md-6">
