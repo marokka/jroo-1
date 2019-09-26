@@ -58,15 +58,8 @@
                                 </div>
                             @else
                                 <div class="login d-flex">
-
                                         <img src="{{asset('frontend/images/icon/gender-neutral-user.png')}}"
                                              style="width: 3em">
-                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Профиль</a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Профиль</a>
-                                        <a class="dropdown-item" href="#">Настройки</a>
-                                        <a class="dropdown-item" href="#">Выход</a>
-                                    </div>
                                 </div>
                             @endguest
 
