@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Cache;
  * @property integer $status
  * @property string $img
  * @property string $mitm_id
+ * @property string $mitm_name
  */
 class Food extends Model
 {
@@ -31,6 +32,7 @@ class Food extends Model
     const ATTR_STATUS      = 'status';
     const ATTR_IMG         = 'img';
     const ATTR_MITM_ID     = 'mitm_id';
+    const ATTR_MITM_NAME   = 'mitm_name';
 
     const STATUS_ACTIVE   = 1;
     const STATUS_INACTIVE = 0;

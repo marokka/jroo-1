@@ -64,7 +64,7 @@ class ParseIdFoods extends Command
                     /**
                      * @var Food $food
                      */
-                    $food = Food::where(Food::ATTR_NAME, 'LIKE', '%' . $name . '%')->first();
+                    $food = Food::where(Food::ATTR_NAME, 'LIKE', '%' . $name . '%')->orWhere(Food::ATTR_MITM_NAME, 'LIKE', '%' . $name . '%')->first();
 
                     if (null !== $food) {
                         echo "[~] Блюдо {$name} найдено \n\n";
