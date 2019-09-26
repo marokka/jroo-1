@@ -40,7 +40,7 @@
         <div class="col-12 col-md-4">
           <div class="method-block"><i class="icon_clock_alt"></i>
             <div class="method-block_text">
-              <p> Рады видеть Вас <br> в Пн-Пт с 9:00 до 00:00,<br>Сб-Вс с 10:00 до 00:00</p>
+              <p> Рады видеть Вас: <br> в Пн-Пт с 9:00 до 00:00,<br>Сб-Вс с 10:00 до 00:00</p>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@
           <div class="col-12">
             <textarea class="textarea-form" name="" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
           </div>
-            <div class="col-12">
+            <div class="col-12" style="margin-top: 10px;">
                 <button class="no-round-btn">Отправить</button>
             </div>
         </div>
