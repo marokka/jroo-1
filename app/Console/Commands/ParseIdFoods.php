@@ -71,7 +71,7 @@ class ParseIdFoods extends Command
                         $food->mitm_id = $id;
                         $food->save();
                     } else {
-                        Log::info('Блюдо ' . $name . 'не найдено');
+                        Log::info('Блюдо ' . $name . ' не найдено');
                     }
 
                 } catch (\Throwable $exception) {
