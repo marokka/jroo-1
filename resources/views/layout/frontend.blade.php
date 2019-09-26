@@ -24,7 +24,7 @@
                                 ул.
                                 Игнатенко дом 3</p>
                             <p class="d-flex align-items-center"><img
-                                    src="{{asset('frontend/images/icon/phone.png')}}" style="width: 3em">+7(978)087-33-37
+                                    src="{{asset('frontend/images/icon/phone.png')}}" style="width: 3em"><a href="tel:+79780873337"> +7 (978) 087-33-37</a>
                             </p>
                             <p class="d-flex align-items-center"><img
                                     src="{{asset('frontend/images/icon/time-machine.png')}}" style="width: 3em">с
@@ -181,7 +181,7 @@
                                     </a>
                                     <a href="">
                                         <p class="d-flex align-items-center">
-                                            <i class="fas fa-phone" style="margin-right: 10px;"></i>+7(978)087-33-37
+                                            <i class="fas fa-phone" style="margin-right: 10px;"></i><a href="tel:+79780873337"> +7 (978) 087-33-37</a>
                                         </p>
                                     </a>
                                     <a href="">
@@ -283,7 +283,7 @@
                                                           style="width: 40%"></div>
                 <div class="footer-contact text-center">
                     <p>Адрес: Крым, г. Ялта, ул. Игнатенко дом 3, </p>
-                    <p>Телефон: +7 (978) 087-33-37</p>
+                    <p>Телефон: <a href="tel:+79780873337"> +7 (978) 087-33-37</a></p>
                     <p>Email: jroo@site.com</p>
                 </div>
                 <div class="footer-social text-center"><a class="round-icon-btn"
