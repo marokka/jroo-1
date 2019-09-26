@@ -71,15 +71,13 @@
                     <div class="col-8">
                         <div class="navgition-menu d-flex align-items-center justify-content-center">
                             <ul class="mb-0">
-                                <li class="toggleable"><a class="menu-item active"
-                                                          href="/">Меню
-                                        <i class="fas fa-caret-down"></i></a>
-                                    <ul class="sub-menu shop d-flex">
-                                        <div class="nav-column">
-                                            <li><a href="/">Категории</a></li>
-                                            <li><a href="shop_grid+list_fullwidth.html">Меню напитков б/а</a></li>
-                                        </div>
-                                    </ul>
+                                <li class="toggleable"><a class="menu-item active"href="/">Меню</a>
+{{--                                    <ul class="sub-menu shop d-flex">--}}
+{{--                                        <div class="nav-column">--}}
+{{--                                            <li><a href="/">Категории</a></li>--}}
+{{--                                            <li><a href="shop_grid+list_fullwidth.html">Меню напитков б/а</a></li>--}}
+{{--                                        </div>--}}
+{{--                                    </ul>--}}
                                 </li>
                                 <li class="toggleable"><a class="menu-item" href="{{route('pay')}}">Оплата</a>
                                 </li>
@@ -119,8 +117,6 @@
                                                 class="sub-menu--expander"><i class="icon_plus"></i></span>
                                             <ul class="sub-menu">
                                                 <li><a href="/">Категории</a></li>
-                                                <li><a href="index.php">Меню Напитков Б/А</a>
-                                                </li>
                                             </ul>
                                         </li>
 
