@@ -70,27 +70,31 @@ use App\Models\Order\Order;
                                 <input class="no-round-input-bg" name="phone" id="phone" type="text" required="">
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputFirstName">Кол-во перчаток*</label>
+                                <input class="no-round-input-bg" name="name" type="text" required="">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputCountry">Размер*</label>
+                                <select class="no-round-input-bg" id="inputContry">
+                                    <option value="1">S</option>
+                                    <option value="2">M</option>
+                                    <option value="3">L</option>
+                                </select>
+                             </div>
+                        </div>
                         <div class="form-group">
                             <label for="inputCompanyName">Адрес*</label>
                             <input class="no-round-input-bg" name="address" id="address" type="text">
                         </div>
-                        <!-- <div class="form-group">
-                          <label for="inputCountry">Country*</label>
-                          <select class="no-round-input-bg" id="inputContry">
-                            <option value="1">Vietnam</option>
-                            <option value="2">USA</option>
-                            <option value="3">Italy</option>
-                            <option value="4">China</option>
-                            <option value="5">Japan</option>
-                            <option value="6">Russia</option>
-                          </select>
-                        </div> -->
+
                         <div class="form-group">
                             <label for="inputStreet">Сдача с</label>
                             <input class="no-round-input-bg" id="inputStreet" name="change" type="text" required="">
                         </div>
                         <div class="form-group">
-                            <label for="inputNote">Коментарий к заказу</label>
+                            <label for="inputNote">Коментарий к заказу (укажите степень прожарки, остроту блюда)</label>
                             <textarea class="textarea-form-bg" id="coment" name="comment" cols="30" rows="7"></textarea>
                         </div>
                     </div>
