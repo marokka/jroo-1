@@ -4,6 +4,7 @@ namespace App\Observers;
 
 use App\Models\Order\Order;
 use App\Repositories\Order\OrderRepository;
+use App\Services\Tillypad\TillypadService;
 use GuzzleHttp\Client;
 
 class OrderObserver
@@ -12,10 +13,15 @@ class OrderObserver
      * @var OrderRepository
      */
     private $orderRepository;
+    /**
+     * @var TillypadService
+     */
+    private $tillypadService;
 
-    public function __construct(OrderRepository $orderRepository)
+    public function __construct(OrderRepository $orderRepository, TillypadService $tillypadService)
     {
         $this->orderRepository = $orderRepository;
+        $this->tillypadService = $tillypadService;
     }
 
     /**
@@ -28,27 +34,28 @@ class OrderObserver
     {
         $json = [];
 
+        $orderClient = $this->tillypadService->getClient($order);
 
         $properties = $this->orderRepository->getOrderProperties($order->cart_id);
 
         foreach ($properties as $key => $property) {
             $json[] = [
-                "clnt_id"       => "2743C52E-D523-49F8-8B8B-91D7AF88A8BF",
+                "clnt_id"       => $orderClient->clnt_ID,
                 "mitm_ID"       => $property->mitm_id,
                 "mitm_value"    => "1",
                 "mitm_count"    => $property->quantity,
                 "delivery_type" => "1",
-                "gest_Phone"    => "9876543210",
-                "City"          => "2",
-                "Street"        => "2",
-                "House"         => "1",
-                "Building"      => "1",
-                "Apartment"     => "1",
-                "Entrance"      => "1",
-                "Floor"         => "1",
-                "Intercom"      => "1",
-                "Comment"       => "1",
-                "gest_comment"  => "Тестовый заказ с сайта",
+                "gest_Phone"    => $order->phone,
+                "City"          => 'Ялта',
+                "Street"        => $order->address,
+                "House"         => $order->home,
+                "Building"      => "",
+                "Apartment"     => "",
+                "Entrance"      => $order->porch,
+                "Floor"         => $order->floor,
+                "Intercom"      => "",
+                "Comment"       => $order->comment,
+                "gest_comment"  => "",
                 "RegionCode"    => "1",
                 "PostCode"      => "1"
             ];
@@ -66,8 +73,6 @@ class OrderObserver
 
             'body' => json_encode($json),
         ]);
-
-        dd($response->getStatusCode(), json_decode($response->getBody()->getContents()));
 
     }
 
