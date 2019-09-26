@@ -59,7 +59,7 @@
                             @else
                                 <div class="login d-flex">
                                     <div class="dropdown show">
-                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
                                             <img src="{{asset('frontend/images/icon/gender-neutral-user.png')}}"
                                                  style="width: 3em">
                                         </a>
