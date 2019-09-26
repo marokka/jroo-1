@@ -239,28 +239,14 @@
                         <form action="{{route('food.by-search')}}">
                             <div class="website-search">
                                 <div class="row no-gutters">
-                                    <div class="col-0 col-md-0 col-lg-4 col-xl-3">
-                                        <div class="filter-search">
-                                            <div
-                                                class="categories-select d-flex align-items-center justify-content-around">
-                                                <span>Все категории</span><i class="arrow_carrot-down"></i></div>
-                                            <div class="categories-select_box">
-                                                <ul>
-                                                    <li>Категория 1</li>
-                                                    <li>Категория 2</li>
-                                                    <li>Категория 3</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-8 col-md-8 col-lg-5 col-xl-7">
+                                    <div class="col-8 col-md-8 col-lg-8 col-xl-8">
                                         <div class="search-input">
                                             <input name="name" value="{{request('name')}}" required
                                                    class="no-round-input no-border" type="text"
                                                    placeholder="Поиск по блюдам">
                                         </div>
                                     </div>
-                                    <div class="col-4 col-md-4 col-lg-3 col-xl-2">
+                                    <div class="col-4 col-md-4 col-lg-4 col-xl-4">
                                         <button class="no-round-btn">Поиск</button>
                                     </div>
                                 </div>
