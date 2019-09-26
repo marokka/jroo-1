@@ -40,7 +40,6 @@ class FoodController extends Controller
             $this->foodReadRepository
                 ->get()->filter($filter)
                 ->paginate(15);
-
         $breadcumb = 'Все блюда';
 
         $model = [];

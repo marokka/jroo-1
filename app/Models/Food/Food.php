@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Cache;
  * @property integer $category_id
  * @property integer $status
  * @property string $img
+ * @property string $mitm_id
  */
 class Food extends Model
 {
@@ -29,6 +30,7 @@ class Food extends Model
     const ATTR_CATEGORY_ID = 'category_id';
     const ATTR_STATUS      = 'status';
     const ATTR_IMG         = 'img';
+    const ATTR_MITM_ID     = 'mitm_id';
 
     const STATUS_ACTIVE   = 1;
     const STATUS_INACTIVE = 0;
@@ -37,11 +39,12 @@ class Food extends Model
 
     protected $with = ['properties'];
 
-    protected $fillable = [self::ATTR_NAME,
-                           self::ATTR_DESCRIPTION,
-                           self::ATTR_CATEGORY_ID,
-                           self::ATTR_STATUS,
-                           self::ATTR_IMG];
+    protected $fillable = [
+        self::ATTR_NAME,
+        self::ATTR_DESCRIPTION,
+        self::ATTR_CATEGORY_ID,
+        self::ATTR_STATUS,
+        self::ATTR_IMG];
 
     public static function getStatusVariants()
     {
@@ -80,7 +83,6 @@ class Food extends Model
     /**
      * Категория блюда
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function category()
     {
