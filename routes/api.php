@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 
+header('Access-Control-Allow-Origin: *');
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -21,6 +23,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['prefix' => 'food'], function () {
     Route::get('/{id}', 'FoodController@byId');
 });
+
+
+Route::apiResource('categories', 'Api\V1\CategoryController');
 
 
 Route::group(['prefix' => 'cart'], function () {
