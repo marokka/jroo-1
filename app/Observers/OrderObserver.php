@@ -40,7 +40,7 @@ class OrderObserver
 
         foreach ($properties as $key => $property) {
             $json[] = [
-                "clnt_id"       => $orderClient->clnt_ID,
+                "clnt_id"       => $orderClient[0]['clnt_ID'],
                 "mitm_ID"       => $property->mitm_id,
                 "mitm_value"    => "1",
                 "mitm_count"    => $property->quantity,

@@ -44,29 +44,52 @@ document.addEventListener("DOMContentLoaded", function () {
 function addToCart() {
     const elem = $(this);
 
+
     $.ajax({
         url: '/api/cart/add-to-cart',
         method: "POST",
         data: {foodPropertyId: elem.data('food-property-id')},
-        success: function () {
-            bootbox.confirm({
-                message: "Товар успешно добавлен в корзину! Перейти к оплате?",
+        success: function (html) {
+            var dialog = bootbox.dialog({
+                title: 'Корзина',
+                message: "<p><i class='far fa-check-circle'></i> Товар успешно добавлен в корзину.</p>",
+                size: 'large',
                 buttons: {
-                    confirm: {
-                        label: 'Да',
-                        className: 'btn-success'
-                    },
                     cancel: {
-                        label: 'Нет',
-                        className: 'btn-danger'
-                    }
-                },
-                callback: function (result) {
-                    if (true === result) {
-                        location.href = '/cart';
+                        label: "Перейти к корзине",
+                        className: 'btn-danger',
+                        callback: function () {
+                            location.href = '/cart';
+                        }
+                    },
+
+                    ok: {
+                        label: "Вернуться к сайту",
+                        className: 'btn-outline-primary',
+                        callback: function () {
+                            console.log('Custom OK clicked');
+                        }
                     }
                 }
             });
+            // bootbox.confirm({
+            //     message: "<b>Товар</b> успешно добавлен в корзину! Перейти к оплате?",
+            //     buttons: {
+            //         confirm: {
+            //             label: 'Да',
+            //             className: 'btn-success'
+            //         },
+            //         cancel: {
+            //             label: 'Нет',
+            //             className: 'btn-danger'
+            //         }
+            //     },
+            //     callback: function (result) {
+            //         if (true === result) {
+            //             location.href = '/cart';
+            //         }
+            //     }
+            // });
             getCart();
         },
 

@@ -39,7 +39,7 @@ class TillypadService
     public function checkClient($phone)
     {
         $client = new Client([
-            'http_error' => false
+            'http_errors' => false
         ]);
 
         $response = $client->get("https://api.tillypad.online/_v1.0/Request.php", [
@@ -53,7 +53,7 @@ class TillypadService
         ]);
 
         if ($response->getStatusCode() == 200) {
-            return json_decode($response->getBody()->getContents());
+            return json_decode($response->getBody()->getContents(), true);
         }
 
         return null;
@@ -98,7 +98,7 @@ class TillypadService
         ]);
 
         if ($response->getStatusCode() == 200) {
-            return json_decode($response->getBody()->getContents());
+            return json_decode($response->getBody()->getContents(), true);
         }
         return null;
     }
