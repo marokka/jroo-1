@@ -44,3 +44,7 @@ Route::get('/console', function () {
 
 Route::get('/console/cache-clear', 'ConsoleController@cacheClear');
 Route::get('/console/migrate', 'ConsoleController@migrate');
+Route::get('/console/php', function (){
+    phpinfo();
+});
+
