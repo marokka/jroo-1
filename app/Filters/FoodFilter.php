@@ -17,12 +17,30 @@ class FoodFilter extends QueryFilter
             return;
         }
 
-        $this->builder->where(Food::TABLE_NAME . '.' . Food::ATTR_NAME, 'like', "%{$value}%");
+        $this->builder->where(Food::TABLE_NAME . '.' . Food::ATTR_NAME, 'LIKE', "%$value%");
+    }
+
+    public function id(?string $value)
+    {
+        if (!$value) {
+            return;
+        }
+
+        $this->builder->where(Food::TABLE_NAME . '.' . Food::ATTR_ID, $value);
     }
 
     public function price(string $value)
     {
         $this->builder->where(FoodProperty::TABLE_NAME . '.price', $value);
+    }
+
+    public function category(string $value)
+    {
+        if (!$value) {
+            return;
+        }
+
+        $this->builder->where(Food::TABLE_NAME . '.' . Food::ATTR_CATEGORY_ID, $value);
     }
 
     public function prices(array $value)

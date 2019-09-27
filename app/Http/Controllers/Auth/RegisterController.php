@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use TimeHunter\LaravelGoogleReCaptchaV3\Validations\GoogleReCaptchaV3ValidationRule;
 
 class RegisterController extends Controller
 {
@@ -53,6 +54,7 @@ class RegisterController extends Controller
             'email'    => ['string', 'email', 'max:255', 'unique:' . User::TABLE_NAME],
             'phone'    => ['string', 'max:255', 'unique:' . User::TABLE_NAME],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'g-recaptcha-response' => [new GoogleReCaptchaV3ValidationRule('register')]
         ]);
     }
 

@@ -1,6 +1,7 @@
 <?php
 /**
  * @var \App\Models\Food\Food $model
+ * @var ?string $categoryName
  */
 
 use App\Http\Controllers\Admin\FoodController as Controller;
@@ -24,7 +25,7 @@ use App\Http\Controllers\Admin\FoodController as Controller;
             <h2></h2>
             <div class="box_general padding_bottom">
                 <div class="header_box version_2">
-                    <h2><i class="fa fa-fw fa-list"></i>{{Controller::TITLE}}</h2>
+                    <h2><i class="fa fa-fw fa-list"></i>{{$categoryName ?? Controller::TITLE}} </h2>
                     <div class="pull-right">
                         <a href="{{route(Controller::ROUTE_CREATE)}}" class="btn badge-primary">Добавить</a>
                     </div>
@@ -32,13 +33,30 @@ use App\Http\Controllers\Admin\FoodController as Controller;
 
                 <div class="categories">
                     <table class="table">
-                        <tbody>
+                        <thead>
                         <tr>
                             <th>#</th>
                             <th>Название</th>
                             <th>Действие</th>
                         </tr>
 
+                        <tr>
+                            <form action="{{route(Controller::ROUTE_INDEX)}}" method="get">
+                                <input type="hidden" name="category" value="{{request('category')}}">
+                                <td>
+                                    <input type="text" class="form-control" name="id" value="{{request('id')}}">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" name="name" value="{{request('name')}}">
+                                </td>
+
+                                <td>
+                                    <button type="submit" class="btn btn-primary">Применить</button>
+                                </td>
+                            </form>
+                        </tr>
+                        </thead>
+                        <tbody>
                         @foreach($foods as $model)
                             <tr>
                                 <td>

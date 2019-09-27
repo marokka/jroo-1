@@ -14,7 +14,7 @@
 
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
+                        <div id="register"></div>
                         <div class="form-group row">
                             <label for="name"
                                    class="col-md-4 col-form-label text-md-right">{{ __('Имя') }}</label>
@@ -102,7 +102,7 @@
                         </div>
                     </form>
 
-
+                    {!!  GoogleReCaptchaV3::render(['register'=>'register']) !!}
                 </div>
             </div>
         </div>

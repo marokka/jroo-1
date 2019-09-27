@@ -32,4 +32,11 @@ class CategoryRepository
 
         return $category;
     }
+
+    public function byId($id)
+    {
+        return Cache::remember(__CLASS__ . __METHOD__ . $id, 5000, function () use ($id) {
+            return Category::find($id);
+        });
+    }
 }

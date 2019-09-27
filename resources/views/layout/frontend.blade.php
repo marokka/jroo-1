@@ -342,6 +342,7 @@
 <script defer src="{{mix('frontend/js/all.js')}}"></script>
 
 <script src="{{ asset('admin_assets/js/custom.js')}}"></script>
+{!!  GoogleReCaptchaV3::init() !!}
 
 </body>
 </html>

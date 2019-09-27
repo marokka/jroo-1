@@ -8,6 +8,7 @@ use App\Models\Category\Category;
 use App\Models\Food\Food;
 use App\Models\Food\FoodProperty;
 use App\Models\Food\models\FoodViewModel;
+use App\Repositories\Category\CategoryRepository;
 use App\Repositories\Food\FoodReadRepository;
 use App\Services\Food\FoodService;
 use Illuminate\Http\Request;
@@ -39,12 +40,21 @@ class FoodController extends Controller
      * @var Food
      */
     private $model;
+    /**
+     * @var CategoryRepository
+     */
+    private $categoryRepository;
 
-    public function __construct(FoodService $foodService, FoodReadRepository $foodReadRepository, Food $model)
-    {
+    public function __construct(
+        FoodService $foodService,
+        FoodReadRepository $foodReadRepository,
+        Food $model,
+        CategoryRepository $categoryRepository
+    ) {
         $this->foodService        = $foodService;
         $this->foodReadRepository = $foodReadRepository;
         $this->model              = $model;
+        $this->categoryRepository = $categoryRepository;
     }
 
     /**
@@ -55,8 +65,11 @@ class FoodController extends Controller
     public function index(Request $request, FoodFilter $filter)
     {
 
-        $foods = $this->foodReadRepository->get()->filter($filter)->paginate(15);
-        return view('admin.food.index', compact('foods'));
+        $foods        = $this->foodReadRepository->get()->filter($filter)->paginate(15);
+
+        $categoryName = $request->get('category') ? $this->categoryRepository->byId($request->get('category'))->name : null;
+
+        return view('admin.food.index', compact('foods', 'categoryName'));
     }
 
     /**
