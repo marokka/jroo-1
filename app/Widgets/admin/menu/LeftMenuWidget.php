@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Widgets\admin\menu;
+namespace App\Widgets\Admin\Menu;
 
 use App\Models\Category\Category;
 use Arrilot\Widgets\AbstractWidget;
