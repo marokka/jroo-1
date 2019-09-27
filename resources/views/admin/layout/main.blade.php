@@ -41,7 +41,7 @@
             aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    @widget('admin.menu.leftMenuWidget')
+    @widget('Admin.Menu.leftMenuWidget')
 </nav>
 <!-- /Navigation-->
 @yield('content')
