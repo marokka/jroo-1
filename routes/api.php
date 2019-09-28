@@ -47,6 +47,10 @@ Route::get('/console', function () {
 });
 
 
+Route::post('/success', function (Request $request) {
+    \Illuminate\Support\Facades\Log::info("Данные оплаты", json_encode($request->all()));
+});
+
 Route::get('/console/cache-clear', 'ConsoleController@cacheClear');
 Route::get('/console/migrate', 'ConsoleController@migrate');
 Route::get('/console/php', function (){

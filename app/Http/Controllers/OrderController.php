@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Order\OrderRequest;
+use App\Models\Order\Order;
 use App\Services\Order\OrderService;
 use Illuminate\Http\Request;
 
@@ -23,6 +24,11 @@ class OrderController extends Controller
     {
         $order = $this->orderService->save($request);
 
-        return redirect()->route('complete', $order->id);
+        if($order->pay_type == Order::TYPE_ONLINE) {
+
+            $this->orderService->pay($order);
+        }
+
+        //return redirect()->route('complete', $order->id);
     }
 }

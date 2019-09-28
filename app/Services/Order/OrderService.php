@@ -47,11 +47,26 @@ class OrderService
             $attributes['total']   = $cart->total;
 
             $order = $this->orderRepository->store($attributes);
-            $cart->delete();
+            //$cart->delete();
             return $order;
         } catch (\Throwable $exception) {
             throw new \Exception('Возникла непридвиденная ошибка');
         }
+
+    }
+
+    public function pay(Order $order)
+    {
+        $mrh_login = env('DEMO_MRH_LOGIN');
+        $mrh_pass1 = env('DEMO_MRH_PASSWORD');
+        $inv_id    = $order->id;
+        $inv_desc  = "Техническая документация по ROBOKASSA";
+        $out_summ  = $order->total;
+        $crc       = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1");
+        print "<html><script language=JavaScript " .
+            "src='https://auth.robokassa.ru/Merchant/PaymentForm/FormMS.js?" .
+            "MerchantLogin=$mrh_login&OutSum=$out_summ&InvoiceID=$inv_id" .
+            "&Description=$inv_desc&SignatureValue=$crc&isTest=1'></script></html>";
 
     }
 }

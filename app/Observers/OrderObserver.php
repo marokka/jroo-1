@@ -32,48 +32,50 @@ class OrderObserver
      */
     public function created(Order $order)
     {
-        $json = [];
+        if (true !== env('APP_DEBUG')) {
+            $json = [];
 
-        $orderClient = $this->tillypadService->getClient($order);
+            $orderClient = $this->tillypadService->getClient($order);
 
-        $properties = $this->orderRepository->getOrderProperties($order->cart_id);
+            $properties = $this->orderRepository->getOrderProperties($order->cart_id);
 
-        foreach ($properties as $key => $property) {
-            $json[] = [
-                "clnt_id"       => $orderClient[0]['clnt_ID'],
-                "mitm_ID"       => $property->mitm_id,
-                "mitm_value"    => "1",
-                "mitm_count"    => $property->quantity,
-                "delivery_type" => "1",
-                "gest_Phone"    => $order->phone,
-                "City"          => 'Ялта',
-                "Street"        => $order->address,
-                "House"         => $order->home,
-                "Building"      => "",
-                "Apartment"     => "",
-                "Entrance"      => $order->porch,
-                "Floor"         => $order->floor,
-                "Intercom"      => "",
-                "Comment"       => $order->comment,
-                "gest_comment"  => "",
-                "RegionCode"    => "1",
-                "PostCode"      => "1"
-            ];
+            foreach ($properties as $key => $property) {
+                $json[] = [
+                    "clnt_id"       => $orderClient[0]['clnt_ID'],
+                    "mitm_ID"       => $property->mitm_id,
+                    "mitm_value"    => "1",
+                    "mitm_count"    => $property->quantity,
+                    "delivery_type" => "1",
+                    "gest_Phone"    => $order->phone,
+                    "City"          => 'Ялта',
+                    "Street"        => $order->address,
+                    "House"         => $order->home,
+                    "Building"      => "",
+                    "Apartment"     => "",
+                    "Entrance"      => $order->porch,
+                    "Floor"         => $order->floor,
+                    "Intercom"      => "",
+                    "Comment"       => $order->comment,
+                    "gest_comment"  => "",
+                    "RegionCode"    => "1",
+                    "PostCode"      => "1"
+                ];
+            }
+            $client = new Client([
+                'http_error' => false
+            ]);
+
+            $response = $client->post('https://api.tillypad.online/_v1.0/Request.php', [
+                'headers' => [
+                    'Authorization' => env('TILLYPAD_TOKEN'),
+                    'Content-Type'  => 'application/json',
+                    'Target'        => 'Delivery',
+                ],
+
+                'body' => json_encode($json),
+            ]);
+
         }
-        $client = new Client([
-            'http_error' => false
-        ]);
-
-        $response = $client->post('https://api.tillypad.online/_v1.0/Request.php', [
-            'headers' => [
-                'Authorization' => env('TILLYPAD_TOKEN'),
-                'Content-Type'  => 'application/json',
-                'Target'        => 'Delivery',
-            ],
-
-            'body' => json_encode($json),
-        ]);
-
     }
 
     /**
