@@ -6,6 +6,7 @@ use App\Http\Requests\Order\OrderRequest;
 use App\Models\Order\Order;
 use App\Services\Order\OrderService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class OrderController extends Controller
 {
@@ -30,5 +31,9 @@ class OrderController extends Controller
         }
 
         //return redirect()->route('complete', $order->id);
+    }
+
+    public function webhook(Request $request) {
+        Log::info("Информация об оплате", $request->all());
     }
 }
