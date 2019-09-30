@@ -88,7 +88,9 @@
                         </table>
                     </div>
                 </div>
+            <!--
                 <div class="col-12 col-sm-8">
+
                     <div class="coupon">
                         @if(Session::has('message'))
                             <div class="alert {{Session::get('message')['class']}}">
@@ -101,8 +103,10 @@
                             <button class="no-round-btn smooth">Активировать купон</button>
                         </form>
                     </div>
+
                 </div>
-                <div class="col-12 col-sm-4 text-right">
+                -->
+                <div class="col-12 col-sm-4 text-left">
                     <button class="no-round-btn black cart-update">Обновить корзину</button>
                 </div>
             </div>
