@@ -44,13 +44,20 @@
                     <h3 class="faq-question">Время доставки?</h3>
                 </div>
                 <div class="faq-answer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Пн –пт с 10:00 до 22:30<br>
+                        Сб-вс с 10:30 до 22:30
+                    </p>
                 </div>
                 <div class="faq-question"><i class="icon_plus"></i>
-                    <h3 class="faq-question">Граници Доставки?</h3>
+                    <h3 class="faq-question">Оплата ?</h3>
                 </div>
                 <div class="faq-answer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Мы принимаем оплату:</p>
+                    <ul>
+                        <li>Наличными курьеру.</li>
+                        <li>В кафе при получении заказа.</li>
+                        <li>Онлайн-переводом с банковской карты.</li>
+                    </ul>
                 </div>
                 <div class="faq-question"><i class="icon_plus"></i>
                     <h3 class="faq-question">Бонусы ?</h3>
