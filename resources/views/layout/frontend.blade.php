@@ -308,25 +308,25 @@
             @include("components.social_network")
         </div>
     </div>
-    <div class="newletter">
-        <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-12 col-md-7">
-                    <div class="newletter_text text-center text-md-left">
-                        <h5>Наша подписка</h5>
-                        <p>Подписаться на Email рассылку</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-5">
-                    <div class="newletter_input">
-                        <input class="round-input" type="text" placeholder="Введите ваш email">
-                        <button>Отправить</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-credit">
+{{--    <div class="newletter">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row justify-content-between align-items-center">--}}
+{{--                <div class="col-12 col-md-7">--}}
+{{--                    <div class="newletter_text text-center text-md-left">--}}
+{{--                        <h5>Наша подписка</h5>--}}
+{{--                        <p>Подписаться на Email рассылку</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-12 col-md-5">--}}
+{{--                    <div class="newletter_input">--}}
+{{--                        <input class="round-input" type="text" placeholder="Введите ваш email">--}}
+{{--                        <button>Отправить</button>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+    <div class="footer-credit" style="background-color: #dcb070;">
         <div class="container">
             <div
                 class="footer-creadit_block d-flex flex-column flex-md-row justify-content-start justify-content-md-between align-items-baseline align-items-md-center">
