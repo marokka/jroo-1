@@ -364,6 +364,21 @@ window.onload = function () {
             values: [min, max],
             slide: function (event, ui) {
                 $("#amount").val("₽" + ui.values[0] + " - ₽" + ui.values[1]);
+            },
+            change: function (event, ui) {
+                const values = $('#slider-range').slider('values');
+                $('#preload').fadeIn('400');
+                $.ajax({
+                    url: location.href,
+                    data: {prices: values},
+                    success: function (html) {
+                        let products = $(html).find(".row.no-gutters-sm .col-12.col-md-4");
+                        //products.addClass('grid-view')
+                        $(".row.no-gutters-sm").html(products);
+                        $('#preload').fadeOut('400');
+                    }
+
+                })
             }
         });
         $("#amount").val("₽" + $("#slider-range").slider("values", 0) +

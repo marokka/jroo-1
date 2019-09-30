@@ -118,4 +118,51 @@ class TillypadService
 
         return $client;
     }
+
+
+    public function sendingOrderToTillypad(Order $order, array $properties = [])
+    {
+        if (true !== env('APP_DEBUG')) {
+            $json = [];
+
+            $orderClient = $this->getClient($order);
+
+            foreach ($properties as $key => $property) {
+                $json[] = [
+                    "clnt_id"       => $orderClient[0]['clnt_ID'],
+                    "mitm_ID"       => $property->mitm_id,
+                    "mitm_value"    => "1",
+                    "mitm_count"    => $property->quantity,
+                    "delivery_type" => $order->delivery_type,
+                    "gest_Phone"    => $order->phone,
+                    "City"          => $order->city,
+                    "Street"        => $order->street,
+                    "House"         => $order->house,
+                    "Building"      => $order->building,
+                    "Apartment"     => $order->apartment,
+                    "Entrance"      => $order->entrance,
+                    "Floor"         => $order->floor,
+                    "Intercom"      => $order->intercom,
+                    "Comment"       => $order->comment,
+                    "gest_comment"  => "",
+                    "RegionCode"    => "1",
+                    "PostCode"      => "1"
+                ];
+            }
+            $client = new Client([
+                'http_error' => false
+            ]);
+
+            $response = $client->post('https://api.tillypad.online/_v1.0/Request.php', [
+                'headers' => [
+                    'Authorization' => env('TILLYPAD_TOKEN'),
+                    'Content-Type'  => 'application/json',
+                    'Target'        => 'Delivery',
+                ],
+
+                'body' => json_encode($json),
+            ]);
+
+        }
+    }
 }

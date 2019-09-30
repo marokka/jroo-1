@@ -23,6 +23,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property integer $total
  * @property string $comment
  * @property integer $status
+ * @property integer $delivery_type
+ * @property string city
+ * @property string $street
+ * @property integer $house
+ * @property integer $apartment
+ * @property integer $entrance
+ * @property integer $intercom
+ * @property integer $building
  */
 class Order extends Model
 {
@@ -46,15 +54,24 @@ class Order extends Model
     const ATTR_TOTAL         = 'total';
     const ATTR_COMMENT       = 'comment';
     const ATTR_STATUS        = 'status';
+    const ATTR_DELIVERY_TYPE = 'delivery_type';
+    const ATTR_CITY          = 'city';
+    const ATTR_STREET        = 'street';
+    const ATTR_HOUSE         = 'house';
+    const ATTR_APARTMENT     = 'apartment';
+    const ATTR_ENTRANCE      = 'entrance';
+    const ATTR_INTERCOM      = 'intercom';
+    const ATTR_BUILDING      = 'building';
 
-    const STATUS_NEW      = 0;
-    const STATUS_ACCEPTED = 1;
-    const STATUS_READY    = 2;
-    const STATUS_DONE     = 3;
+    const STATUS_NO_PAID = 0;
+    const STATUS_PAID    = 1;
 
 
     const TYPE_CASH   = 0;
     const TYPE_ONLINE = 1;
+
+    const DELIVERY_TYPE_PICKUP  = 1;
+    const DELIVERY_TYPE_COURIER = 2;
 
     protected $fillable = [
         self::ATTR_ID,
@@ -73,11 +90,9 @@ class Order extends Model
         self::ATTR_PAY_TYPE,
         self::ATTR_TOTAL,
         self::ATTR_STATUS,
+        self::ATTR_DELIVERY_TYPE
     ];
 
-    protected $attributes = [
-        self::ATTR_STATUS => self::STATUS_NEW,
-    ];
 
     public function scopeFilter($builder, $filters)
     {
@@ -87,10 +102,7 @@ class Order extends Model
     public static function getStatusesVariants()
     {
         return [
-            static::STATUS_NEW      => 'Новый',
-            static::STATUS_ACCEPTED => 'Принят',
-            static::STATUS_READY    => 'Готов',
-            static::STATUS_DONE     => 'Выполнен',
+            static::STATUS_NO_PAID => 'Не оплачен',
         ];
     }
 

@@ -36,11 +36,14 @@
                     <div class="quantity-select"><label for="quantity">Количество:</label>
                         <input class="no-round-input"
                                id="quantity"
+                               data-food-id="{{$model->id}}"
                                type="number" min="0"
                                value="1">
                     </div>
                     <div class="product-select">
-                        <button class="add-to-cart normal-btn outline">Добавить в корзину</button>
+                        <button class="add-to-cart normal-btn outline"
+                                data-food-property-id="{{$model->properties[0]->id}}">Добавить в корзину
+                        </button>
                         {{--<button class="add-to-compare normal-btn outline">+ Добавить в избранное</button>--}}
                     </div>
                     <div class="product-share"><h5>Поделиться:</h5><a href=""><i class="fab fa-facebook-f"> </i></a><a

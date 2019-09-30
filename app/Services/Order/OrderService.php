@@ -13,7 +13,10 @@ use App\Http\Requests\Order\OrderRequest;
 use App\Models\Cart\Cart;
 use App\Models\Order\Order;
 use App\Repositories\Order\OrderRepository;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
+use Idma\Robokassa\Payment;
 
 class OrderService
 {
@@ -22,9 +25,15 @@ class OrderService
      */
     private $orderRepository;
 
+    /**
+     * @var Payment
+     */
+    private $payment;
+
     public function __construct(OrderRepository $orderRepository)
     {
         $this->orderRepository = $orderRepository;
+        $this->payment         = app()->make('Payment');
     }
 
     /**
@@ -55,18 +64,41 @@ class OrderService
 
     }
 
-    public function pay(Order $order)
+    /**
+     * Возвращает URL для редиректа на страницу оплаты
+     *
+     * @param Order $order
+     * @return string
+     * @throws \Idma\Robokassa\Exception\EmptyDescriptionException
+     * @throws \Idma\Robokassa\Exception\InvalidInvoiceIdException
+     * @throws \Idma\Robokassa\Exception\InvalidSumException
+     */
+    public function setValuesForPayment(Order $order)
     {
-        $mrh_login = env('DEMO_MRH_LOGIN');
-        $mrh_pass1 = env('DEMO_MRH_PASSWORD');
-        $inv_id    = $order->id;
-        $inv_desc  = "Техническая документация по ROBOKASSA";
-        $out_summ  = $order->total;
-        $crc       = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1");
-        print "<html><script language=JavaScript " .
-            "src='https://auth.robokassa.ru/Merchant/PaymentForm/FormMS.js?" .
-            "MerchantLogin=$mrh_login&OutSum=$out_summ&InvoiceID=$inv_id" .
-            "&Description=$inv_desc&SignatureValue=$crc&isTest=1'></script></html>";
+        $payment = $this->payment;
+        $payment->setInvoiceId($order->id);
+        $payment->setSum($order->total);
+        $payment->setDescription('test');
+        $payment->setEmail('test');
 
+        return $payment->getPaymentUrl();
     }
+
+
+    public function setSuccessTypeOrder(Request $request)
+    {
+        $this->payment->validateResult($request->all());
+
+        /**
+         * @var Order $order
+         */
+        $order = Order::findOrFail((int)$this->payment->getInvoiceId());
+
+        $order->status = $order::STATUS_PAID;
+        $order->save();
+
+        return $order;
+    }
+
+
 }
