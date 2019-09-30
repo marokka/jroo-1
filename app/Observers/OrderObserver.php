@@ -32,8 +32,10 @@ class OrderObserver
      */
     public function created(Order $order)
     {
-        $properties = $this->orderRepository->getOrderProperties($order->cart_id);
-        $this->tillypadService->sendingOrderToTillypad($order, $properties);
+        if ($order::TYPE_CASH === $order->pay_type) {
+            $properties = $this->orderRepository->getOrderProperties($order->cart_id);
+            $this->tillypadService->sendingOrderToTillypad($order, $properties);
+        }
     }
 
     /**
@@ -44,7 +46,10 @@ class OrderObserver
      */
     public function updated(Order $order)
     {
-        //
+        if ($order::TYPE_ONLINE === $order->pay_type) {
+            $properties = $this->orderRepository->getOrderProperties($order->cart_id);
+            $this->tillypadService->sendingOrderToTillypad($order, $properties);
+        }
     }
 
     /**

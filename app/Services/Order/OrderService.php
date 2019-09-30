@@ -78,8 +78,6 @@ class OrderService
         $payment = $this->payment;
         $payment->setInvoiceId($order->id);
         $payment->setSum($order->total);
-        $payment->setDescription('test');
-        $payment->setEmail('test');
 
         return $payment->getPaymentUrl();
     }

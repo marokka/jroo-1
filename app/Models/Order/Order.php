@@ -90,7 +90,14 @@ class Order extends Model
         self::ATTR_PAY_TYPE,
         self::ATTR_TOTAL,
         self::ATTR_STATUS,
-        self::ATTR_DELIVERY_TYPE
+        self::ATTR_DELIVERY_TYPE,
+        self::ATTR_CITY,
+        self::ATTR_STREET,
+        self::ATTR_HOUSE,
+        self::ATTR_APARTMENT,
+        self::ATTR_ENTRANCE,
+        self::ATTR_INTERCOM,
+        self::ATTR_BUILDING,
     ];
 
 
@@ -112,6 +119,14 @@ class Order extends Model
         return [
             static::TYPE_CASH   => 'Наличными',
             static::TYPE_ONLINE => 'Онлайн',
+        ];
+    }
+
+    public static function getDeliveryVariants()
+    {
+        return [
+            self::DELIVERY_TYPE_PICKUP  => 'Самовывоз',
+            self::DELIVERY_TYPE_COURIER => 'Доставка курьером'
         ];
     }
 

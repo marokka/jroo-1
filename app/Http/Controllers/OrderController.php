@@ -22,12 +22,12 @@ class OrderController extends Controller
         $this->orderService = $orderService;
     }
 
-    public function addOrder(OrderRequest $request, Payment $payment)
+    public function addOrder(OrderRequest $request)
     {
         $order = $this->orderService->save($request);
 
         if ($order->pay_type == Order::TYPE_ONLINE) {
-            return Redirect::away($this->orderService->setValuesForPayment($order, $payment));
+            return Redirect::away($this->orderService->setValuesForPayment($order));
         }
 
         return redirect()->route('complete', $order->id);
@@ -35,8 +35,11 @@ class OrderController extends Controller
 
     public function webhook(Request $request)
     {
-        $order = Order::findOrFail($request->all('InvId'));
-
+        /**
+         * @var Order $order
+         */
+        $order         = Order::findOrFail($request->all('InvId'));
+        $order->status = $order::STATUS_PAID;
         Log::info("Информация об оплате", $request->all());
     }
 }
