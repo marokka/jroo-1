@@ -48,6 +48,34 @@
                 Спасибо за заказ! <br> <br>
                 С Вами обязательно свяжется оператор в течении 10 минут и уточнит более подробно условия доставки.
             </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="benefit-block">
+                        <div class="our-benefits shadowless benefit-border">
+                            <div class="row no-gutters">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="benefit-detail d-flex flex-column align-items-center"><img class="" src="{{asset('frontend/images/icon/restaurant-menu.png')}}" alt=""  style="width: 25%;">
+                                        <h5 class="benefit-title">Вернуться в меню</h5>
+                                        <button class="normal-btn">Перейти</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="benefit-detail d-flex flex-column align-items-center"><img class="" src="{{asset('frontend/images/JBS_Logo.png')}}" alt="" style="width: 25%;">
+                                        <h5 class="benefit-title">Перейти на основной сайт</h5>
+                                        <button class="normal-btn">Перейти</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12 col-lg-4">
+                                    <div class="benefit-detail d-flex flex-column align-items-center"><img class="" src="{{asset('frontend/images/icon/tripadvisor.png')}}" alt=""  style="width: 25%;">
+                                        <h5 class="benefit-title">Посмотреть отзывы на трипадвизоре </h5>
+                                        <button class="normal-btn">Перейти</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection

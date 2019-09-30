@@ -49,18 +49,7 @@
                     </p>
                 </div>
                 <div class="faq-question"><i class="icon_plus"></i>
-                    <h3 class="faq-question">Оплата ?</h3>
-                </div>
-                <div class="faq-answer">
-                    <p>Мы принимаем оплату:</p><br> <br>
-                    <p>
-                    •	Наличными курьеру. <br>
-                    •	В кафе при получении заказа.<br>
-                    •	Онлайн-переводом с банковской карты.<br>
-                    </p>
-                </div>
-                <div class="faq-question"><i class="icon_plus"></i>
-                    <h3 class="faq-question">Бонусы ?</h3>
+                    <h3 class="faq-question"> ?</h3>
                 </div>
                 <div class="faq-answer">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
