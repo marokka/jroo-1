@@ -116,7 +116,7 @@ use App\Models\Order\Order;
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputStreet">Сдача с*</label>
-                                <input class="no-round-input-bg" id="inputStreet" name="change" type="text" required="">
+                                <input class="no-round-input-bg" id="inputStreet" name="change" type="text">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputStreet">Кол-во приборов</label>
