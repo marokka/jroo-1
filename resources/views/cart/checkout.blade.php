@@ -72,6 +72,7 @@ use App\Models\Order\Order;
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
+                                <label for="inputFirstName">Размер</label>
                                 <label for="inputFirstName">S</label>
                             </div>
                             <div class="form-group col-md-6">
@@ -81,6 +82,7 @@ use App\Models\Order\Order;
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
+                                <label for="inputFirstName">Размер</label>
                                 <label for="inputFirstName">M</label>
                             </div>
                             <div class="form-group col-md-6">
@@ -90,6 +92,7 @@ use App\Models\Order\Order;
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
+                                <label for="inputFirstName">Размер</label>
                                 <label for="inputFirstName">L</label>
                             </div>
                             <div class="form-group col-md-6">
