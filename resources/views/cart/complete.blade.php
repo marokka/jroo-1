@@ -68,7 +68,7 @@
                                 <div class="col-12 col-md-12 col-lg-4">
                                     <div class="benefit-detail d-flex flex-column align-items-center"><img class="" src="{{asset('frontend/images/icon/tripadvisor.png')}}" alt=""  style="width: 25%;">
                                         <h5 class="benefit-title">Посмотреть отзывы на трипадвизоре </h5>
-                                        <button class="normal-btn">Перейти</button>
+                                        <button class="normal-btn" onclick="location.href = 'https://www.tripadvisor.ru/UserReviewEdit-g295378-d13001575-Jroo_Burger_Steak-Yalta.html'">Перейти</button>
                                     </div>
                                 </div>
                             </div>
