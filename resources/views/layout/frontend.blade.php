@@ -332,7 +332,7 @@
                 class="footer-creadit_block d-flex flex-column flex-md-row justify-content-start justify-content-md-between align-items-baseline align-items-md-center">
                 <p class="author">Copyright © 2019 Jroo</p><img class="payment-method"
                                                                 src="{{asset('frontend/images/money.jpg')}}"
-                                                                style="width: 50%" alt="">
+                                                                style="width: 50% ;border-radius: 10px" alt="">
             </div>
         </div>
     </div>
