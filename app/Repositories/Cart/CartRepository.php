@@ -110,7 +110,10 @@ class CartRepository
     {
         $session = Session::get(Cart::SESSION_KEY);
 
-        $cart = Cart::where(Cart::ATTR_SESSION, $session)->first();
+        $cart = Cart::where([
+            [Cart::ATTR_SESSION, $session],
+            [Cart::ATTR_STATUS, Cart::STATUS_ACTIVE]
+        ])->first();
 
         return $cart;
     }

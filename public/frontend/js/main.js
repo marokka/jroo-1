@@ -15,6 +15,18 @@ window.onload = function () {
             elem.classList.add('align-items-center');
             elem.innerHTML = $($(".gloves > .form-row.align-items-center")[0]).html();
             $('.gloves').append(elem);
+        });
+
+        $('input[name="delivery_type"]').on('change', function () {
+            const elem = $(this);
+
+            if (elem.attr('id') === 'pickup') {
+                $('.hide-pickup').toggleClass('d-none');
+            }
+
+            if (elem.attr('id') !== 'pickup' && $('.hide-pickup').hasClass('d-none')) {
+                $('.hide-pickup').toggleClass('d-none');
+            }
         })
 
 

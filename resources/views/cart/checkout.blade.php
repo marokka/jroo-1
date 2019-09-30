@@ -73,15 +73,18 @@ use App\Models\Order\Order;
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="inputFirstName">Размер S</label>
-                                <input class="no-round-input-bg" name="phone" id="gloves_s" type="text" placeholder="Кол-во перчаток">
+                                <input class="no-round-input-bg" name="gloves_s" id="gloves_s" type="text"
+                                       placeholder="Кол-во перчаток">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputLastName">Размер M</label>
-                                <input class="no-round-input-bg" name="phone" id="gloves_m" type="text" placeholder="Кол-во перчаток">
+                                <input class="no-round-input-bg" name="gloves_m" id="gloves_m" type="text"
+                                       placeholder="Кол-во перчаток">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputLastName">Размер L</label>
-                                <input class="no-round-input-bg" name="phone" id="gloves_l" type="text" placeholder="Кол-во перчаток">
+                                <input class="no-round-input-bg" name="gloves_l" id="gloves_l" type="text"
+                                       placeholder="Кол-во перчаток">
                             </div>
                         </div>
                         <!--
@@ -120,7 +123,7 @@ use App\Models\Order\Order;
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputStreet">Кол-во приборов</label>
-                                <input class="no-round-input-bg" id="inputStreet" name="change" type="text">
+                                <input class="no-round-input-bg" id="inputStreet" name="number_appliances" type="text">
                             </div>
                         </div>
                         <div class="form-row">
@@ -171,6 +174,18 @@ use App\Models\Order\Order;
                             <div class="form-group">
                                 <input type="radio" name="pay_type" id="paypal" value="{{Order::TYPE_ONLINE}}">
                                 <label for="paypal">Онлайн оплата</label>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <input type="radio" name="delivery_type" id="pickup"
+                                       value="{{Order::DELIVERY_TYPE_PICKUP}}"
+                                       checked="">
+                                <label for="pickup">Самовывоз</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" name="delivery_type" id="courier"
+                                       value="{{Order::DELIVERY_TYPE_COURIER}}">
+                                <label for="courier">Доставка курьером</label>
                             </div>
                             <button type="submit" class="normal-btn submit-btn"> Заказать</button>
                         </div>

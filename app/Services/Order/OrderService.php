@@ -43,22 +43,45 @@ class OrderService
      */
     public function save(OrderRequest $request)
     {
+
         try {
-            $cart                  = Cart::where(Cart::ATTR_SESSION, Session::get(Cart::SESSION_KEY))->first();
-            $attributes            = $request->all([
+            /**
+             * @var Cart $cart
+             */
+            $cart       = Cart::where(Cart::ATTR_SESSION, Session::get(Cart::SESSION_KEY))->first();
+            $attributes = $request->all([
                 Order::ATTR_NAME,
                 Order::ATTR_PHONE,
-                Order::ATTR_ADDRESS,
                 Order::ATTR_COMMENT,
                 Order::ATTR_PAY_TYPE,
+                Order::ATTR_DELIVERY_TYPE,
+                Order::ATTR_CITY,
+                Order::ATTR_STREET,
+                Order::ATTR_HOUSE,
+                Order::ATTR_APARTMENT,
+                Order::ATTR_ENTRANCE,
+                Order::ATTR_INTERCOM,
+                Order::ATTR_BUILDING,
             ]);
+
             $attributes['cart_id'] = $cart->id;
             $attributes['total']   = $cart->total;
 
-            $order = $this->orderRepository->store($attributes);
-            //$cart->delete();
+            $attributes['comment'] .= <<<TEXT
+            \n
+            Сдача с: {$request->get('change')}
+            Количество приборов: {$request->get('number_appliances')}
+            Количество перчаток L: {$request->get('gloves_l')}
+            Количество перчаток M: {$request->get('gloves_m')}
+            Количество перчаток S: {$request->get('gloves_s')}
+TEXT;
+
+            $order        = $this->orderRepository->store($attributes);
+            //$cart->status = Cart::STATUS_INACTIVE;
+            $cart->delete();
             return $order;
         } catch (\Throwable $exception) {
+            dd($exception);
             throw new \Exception('Возникла непридвиденная ошибка');
         }
 
@@ -78,6 +101,7 @@ class OrderService
         $payment = $this->payment;
         $payment->setInvoiceId($order->id);
         $payment->setSum($order->total);
+        $payment->setDescription("Оплата заказа");
 
         return $payment->getPaymentUrl();
     }

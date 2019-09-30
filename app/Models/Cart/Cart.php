@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property integer $user_id
  * @property string $session
  * @property integer $coupon_id
+ * @property string $status
  */
 class Cart extends Model
 {
@@ -23,9 +24,12 @@ class Cart extends Model
     const ATTR_USER_ID   = 'user_id';
     const ATTR_SESSION   = 'session';
     const ATTR_COUPON_ID = 'coupon_id';
+    const ATTR_STATUS    = 'status';
 
     const TABLE_NAME = 'carts';
 
+    const STATUS_ACTIVE   = 1;
+    const STATUS_INACTIVE = 0;
 
     public function properties()
     {
