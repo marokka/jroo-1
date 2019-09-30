@@ -21,8 +21,8 @@
                     <div class="col-12 col-md-6">
                         <div class="our-story_text">
                             <h1 class="title green-underline">О нашей доставке</h1>
-                            <p>Tyna Giang's integrated agro-forestry farming model is the first project in Vietnam to achieve the highest ranking in the "100 projects to combat climate change" by the Ministry of Environment, Energy and Sea. France organized in 2016 ...</p>
-                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Neque porro quisquam est, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem</p>
+                            <p>Мы используем самые лучшие ингредиенты и начинаем готовить только после получения вашего заказа. Умелые руки наших поваров приготовят ваш заказ быстро, качественно, а главное — с любовью.</p>
+                            <p>На нашем сайте вы всегда можете заказать доставку еды домой или в офис со скидкой 10%. Для этого необходимо сформировать корзину из блюд, представленных на сайте, и оформить заказ.  Также всегда есть возможность сделать заказ по телефону +7 (978) 087 33 37.</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
