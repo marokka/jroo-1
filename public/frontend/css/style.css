@@ -5862,8 +5862,7 @@ footer.coffee .newletter {
     margin-top: 15px; }
   .shop-grid-list .shop-products .shop-products_bottom--fullwidth .w-100 {
     display: none; }
-  .shop-grid-list .shop-products .shop-products_bottom .col-12:nth-child(n+5) {
-    display: none; }
+
   .shop-layout .shop-grid-list .shop-products .shop-products_bottom .col-12:nth-child(n+5) {
     display: none; }
   .shop-layout .shop-grid-list .shop-products .shop-products_bottom--fullwidth .col-12:nth-child(n+5) {

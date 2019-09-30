@@ -30,7 +30,7 @@ class OrderController extends Controller
             $this->orderService->pay($order);
         }
 
-        //return redirect()->route('complete', $order->id);
+        return redirect()->route('complete', $order->id);
     }
 
     public function webhook(Request $request) {
