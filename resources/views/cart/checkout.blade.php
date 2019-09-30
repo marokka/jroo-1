@@ -73,15 +73,15 @@ use App\Models\Order\Order;
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="inputFirstName">Размер S</label>
-                                <input class="no-round-input-bg" name="phone" id="gloves_s" type="text" placeholder="Количество">
+                                <input class="no-round-input-bg" name="phone" id="gloves_s" type="text" placeholder="Кол-во перчаток">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputLastName">Размер M</label>
-                                <input class="no-round-input-bg" name="phone" id="gloves_m" type="text" placeholder="Количество">
+                                <input class="no-round-input-bg" name="phone" id="gloves_m" type="text" placeholder="Кол-во перчаток">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputLastName">Размер L</label>
-                                <input class="no-round-input-bg" name="phone" id="gloves_l" type="text" placeholder="Количество">
+                                <input class="no-round-input-bg" name="phone" id="gloves_l" type="text" placeholder="Кол-во перчаток">
                             </div>
                         </div>
                         <!--
