@@ -71,33 +71,17 @@ use App\Models\Order\Order;
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputFirstName">Размер</label>
-                                <label for="inputFirstName">S</label>
+                            <div class="form-group col-md-4">
+                                <label for="inputFirstName">Размер S</label>
+                                <input class="no-round-input-bg" name="phone" id="phone" type="text" placeholder="Количество">
                             </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputLastName">Количество</label>
-                                <input class="no-round-input-bg" name="phone" id="phone" type="text">
+                            <div class="form-group col-md-4">
+                                <label for="inputLastName">Размер M</label>
+                                <input class="no-round-input-bg" name="phone" id="phone" type="text" placeholder="Количество">
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputFirstName">Размер</label>
-                                <label for="inputFirstName">M</label>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputLastName">Количество</label>
-                                <input class="no-round-input-bg" name="phone" id="phone" type="text">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputFirstName">Размер</label>
-                                <label for="inputFirstName">L</label>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputLastName">Количество</label>
-                                <input class="no-round-input-bg" name="phone" id="phone" type="text">
+                            <div class="form-group col-md-4">
+                                <label for="inputLastName">Размер L</label>
+                                <input class="no-round-input-bg" name="phone" id="phone" type="text" placeholder="Количество">
                             </div>
                         </div>
                         <!--
