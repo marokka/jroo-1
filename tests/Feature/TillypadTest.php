@@ -9,18 +9,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class TillypadTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
 
     /**
      * Тест проверяет что вернется ошибка, если номера в базе не найдено
