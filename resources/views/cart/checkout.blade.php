@@ -70,27 +70,62 @@ use App\Models\Order\Order;
                                 <input class="no-round-input-bg" name="phone" id="phone" type="text" required="">
                             </div>
                         </div>
-                        <div class="gloves">
-                            <div class="form-row align-items-center">
-                                <div class="form-group col-md-5">
-                                    <label for="inputFirstName">Кол-во перчаток</label>
-                                    <input class="no-round-input-bg" name="glovesCount[]" type="text" required="">
-                                </div>
-                                <div class="form-group col-md-5">
-                                    <label for="inputCountry">Размер</label>
-                                    <select class="no-round-input-bg" name="glovesSize[]" id="inputContry">
-                                        <option value="1">S</option>
-                                        <option value="2">M</option>
-                                        <option value="3">L</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group col-md-2 text-center">
-                                    <button type="button" class="btn btn-primary mt-3 gloves-add" style="background: #662c00; border: none;">+
-                                    </button>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputFirstName">S</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputLastName">Количество</label>
+                                <input class="no-round-input-bg" name="phone" id="phone" type="text">
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputFirstName">M</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputLastName">Количество</label>
+                                <input class="no-round-input-bg" name="phone" id="phone" type="text">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputFirstName">L</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputLastName">Количество</label>
+                                <input class="no-round-input-bg" name="phone" id="phone" type="text">
+                            </div>
+                        </div>
+                        <!--
+                       <div class="gloves">
+                           <div class="form-row align-items-center">
+
+
+                              <div class="form-group col-md-6">
+                                  <label for="inputFirstName">Кол-во перчаток</label>
+                                  <input class="no-round-input-bg" name="glovesCount[]" type="text" required="">
+                              </div>
+
+
+                              <div class="form-group col-md-5">
+                                  <label for="inputCountry">Размер</label>
+                                  <select class="no-round-input-bg" name="glovesSize[]" id="inputContry">
+                                      <option value="1">S</option>
+                                      <option value="2">M</option>
+                                      <option value="3">L</option>
+                                  </select>
+                              </div>
+
+
+                              <div class="form-group col-md-2 text-center">
+                                  <button type="button" class="btn btn-primary mt-3 gloves-add" style="background: #662c00; border: none;">+
+                                  </button>
+                              </div>
+
+                            </div>
+                        </div>
+                        -->
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputStreet">Сдача с*</label>
@@ -98,15 +133,41 @@ use App\Models\Order\Order;
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputStreet">Кол-во приборов</label>
-                                <input class="no-round-input-bg" id="inputStreet" name="change" type="text" required="">
+                                <input class="no-round-input-bg" id="inputStreet" name="change" type="text">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="inputCompanyName">Адрес*</label>
-                            <input class="no-round-input-bg" name="address" id="address" type="text">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="inputCompanyName">Город*</label>
+                                <input class="no-round-input-bg" name="city" id="hide-pickup" type="text">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputCompanyName">Улица*</label>
+                                <input class="no-round-input-bg" name="street" id="hide-pickup" type="text">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputCompanyName">Дом*</label>
+                                <input class="no-round-input-bg" name="house" id="hide-pickup" type="text">
+                            </div>
                         </div>
-
-
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="inputCompanyName">Подъезд*</label>
+                                <input class="no-round-input-bg" name="entrance" id="hide-pickup" type="text">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputCompanyName">Корпус*</label>
+                                <input class="no-round-input-bg" name="building" id="hide-pickup" type="text">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputCompanyName">Квартира*</label>
+                                <input class="no-round-input-bg" name="apartment" id="hide-pickup" type="text">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputCompanyName">Домофон*</label>
+                                <input class="no-round-input-bg" name="intercom" id="hide-pickup" type="text">
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="inputNote">Коментарий к заказу (укажите степень прожарки, остроту блюда)</label>
                             <textarea class="textarea-form-bg" id="coment" name="comment" cols="30" rows="7"></textarea>
