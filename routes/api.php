@@ -46,7 +46,9 @@ Route::get('/console', function () {
     Artisan::call("storage:link");
 });
 
-
+Route::get('/success', function () {
+    return view('cart.complete');
+});
 Route::post('/success-pay', 'OrderController@webhook');
 
 Route::get('/console/cache-clear', 'ConsoleController@cacheClear');
