@@ -48,7 +48,7 @@ class OrderService
             /**
              * @var Cart $cart
              */
-            $cart       = Cart::where(Cart::ATTR_SESSION, Session::get(Cart::SESSION_KEY))->first();
+            $cart       = Cart::withTrashed()->where(Cart::ATTR_SESSION, Session::get(Cart::SESSION_KEY))->first();
             $attributes = $request->all([
                 Order::ATTR_NAME,
                 Order::ATTR_PHONE,
@@ -76,7 +76,7 @@ class OrderService
             Количество перчаток S: {$request->get('gloves_s')}
 TEXT;
 
-            $order        = $this->orderRepository->store($attributes);
+            $order = $this->orderRepository->store($attributes);
             //$cart->status = Cart::STATUS_INACTIVE;
             $cart->delete();
             return $order;
