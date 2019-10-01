@@ -43,12 +43,12 @@ use App\Models\Food\models\FoodViewModel;
                                data-food-id="{{$model->id}}"
                                type="number" min="0"
                                value="1">
-                        <div class="number-input">
+                        <div class="number-input d-flex align-items-center text-center">
                             <button class="step-button minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                 <i class="fas fa-minus"></i>
                             </button>
-                            <input class="quantity" min="0" name="quantity" value="1" type="number">
-                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">
+                            <input class="quantity text-center" min="0" name="quantity" value="1" type="number">
+                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="step-button plus">
                                 <i class="fas fa-plus"></i>
                             </button>
                         </div>

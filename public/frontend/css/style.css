@@ -7151,8 +7151,6 @@ footer.coffee .newletter {
     .step-button {
         background: none;
         border: none;
-        display: flex;
-        align-items: center;
     }
 
 
