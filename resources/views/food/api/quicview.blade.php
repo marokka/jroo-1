@@ -1,6 +1,9 @@
 <?php
+
+use App\Models\Food\models\FoodViewModel;
+
 /**
- * @var \App\Models\Food\Food $model
+ * @var FoodViewModel $model
  */
 ?>
 
@@ -32,7 +35,7 @@
                         </h3>
                     </div>
                     <p class="product-describe">{{$model->description}}</p>
-                    
+                    <h5 class="product-avaiable">Выход: <span>{{$model->foodInfo->weight}} </span></h5>
                     <div class="quantity-select"><label for="quantity">Количество:</label>
                         <input class="no-round-input"
                                id="quantity"
