@@ -13,6 +13,7 @@ use App\Models\Cart\Cart;
 use App\Models\Order\Order;
 use App\Repositories\Cart\CartRepository;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Log;
 
 class TillypadService
 {
@@ -163,6 +164,8 @@ class TillypadService
                 'body' => json_encode($json),
             ]);
 
+
+            Log::info('Информация о заказа', [$response->getBody()->getContents()])
         }
     }
 }
