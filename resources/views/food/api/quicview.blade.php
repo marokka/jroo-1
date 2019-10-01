@@ -37,12 +37,9 @@ use App\Models\Food\models\FoodViewModel;
                     <p class="product-describe">{{$model->description}}</p>
                     <h5 class="product-avaiable">Выход: <span>{{$model->foodInfo->weight}} </span></h5>
                     <br>
-                    <div class="quantity-select"><label for="quantity">Количество:</label>
-                        <input class="no-round-input"
-                               id="quantity"
-                               data-food-id="{{$model->id}}"
-                               type="number" min="0"
-                               value="1">
+                    <div class="quantity-select d-flex align-items-center">
+                        <label for="quantity">Количество:</label>
+
                         <div class="number-input d-flex align-items-center text-center">
                             <button class="step-button minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                 <i class="fas fa-minus"></i>

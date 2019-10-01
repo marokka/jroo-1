@@ -14,7 +14,15 @@
     <td class="product-name">{{$property->name}}</td>
     <td class="product-price">₽{{$property->price}}</td>
     <td class="product-quantity">
-        <input class="quantity no-round-input" data-id="{{$property->id}}" type="number" min="1" value="{{$property->quantity}}">
+        <div class="number-input d-flex align-items-center text-center">
+            <button class="step-button minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
+                <i class="fas fa-minus"></i>
+            </button>
+            <input data-id="{{$property->id}}" class="quantity no-round-input text-center" min="0"  value="{{$property->quantity}}" type="number">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="step-button plus">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
     </td>
     <td class="product-total">₽{{$property->sum}}</td>
     <td class="product-clear">
