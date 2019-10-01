@@ -78,7 +78,9 @@ TEXT;
 
             $order = $this->orderRepository->store($attributes);
             //$cart->status = Cart::STATUS_INACTIVE;
-            $cart->delete();
+
+            //$cart->delete();
+            session()->regenerate();
             return $order;
         } catch (\Throwable $exception) {
             dd($exception);

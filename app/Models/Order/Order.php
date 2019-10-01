@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string $time_delivery
  * @property string $date_delivery
  * @property string $organization
- * @property string $pay_type
+ * @property integer $pay_type
  * @property integer $user_id
  * @property integer $total
  * @property string $comment

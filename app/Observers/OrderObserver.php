@@ -32,8 +32,9 @@ class OrderObserver
      */
     public function created(Order $order)
     {
-        if ($order::TYPE_CASH === $order->pay_type) {
-            $properties = $this->orderRepository->getOrderProperties($order->cart_id);
+        if ($order::TYPE_CASH === (int) $order->pay_type) {
+            $properties = $this->orderRepository->getOrderProperties($order->cart_id)->toArray();
+
             $this->tillypadService->sendingOrderToTillypad($order, $properties);
         }
     }
