@@ -7146,6 +7146,14 @@ footer.coffee .newletter {
     .contact-us .leave-message form input {
       margin-bottom: 30px; }
 
+
+
+    .step-button::after {
+        content: "\F164";
+        font-family: Font Awesome\ 5 Free;
+    }
+
+
 @media (max-width: 576px) {
   .contact-us .contact-method .method-block {
     margin-bottom: 40px; } }
