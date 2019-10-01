@@ -43,11 +43,20 @@ class CartService
 
         if (null == $cart) {
             $cart = $this->cartRepository->store($session, 0);
-            $this->cartRepository->setProperty($cart->id, $foodProperty->id, (int)$foodProperty->price);
+            $this->cartRepository->setProperty(
+                $cart->id, $foodProperty->id,
+                (int)$foodProperty->price,
+                (int)$request->post('quantity')
+            );
             return $cart;
         }
 
-        $this->cartRepository->setProperty($cart->id, $foodProperty->id, (int)$foodProperty->price);
+
+        $this->cartRepository->setProperty(
+            $cart->id, $foodProperty->id,
+            (int)$foodProperty->price,
+            (int)$request->post('quantity')
+        );
 
         return $cart;
     }

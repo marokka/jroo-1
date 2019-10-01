@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     getCart();
 
-    $(".add-to-cart").on('click', addToCart);
+    $(document).on('click', ".add-to-cart", addToCart);
     $('.remove-item').on('click', function () {
         const elem = $(this);
         const id = elem.data('property-id');
@@ -48,7 +48,7 @@ function addToCart() {
     $.ajax({
         url: '/api/cart/add-to-cart',
         method: "POST",
-        data: {foodPropertyId: elem.data('food-property-id')},
+        data: {foodPropertyId: elem.data('food-property-id'), quantity: $('input.quantity').val() || 1},
         success: function (html) {
             var dialog = bootbox.dialog({
                 title: 'Корзина',

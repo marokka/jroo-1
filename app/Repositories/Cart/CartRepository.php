@@ -49,7 +49,7 @@ class CartRepository
 
     }
 
-    public function setProperty(int $cartId, int $foodPropertyId, int $price, int $quantity = 1): CartProperty
+    public function setProperty(int $cartId, int $foodPropertyId, int $price, int $quantity): CartProperty
     {
         /**
          * @var CartProperty $cartProperty
@@ -59,12 +59,10 @@ class CartRepository
             [$this->cartPropertyModel::ATTR_FOOD_PROPERTY_ID, $foodPropertyId],
         ])->first();
 
-
         if (null !== $cartProperty) {
             $cartProperty->quantity += $quantity;
             $cartProperty->price    = $price;
             $cartProperty->save();
-
             $this->updateTotal($cartId);
 
             return $cartProperty;
@@ -76,7 +74,9 @@ class CartRepository
         $cartProperty->food_property_id = $foodPropertyId;
         $cartProperty->quantity         = $quantity;
         $cartProperty->price            = $price;
+
         $cartProperty->save();
+
 
         // ==== обновление общей суммы корзины
         $this->updateTotal($cartId);
@@ -90,9 +90,11 @@ class CartRepository
         /**
          * @var Cart $cart
          */
+
         $cart = Cart::findOrFail($cartID);
 
         $cartProps = CartProperty::where(CartProperty::ATTR_CART_ID, $cartID)->get()->toArray();
+
         foreach ($cartProps as $cartProp) {
             $total += $cartProp['price'] * $cartProp['quantity'];
         }

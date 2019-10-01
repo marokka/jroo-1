@@ -24,7 +24,8 @@
                                 ул.
                                 Игнатенко дом 3</p>
                             <p class="d-flex align-items-center"><img
-                                    src="{{asset('frontend/images/icon/phone.png')}}" style="width: 3em"><a href="tel:+79780873337" style="color: #0b0b0b"> +7 (978) 087-33-37</a>
+                                    src="{{asset('frontend/images/icon/phone.png')}}" style="width: 3em"><a
+                                    href="tel:+79780873337" style="color: #0b0b0b"> +7 (978) 087-33-37</a>
                             </p>
                             <p class="d-flex align-items-center"><img
                                     src="{{asset('frontend/images/icon/time-machine.png')}}" style="width: 3em">с
@@ -35,10 +36,15 @@
                         <div
                             class="header-right d-flex justify-content-around">
                             <div class="social-link d-flex">
-                                <a href="https://vk.com/club136274972" target="_blank"><img src="{{asset('frontend/images/icon/vk-com.png')}}" style="width: 3em"> </a>
-                                <a href="https://www.facebook.com/jrooburgersteak/" target="_blank"><img src="{{asset('frontend/images/icon/facebook-new.png')}}" style="width: 3em"></a>
-                                <a href="https://www.instagram.com/jroo_burger_steak/" target="_blank"><img src="{{asset('frontend/images/icon/instagram.png')}}" style="width: 3em"></a>
-                                <a href="https://www.tripadvisor.ru/UserReviewEdit-g295378-d13001575-Jroo_Burger_Steak-Yalta.html" target="_blank"><img src="{{asset('frontend/images/icon/tripadvisor-new.png')}}" style="width: 3em"></a>
+                                <a href="https://vk.com/club136274972" target="_blank"><img
+                                        src="{{asset('frontend/images/icon/vk-com.png')}}" style="width: 3em"> </a>
+                                <a href="https://www.facebook.com/jrooburgersteak/" target="_blank"><img
+                                        src="{{asset('frontend/images/icon/facebook-new.png')}}" style="width: 3em"></a>
+                                <a href="https://www.instagram.com/jroo_burger_steak/" target="_blank"><img
+                                        src="{{asset('frontend/images/icon/instagram.png')}}" style="width: 3em"></a>
+                                <a href="https://www.tripadvisor.ru/UserReviewEdit-g295378-d13001575-Jroo_Burger_Steak-Yalta.html"
+                                   target="_blank"><img src="{{asset('frontend/images/icon/tripadvisor-new.png')}}"
+                                                        style="width: 3em"></a>
                             </div>
 
                             @guest
@@ -55,7 +61,8 @@
                             @else
                                 <div class="login d-flex">
                                     <div class="dropdown show">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <img src="{{asset('frontend/images/icon/gender-neutral-user.png')}}"
                                                  style="width: 3em">
                                         </a>
@@ -63,7 +70,8 @@
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                             <a class="dropdown-item" href="#"><i class="fas fa-user"></i>Главная</a>
                                             <a class="dropdown-item" href="#"><i class="fas fa-edit"></i>Настройки</a>
-                                            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Выход</a>
+                                            <a class="dropdown-item" href="#"><i
+                                                    class="fas fa-sign-out-alt"></i>Выход</a>
                                         </div>
                                     </div>
                                 </div>
@@ -185,7 +193,8 @@
                                     </a>
                                     <a href="">
                                         <p class="d-flex align-items-center">
-                                            <i class="fas fa-phone" style="margin-right: 10px;"></i><a href="tel:+79780873337" style="color: #0b0b0b"> +7 (978) 087-33-37</a>
+                                            <i class="fas fa-phone" style="margin-right: 10px;"></i><a
+                                                href="tel:+79780873337" style="color: #0b0b0b"> +7 (978) 087-33-37</a>
                                         </p>
                                     </a>
                                     <a href="">
@@ -301,27 +310,29 @@
                             class="fab fa-vk"> </i></a></div>
             </div>
 
-            @include("components.social_network")
+            @if(false === env('APP_DEBUG'))
+                @include("components.social_network")
+            @endif
         </div>
     </div>
-{{--    <div class="newletter">--}}
-{{--        <div class="container">--}}
-{{--            <div class="row justify-content-between align-items-center">--}}
-{{--                <div class="col-12 col-md-7">--}}
-{{--                    <div class="newletter_text text-center text-md-left">--}}
-{{--                        <h5>Наша подписка</h5>--}}
-{{--                        <p>Подписаться на Email рассылку</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-12 col-md-5">--}}
-{{--                    <div class="newletter_input">--}}
-{{--                        <input class="round-input" type="text" placeholder="Введите ваш email">--}}
-{{--                        <button>Отправить</button>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
+    {{--    <div class="newletter">--}}
+    {{--        <div class="container">--}}
+    {{--            <div class="row justify-content-between align-items-center">--}}
+    {{--                <div class="col-12 col-md-7">--}}
+    {{--                    <div class="newletter_text text-center text-md-left">--}}
+    {{--                        <h5>Наша подписка</h5>--}}
+    {{--                        <p>Подписаться на Email рассылку</p>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--                <div class="col-12 col-md-5">--}}
+    {{--                    <div class="newletter_input">--}}
+    {{--                        <input class="round-input" type="text" placeholder="Введите ваш email">--}}
+    {{--                        <button>Отправить</button>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--    </div>--}}
     <div class="footer-credit" style="background-color: #dcb070;">
         <div class="container">
             <div
