@@ -124,6 +124,7 @@ class TillypadService
     public function sendingOrderToTillypad(Order $order, array $properties = [])
     {
         if (true !== env('APP_DEBUG')) {
+            Log::info("Здесь");
             $json = [];
 
             $orderClient = $this->getClient($order);
