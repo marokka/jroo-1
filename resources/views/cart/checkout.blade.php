@@ -127,33 +127,33 @@ use App\Models\Order\Order;
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-4" id="hide-pickup">
+                            <div class="form-group col-md-4 hide-pickup">
                                 <label for="inputCompanyName">Город*</label>
                                 <input class="no-round-input-bg" name="city" type="text">
                             </div>
-                            <div class="form-group col-md-4" id="hide-pickup">
+                            <div class="form-group col-md-4 hide-pickup">
                                 <label for="inputCompanyName">Улица*</label>
                                 <input class="no-round-input-bg" name="street" type="text">
                             </div>
-                            <div class="form-group col-md-4" id="hide-pickup">
+                            <div class="form-group col-md-4 hide-pickup">
                                 <label for="inputCompanyName">Дом*</label>
                                 <input class="no-round-input-bg" name="house" type="text">
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-3" id="hide-pickup">
+                            <div class="form-group col-md-3 hide-pickup">
                                 <label for="inputCompanyName">Подъезд*</label>
                                 <input class="no-round-input-bg" name="entrance" type="text">
                             </div>
-                            <div class="form-group col-md-3" id="hide-pickup">
+                            <div class="form-group col-md-3 hide-pickup">
                                 <label for="inputCompanyName">Корпус*</label>
                                 <input class="no-round-input-bg" name="building"  type="text">
                             </div>
-                            <div class="form-group col-md-3" id="hide-pickup">
+                            <div class="form-group col-md-3 hide-pickup">
                                 <label for="inputCompanyName">Квартира*</label>
                                 <input class="no-round-input-bg" name="apartment" type="text">
                             </div>
-                            <div class="form-group col-md-3" id="hide-pickup">
+                            <div class="form-group col-md-3 hide-pickup">
                                 <label for="inputCompanyName">Домофон*</label>
                                 <input class="no-round-input-bg" name="intercom"  type="text">
                             </div>
