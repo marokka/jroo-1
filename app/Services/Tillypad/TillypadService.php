@@ -145,7 +145,7 @@ class TillypadService
                     "Entrance"      => $order->entrance,
                     "Floor"         => $order->floor,
                     "Intercom"      => $order->intercom,
-                    "Comment"       => trim($order->comment),
+                    "Comment"       => "Test",
                     "gest_comment"  => $order::STATUS_PAID === $order->status ? 'Счёт оплачен' : 'Оплата наличными',
                     "RegionCode"    => "1",
                     "PostCode"      => "1"
