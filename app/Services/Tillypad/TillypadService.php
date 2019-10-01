@@ -165,7 +165,7 @@ class TillypadService
             ]);
 
 
-            Log::info('Информация о заказа', [$response->getBody()->getContents()])
+            Log::info('Информация о заказа', [$response->getBody()->getContents()]);
         }
     }
 }
