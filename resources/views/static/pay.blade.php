@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="{{asset('frontend/images/pay-pay.png')}}" alt="">
+                        <img src="{{asset('frontend/images/pay-pay.png')}}" alt="" style="width: 100%;">
                     </div>
                 </div>
                 <div class="row">
