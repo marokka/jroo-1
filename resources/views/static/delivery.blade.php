@@ -41,7 +41,7 @@
         <div class="container">
             <div id="accordion">
                 <div class="faq-question"><i class="icon_plus"></i>
-                    <h3 class="faq-question">Время доставки?</h3>
+                    <h3 class="faq-question">Время доставки</h3>
                 </div>
                 <div class="faq-answer">
                     <p>Пн –пт с 10:00 до 22:30<br>
@@ -49,10 +49,10 @@
                     </p>
                 </div>
                 <div class="faq-question"><i class="icon_plus"></i>
-                    <h3 class="faq-question"> ?</h3>
+                    <h3 class="faq-question">Удобная оплата и быстрая доставка.</h3>
                 </div>
                 <div class="faq-answer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Курьеры привезут горячие и очень аппетитные блюда в течение часа, а в некоторые районы города в течение полутора часов. Блюда остаются горячими, благодаря использованию специальных термосумок. Чтобы вы ни заказали — пиццу, бургер, или десерт, быстро обрабатываем заказы и привозим по указанному адресу. Позвоните нам по телефону +7 (978) 087 33 37 или оставьте заказ на сайте.</p>
                 </div>
             </div>
         </div>
