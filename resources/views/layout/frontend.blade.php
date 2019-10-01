@@ -38,7 +38,7 @@
                                 <a href="https://vk.com/club136274972" target="_blank"><img src="{{asset('frontend/images/icon/vk-com.png')}}" style="width: 3em"> </a>
                                 <a href="https://www.facebook.com/jrooburgersteak/" target="_blank"><img src="{{asset('frontend/images/icon/facebook-new.png')}}" style="width: 3em"></a>
                                 <a href="https://www.instagram.com/jroo_burger_steak/" target="_blank"><img src="{{asset('frontend/images/icon/instagram.png')}}" style="width: 3em"></a>
-                                <a href="https://www.tripadvisor.ru/UserReviewEdit-g295378-d13001575-Jroo_Burger_Steak-Yalta.html" target="_blank"><img src="{{asset('frontend/images/icon/tripadvisor.png')}}" style="width: 3em"></a>
+                                <a href="https://www.tripadvisor.ru/UserReviewEdit-g295378-d13001575-Jroo_Burger_Steak-Yalta.html" target="_blank"><img src="{{asset('frontend/images/icon/tripadvisor-new.png')}}" style="width: 3em"></a>
                             </div>
 
                             @guest
