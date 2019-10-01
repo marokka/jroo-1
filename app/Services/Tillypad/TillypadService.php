@@ -132,9 +132,9 @@ class TillypadService
             foreach ($properties as $key => $property) {
                 $json[] = [
                     "clnt_id"       => $orderClient[0]['clnt_ID'],
-                    "mitm_ID"       => $property->mitm_id,
+                    "mitm_ID"       => $property['mitm_id'],
                     "mitm_value"    => "1",
-                    "mitm_count"    => $property->quantity,
+                    "mitm_count"    => $property['quantity'],
                     "delivery_type" => $order->delivery_type,
                     "gest_Phone"    => $order->phone,
                     "City"          => $order->city,
