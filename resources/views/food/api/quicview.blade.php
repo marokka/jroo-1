@@ -46,9 +46,10 @@
                         </button>
                         {{--<button class="add-to-compare normal-btn outline">+ Добавить в избранное</button>--}}
                     </div>
+                    <!--
                     <div class="product-share"><h5>Поделиться:</h5><a href=""><i class="fab fa-facebook-f"> </i></a><a
                             href=""><i class="fab fa-twitter"></i></a><a href=""><i class="fab fa-invision"> </i></a><a
-                            href=""><i class="fab fa-pinterest-p"></i></a></div>
+                            href=""><i class="fab fa-pinterest-p"></i></a></div>-->
                 </div>
             </div>
         </div>

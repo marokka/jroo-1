@@ -48,7 +48,7 @@
     </div>
     <div class="leave-message">
       <h1 class="title">Написать нам</h1>
-      <p>Есть предложения, или вы остались чем то недовольны.</p>
+      <p>Есть предложения, пожелания или коментарии, будем рады обратной связи.</p>
       <form action="" method="post">
         <div class="row">
           <div class="col-12 col-md-6">
