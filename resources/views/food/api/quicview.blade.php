@@ -44,14 +44,12 @@ use App\Models\Food\models\FoodViewModel;
                                type="number" min="0"
                                value="1">
                          -->
-                        <div class="number-input">
-                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                        <div class="quantity">
                             <input class="no-round-input"
                                    id="quantity"
                                    data-food-id="{{$model->id}}"
                                    type="number" min="0"
                                    value="1">
-                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                         </div>
                     </div>
                     <div class="product-select">
