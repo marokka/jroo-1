@@ -7148,9 +7148,11 @@ footer.coffee .newletter {
 
 
 
-    .step-button::after {
-        content: "\F164";
-        font-family: Font Awesome\ 5 Free;
+    .step-button {
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
     }
 
 

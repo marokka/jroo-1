@@ -44,9 +44,13 @@ use App\Models\Food\models\FoodViewModel;
                                type="number" min="0"
                                value="1">
                         <div class="number-input">
-                            <button class="step-button minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                            <button class="step-button minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
+                                <i class="fas fa-minus"></i>
+                            </button>
                             <input class="quantity" min="0" name="quantity" value="1" type="number">
-                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">
+                                <i class="fas fa-plus"></i>
+                            </button>
                         </div>
                     </div>
                     <div class="product-select">
