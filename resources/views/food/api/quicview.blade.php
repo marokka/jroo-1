@@ -38,18 +38,15 @@ use App\Models\Food\models\FoodViewModel;
                     <h5 class="product-avaiable">Выход: <span>{{$model->foodInfo->weight}} </span></h5>
                     <br>
                     <div class="quantity-select"><label for="quantity">Количество:</label>
-                        <!--<input class="no-round-input"
+                        <input class="no-round-input"
                                id="quantity"
                                data-food-id="{{$model->id}}"
                                type="number" min="0"
                                value="1">
-                         -->
-                        <div class="quantity">
-                            <input class="no-round-input"
-                                   id="quantity"
-                                   data-food-id="{{$model->id}}"
-                                   type="number" min="0"
-                                   value="1">
+                        <div class="number-input">
+                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                            <input class="quantity" min="0" name="quantity" value="1" type="number">
+                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                         </div>
                     </div>
                     <div class="product-select">
@@ -67,37 +64,3 @@ use App\Models\Food\models\FoodViewModel;
         </div>
     </div>
 </div>
-<script>
-    jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
-    jQuery('.quantity').each(function() {
-        var spinner = jQuery(this),
-            input = spinner.find('input[type="number"]'),
-            btnUp = spinner.find('.quantity-up'),
-            btnDown = spinner.find('.quantity-down'),
-            min = input.attr('min'),
-            max = input.attr('max');
-
-        btnUp.click(function() {
-            var oldValue = parseFloat(input.val());
-            if (oldValue >= max) {
-                var newVal = oldValue;
-            } else {
-                var newVal = oldValue + 1;
-            }
-            spinner.find("input").val(newVal);
-            spinner.find("input").trigger("change");
-        });
-
-        btnDown.click(function() {
-            var oldValue = parseFloat(input.val());
-            if (oldValue <= min) {
-                var newVal = oldValue;
-            } else {
-                var newVal = oldValue - 1;
-            }
-            spinner.find("input").val(newVal);
-            spinner.find("input").trigger("change");
-        });
-
-    });
-</script>
