@@ -36,6 +36,7 @@ use App\Models\Food\models\FoodViewModel;
                     </div>
                     <p class="product-describe">{{$model->description}}</p>
                     <h5 class="product-avaiable">Выход: <span>{{$model->foodInfo->weight}} </span></h5>
+                    <br>
                     <div class="quantity-select"><label for="quantity">Количество:</label>
                         <input class="no-round-input"
                                id="quantity"
