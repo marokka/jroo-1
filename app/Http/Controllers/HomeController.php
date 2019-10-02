@@ -33,4 +33,8 @@ class HomeController extends Controller
     {
         return view('static.contact');
     }
+    public function bonus()
+    {
+        return view('static.bonus');
+    }
 }
