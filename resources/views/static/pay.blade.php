@@ -18,7 +18,7 @@
         <div class="container">
             <div class="our-story">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12" style="margin-bottom: 20px;">
                         <h1 class="text-center" style="font-size: 36px; font-weight: bold;">Мы принимаем оплату</h1>
                         <div class="customer-benefit">
                             <div class="ogami-container-fluid">
@@ -49,8 +49,7 @@
                             </div>
                         </div>
                     </div>
-                    <br>
-                    <br>
+
                     <div class="col-12 col-md-6">
                         <div class="our-story_text">
                             <h1 class="title green-underline">ОПЛАТА НАЛИЧНЫМИ</h1>
