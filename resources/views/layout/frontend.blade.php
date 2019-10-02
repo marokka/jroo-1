@@ -46,7 +46,7 @@
                                    target="_blank"><img src="{{asset('frontend/images/icon/tripadvisor-new.png')}}"
                                                         style="width: 3em"></a>
                             </div>
-
+                            <!--
                             @guest
                                 <div class="login d-flex">
                                     <a href="{{route('login')}}">
@@ -76,7 +76,7 @@
                                     </div>
                                 </div>
                             @endguest
-
+                            -->
                         </div>
                     </div>
                 </div>
@@ -171,6 +171,7 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <!--
                                 @guest
                                 <div class="mobile-login">
                                     <h2>Личный кабинет</h2><a href={{route('login')}}><img
@@ -191,6 +192,7 @@
                                     </div>
 
                                  @endguest
+                                -->
                                 <div class="mobile-social"><a href="https://vk.com/club136274972" target="_blank"><img
                                             src="{{asset('frontend/images/icon/vk-com.png')}}"
                                             style="width: 40px; margin-right: 5px;"></a><a
@@ -250,6 +252,7 @@
         <div class="navigation-filter">
             <div class="container">
                 <div class="row">
+                    <!--
                     <div class="col-12 col-md-4 col-lg-4 col-xl-3 order-2 order-md-1">
                         <div class="department-menu_block">
                             <div class="department-menu d-flex justify-content-between align-items-center"><i
@@ -282,7 +285,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-8 col-lg-8 col-xl-9 order-1 order-md-2">
+                    -->
+                    <div class="col-12 col-md-12 col-lg-12 col-xl-12 order-1 order-md-2">
                         <form action="{{route('food.by-search')}}">
                             <div class="website-search">
                                 <div class="d-flex justify-content-between">
