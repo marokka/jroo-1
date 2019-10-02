@@ -105,6 +105,11 @@
                                         href="{{route('delivery')}}">Доставка</a>
                                 </li>
                                 <li class="toggleable">
+                                    <a
+                                        class="menu-item {{request()->is('bonus') ? 'active' : ''}}"
+                                        href="{{route('bonus')}}">Бонусы</a>
+                                </li>
+                                <li class="toggleable">
                                     <a class="menu-item {{request()->is('contact') ? 'active' : ''}}"
                                        href="{{route('contact')}}">Контакты</a>
                                 </li>

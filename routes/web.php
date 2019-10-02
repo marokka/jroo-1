@@ -24,6 +24,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/pay', 'HomeController@pay')->name('pay');
 Route::get('/delivery', 'HomeController@delivery')->name('delivery');
 Route::get('/contact', 'HomeController@contact')->name('contact');
+Route::get('/bonus', 'HomeController@bonus')->name('bonus');
 
 // Корзина
 
