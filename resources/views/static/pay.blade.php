@@ -49,6 +49,8 @@
                             </div>
                         </div>
                     </div>
+                    <br>
+                    <br>
                     <div class="col-12 col-md-6">
                         <div class="our-story_text">
                             <h1 class="title green-underline">ОПЛАТА НАЛИЧНЫМИ</h1>
