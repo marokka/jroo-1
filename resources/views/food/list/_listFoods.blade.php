@@ -24,14 +24,14 @@ use App\Models\Food\models\FoodViewModel;
                                 <del>₽{{$food->properties[0]->old_price}}</del>
                             @endif
                         </h3>
-                        <h5 class="product-rated"><i class="icon_star"></i><i
-                                class="icon_star"></i><i class="icon_star"></i><i
-                                class="icon_star"></i><i
-                                class="icon_star-half"></i><span>(5)</span></h5>
+{{--                        <h5 class="product-rated"><i class="icon_star"></i><i--}}
+{{--                                class="icon_star"></i><i class="icon_star"></i><i--}}
+{{--                                class="icon_star"></i><i--}}
+{{--                                class="icon_star-half"></i><span>(5)</span></h5>--}}
                         <p class="product-describe">{{$food->description}}</p>
                         <h5 class="product-avaiable">Выход: <span>{{$food->foodInfo->weight}} </span></h5>
-                        <button class="add-to-wishlist button-borderless"><i
-                                class="icon_heart_alt"></i></button>
+{{--                        <button class="add-to-wishlist button-borderless"><i--}}
+{{--                                class="icon_heart_alt"></i></button>--}}
                     </div>
                     <div class="grid-buttons">
                         {{--<button class="add-to-wishlist round-icon-btn"><i--}}
