@@ -159,6 +159,11 @@
                                                     style="width: 30px; margin-right: 5px;">Доставка</a>
 
                                         </li>
+                                        <li class="toggleable"><a class="menu-item" href="{{route('bonus')}}"><img
+                                                    src="{{asset('frontend/images/icon/loyalty-card.png')}}"
+                                                    style="width: 30px; margin-right: 5px;">Бонусы</a>
+
+                                        </li>
                                         <li class="toggleable"><a class="menu-item" href="{{route('contact')}}"><img
                                                     src="{{asset('frontend/images/icon/contact-card.png')}}"
                                                     style="width: 30px; margin-right: 5px;">Контакты</a>
