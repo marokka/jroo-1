@@ -39,6 +39,11 @@ class CategoryViewModel
      */
     public $slug;
 
+
+    /**
+     * @var integer
+     */
+    public $count;
     /**
      * @var FoodViewModel[]
      */
@@ -46,11 +51,12 @@ class CategoryViewModel
 
     public function __construct(Category $model)
     {
-        $this->id   = $model->id;
-        $this->icon = $model->icon;
-        $this->img  = $model->img;
-        $this->name = $model->name;
-        $this->slug = $model->slug;
+        $this->id    = $model->id;
+        $this->icon  = $model->icon;
+        $this->img   = $model->img;
+        $this->name  = $model->name;
+        $this->slug  = $model->slug;
+        $this->count = $model->foods()->count();
 
 
         foreach ($model->foods as $food) {
