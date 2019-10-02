@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
 
         $this->app->singleton('Payment', function () {
             return new Payment(env('DEMO_MRH_LOGIN'), env('DEMO_MRH_PASSWORD'), env('DEMO_MRH_PASSWORD2'),
-                env('APP_DEBUG'));
+                env('TEST_ROBOKASSA', false));
         });
 
     }
