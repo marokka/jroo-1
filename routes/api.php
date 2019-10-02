@@ -25,7 +25,7 @@ Route::group(['prefix' => 'food'], function () {
 });
 
 
-Route::apiResource('categories', 'Api\V1\CategoryController');
+Route::apiResource('categories', 'Api\V1\CategoryController')->middleware('api.headers');
 
 
 Route::group(['prefix' => 'cart'], function () {
