@@ -61,6 +61,18 @@ use App\Models\Order\Order;
                     <div class="col-12 col-lg-8">
                         <h2 class="form-title">Ваши данные</h2>
                         <div class="form-row">
+                            <div class="form-group col-md-6"">
+                                <input type="radio" name="delivery_type" id="pickup"
+                                       value="{{Order::DELIVERY_TYPE_PICKUP}}" />
+                                <label for="pickup">Самовывоз</label>
+                            </div>
+                            <div class="form-group col-md-6"">
+                                <input type="radio" name="delivery_type" id="courier"
+                                       value="{{Order::DELIVERY_TYPE_COURIER}}" checked />
+                                <label for="courier">Доставка курьером</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputFirstName">Имя*</label>
                                 <input class="no-round-input-bg" name="name" type="text" required="">
@@ -176,16 +188,7 @@ use App\Models\Order\Order;
                                 <label for="paypal">Онлайн оплата</label>
                             </div>
                             <hr>
-                            <div class="form-group">
-                                <input type="radio" name="delivery_type" id="pickup"
-                                       value="{{Order::DELIVERY_TYPE_PICKUP}}" />
-                                <label for="pickup">Самовывоз</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="radio" name="delivery_type" id="courier"
-                                       value="{{Order::DELIVERY_TYPE_COURIER}}" checked />
-                                <label for="courier">Доставка курьером</label>
-                            </div>
+
                             <button type="submit" class="normal-btn submit-btn"> Заказать</button>
                         </div>
                     </div>
