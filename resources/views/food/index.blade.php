@@ -24,7 +24,7 @@
                         <button class="no-round-btn" id="filter-sidebar--closebtn">Закрыть</button>
                         @widget('category.categoryWidget')
                         @widget('filter.filterPriceWidget')
-                        <button class="no-round-btn" id="filter-sidebar--closebtn">Закрыть</button>
+                        
                     </div>
                     <div class="filter-sidebar--background" style="display: none"></div>
                 </div>
