@@ -123,7 +123,7 @@ class TillypadService
 
     public function sendingOrderToTillypad(Order $order, array $properties = [])
     {
-        if (true !== env('APP_DEBUG')) {
+        if (true === env('SEND_TILLYPAD', false)) {
             Log::info("Здесь");
             $json = [];
 
