@@ -1097,10 +1097,10 @@ a {
   background-color: #fff; }
   .benefit-block .our-benefits.shadowless {
     box-shadow: none; }
-  .benefit-block .our-benefits.benefit-border {
-    border: 1px solid #ebebeb; }
-  .benefit-block .our-benefits .benefit-detail {
-    border-right: 1px solid #ebebeb; }
+  /*.benefit-block .our-benefits.benefit-border {*/
+  /*  border: 1px solid #ebebeb; }*/
+  /*.benefit-block .our-benefits .benefit-detail {*/
+  /*  border-right: 1px solid #ebebeb; }*/
     .benefit-block .our-benefits .benefit-detail.boderless {
       border: 0; }
   .benefit-block .our-benefits .benefit-img {
