@@ -108,9 +108,6 @@
                 -->
             </div>
             <div class="row align-items-center justify-content-between">
-                <div class="col-12 col-md-6">
-                    <button class="no-round-btn black cart-update">Обновить корзину</button>
-                </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="cart-total_block">
                         <h2>Сумма заказа</h2>
@@ -127,7 +124,7 @@
                             </tbody>
                         </table>
                         <div class="checkout-method">
-                            <a href="{{route('checkout')}}">
+                            <a href="{{route('checkout')}}" class="checkout">
                                 <button class="normal-btn"> Оформить заказ</button>
                             </a>
                         </div>
