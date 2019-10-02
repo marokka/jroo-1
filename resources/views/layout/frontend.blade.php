@@ -184,10 +184,10 @@
 
                                     <div class="mobile-login">
                                         <h2>Личный кабинет</h2>
-                                        <a href={{route('login')}}><img src="{{asset('frontend/images/icon/gender-neutral-user.png')}}" style="width: 30px; margin-right: 5px;">Вход</a>
-                                        <a href="#"><i class="fas fa-user"></i>Главная</a>
-                                        <a  href="#"><i class="fas fa-edit"></i>Настройки</a>
-                                        <a  href="#"><i class="fas fa-sign-out-alt"></i>Выход</a>
+
+                                        <a href="#"><i class="fas fa-user" style="width: 30px; margin-right: 5px;"></i>Главная</a>
+                                        <a  href="#"><i class="fas fa-edit"style="width: 30px; margin-right: 5px;"></i>Настройки</a>
+                                        <a  href="#"><i class="fas fa-sign-out-alt" style="width: 30px; margin-right: 5px;"></i>Выход</a>
                                     </div>
 
                                  @endguest
