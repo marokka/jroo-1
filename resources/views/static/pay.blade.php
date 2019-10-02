@@ -19,7 +19,7 @@
             <div class="our-story">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="title green-underline">Мы принимаем оплату</h1>
+                        <h1 class="text-center">Мы принимаем оплату</h1>
                         <div class="customer-benefit">
                             <div class="ogami-container-fluid">
                                 <div class="benefit-block">
