@@ -171,14 +171,26 @@
                                         </li>
                                     </ul>
                                 </div>
+                                @guest
                                 <div class="mobile-login">
-                                    <h2>Личный кабинет</h2><a href="login.php"><img
+                                    <h2>Личный кабинет</h2><a href={{route('login')}}><img
                                             src="{{asset('frontend/images/icon/gender-neutral-user.png')}}"
                                             style="width: 30px; margin-right: 5px;">Вход</a><a
-                                        href="register.php"><img
+                                        href="{{route('register')}}"><img
                                             src="{{asset('frontend/images/icon/add-user-male.png')}}"
                                             style="width: 30px; margin-right: 5px;">Регистрация</a>
                                 </div>
+                                @else
+
+                                    <div class="mobile-login">
+                                        <h2>Личный кабинет</h2>
+                                        <a href={{route('login')}}><img src="{{asset('frontend/images/icon/gender-neutral-user.png')}}" style="width: 30px; margin-right: 5px;">Вход</a>
+                                        <a href="#"><i class="fas fa-user"></i>Главная</a>
+                                        <a  href="#"><i class="fas fa-edit"></i>Настройки</a>
+                                        <a  href="#"><i class="fas fa-sign-out-alt"></i>Выход</a>
+                                    </div>
+
+                                 @endguest
                                 <div class="mobile-social"><a href="https://vk.com/club136274972" target="_blank"><img
                                             src="{{asset('frontend/images/icon/vk-com.png')}}"
                                             style="width: 40px; margin-right: 5px;"></a><a
