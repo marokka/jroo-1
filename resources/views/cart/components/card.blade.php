@@ -15,12 +15,13 @@
     <td class="product-price">₽{{$property->price}}</td>
     <td class="product-quantity">
         <div class="number-input d-flex align-items-center text-center">
-            <button class="step-button minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
+            <button class="step-button minus" onclick="alert(123)" >
                 <i class="fas fa-minus"></i>
             </button>
             <input data-id="{{$property->id}}" class="quantity no-round-input text-center" min="1"  placeholder="{{$property->quantity}}" type="number" readonly>
             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="step-button plus">
-                <i class="fas fa-plus"></i>
+{{--                <i class="fas fa-plus"></i>--}}
+                test
             </button>
         </div>
     </td>
