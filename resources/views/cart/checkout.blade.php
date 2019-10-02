@@ -64,12 +64,12 @@ use App\Models\Order\Order;
                             <div class="form-group col-md-6"">
                                 <input type="radio" name="delivery_type" id="pickup"
                                        value="{{Order::DELIVERY_TYPE_PICKUP}}" />
-                                <label for="pickup">Самовывоз</label>
+                                <label for="pickup"> <i class="fas fa-shopping-bag"></i> Самовывоз</label>
                             </div>
                             <div class="form-group col-md-6"">
                                 <input type="radio" name="delivery_type" id="courier"
                                        value="{{Order::DELIVERY_TYPE_COURIER}}" checked />
-                                <label for="courier">Доставка курьером</label>
+                                <label for="courier"> <i class="fas fa-truck"></i> Доставка курьером</label>
                             </div>
                         </div>
                         <div class="form-row">
