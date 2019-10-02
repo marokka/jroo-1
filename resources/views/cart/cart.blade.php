@@ -106,11 +106,11 @@
 
                 </div>
                 -->
-                <div class="col-12 col-sm-4 text-left">
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-12 col-md-6">
                     <button class="no-round-btn black cart-update">Обновить корзину</button>
                 </div>
-            </div>
-            <div class="row justify-content-end">
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="cart-total_block">
                         <h2>Сумма заказа</h2>
