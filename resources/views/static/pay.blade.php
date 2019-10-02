@@ -26,19 +26,19 @@
                                     <div class="our-benefits shadowless benefit-border">
                                         <div class="row no-gutters">
                                             <div class="col-12 col-md-6 col-lg-4">
-                                                <div class="benefit-detail d-flex flex-column align-items-center"><img class="benefit-img" src="{{asset('frontend/images/icon/delivery-pay.png')}}" alt="">
+                                                <div class="benefit-detail d-flex flex-column align-items-center"><img src="{{asset('frontend/images/icon/delivery-pay.png')}}" alt="">
                                                     <br>
                                                     <h5 class="benefit-title">Наличными курьеру.</h5>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6 col-lg-4">
-                                                <div class="benefit-detail d-flex flex-column align-items-center"><img class="benefit-img" src="{{asset('frontend/images/icon/nal.png')}}" alt="">
+                                                <div class="benefit-detail d-flex flex-column align-items-center"><img src="{{asset('frontend/images/icon/nal.png')}}" alt="">
                                                     <br>
                                                     <h5 class="benefit-title">В кафе при получении заказа.</h5>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6 col-lg-4">
-                                                <div class="benefit-detail d-flex flex-column align-items-center"><img class="benefit-img" src="{{asset('frontend/images/icon/online-money-transfer.png')}}" alt="">
+                                                <div class="benefit-detail d-flex flex-column align-items-center"><img src="{{asset('frontend/images/icon/online-money-transfer.png')}}" alt="">
                                                     <br>
                                                     <h5 class="benefit-title">Онлайн-переводом с банковской карты.</h5>
                                                 </div>
