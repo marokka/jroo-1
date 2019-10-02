@@ -178,12 +178,12 @@ use App\Models\Order\Order;
                             <hr>
                             <div class="form-group">
                                 <input type="radio" name="delivery_type" id="pickup"
-                                       value="{{Order::DELIVERY_TYPE_PICKUP}}" />
+                                       value="{{Order::DELIVERY_TYPE_PICKUP}}" checked />
                                 <label for="pickup">Самовывоз</label>
                             </div>
                             <div class="form-group">
                                 <input type="radio" name="delivery_type" id="courier"
-                                       value="{{Order::DELIVERY_TYPE_COURIER}}" checked />
+                                       value="{{Order::DELIVERY_TYPE_COURIER}}"  />
                                 <label for="courier">Доставка курьером</label>
                             </div>
                             <button type="submit" class="normal-btn submit-btn"> Заказать</button>
