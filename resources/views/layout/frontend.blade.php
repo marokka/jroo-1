@@ -13,16 +13,6 @@
 <body>
 <div id="main">
 
-    <div class="toast" data-autohide="true">
-        <div class="toast-header">
-            <strong class="mr-auto text-primary">Корзина</strong>
-            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
-        </div>
-        <div class="toast-body">
-            Товар успешно добавлен в корзину
-        </div>
-    </div>
-
     <header>
         <div class="header-block d-flex align-items-center">
             <div class="container">
@@ -57,10 +47,10 @@
                                    target="_blank"><img src="{{asset('frontend/images/icon/tripadvisor-new.png')}}"
                                                         style="width: 3em"></a>
                             </div>
-                        <!--
+                            <!--
                             @guest
-                            <div class="login d-flex">
-                                <a href="{{route('login')}}">
+                                <div class="login d-flex">
+                                    <a href="{{route('login')}}">
                                         <img src="{{asset('frontend/images/icon/gender-neutral-user.png')}}"
                                              style="width: 3em">
                                     </a>
@@ -70,11 +60,11 @@
                                     </a>
                                 </div>
                             @else
-                            <div class="login d-flex">
-                                <div class="dropdown show">
-                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <img src="{{asset('frontend/images/icon/gender-neutral-user.png')}}"
+                                <div class="login d-flex">
+                                    <div class="dropdown show">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img src="{{asset('frontend/images/icon/gender-neutral-user.png')}}"
                                                  style="width: 3em">
                                         </a>
 
@@ -182,7 +172,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            <!--
+                                <!--
                                 @guest
                                 <div class="mobile-login">
                                     <h2>Личный кабинет</h2><a href={{route('login')}}><img
@@ -194,15 +184,15 @@
                                 </div>
                                 @else
 
-                                <div class="mobile-login">
-                                    <h2>Личный кабинет</h2>
+                                    <div class="mobile-login">
+                                        <h2>Личный кабинет</h2>
 
-                                    <a href="#"><i class="fas fa-user" style="width: 30px; margin-right: 5px;"></i>Главная</a>
-                                    <a  href="#"><i class="fas fa-edit"style="width: 30px; margin-right: 5px;"></i>Настройки</a>
-                                    <a  href="#"><i class="fas fa-sign-out-alt" style="width: 30px; margin-right: 5px;"></i>Выход</a>
-                                </div>
+                                        <a href="#"><i class="fas fa-user" style="width: 30px; margin-right: 5px;"></i>Главная</a>
+                                        <a  href="#"><i class="fas fa-edit"style="width: 30px; margin-right: 5px;"></i>Настройки</a>
+                                        <a  href="#"><i class="fas fa-sign-out-alt" style="width: 30px; margin-right: 5px;"></i>Выход</a>
+                                    </div>
 
-@endguest
+                                 @endguest
                                 -->
                                 <div class="mobile-social"><a href="https://vk.com/club136274972" target="_blank"><img
                                             src="{{asset('frontend/images/icon/vk-com.png')}}"
@@ -263,7 +253,7 @@
         <div class="navigation-filter">
             <div class="container">
                 <div class="row">
-                <!--
+                    <!--
                     <div class="col-12 col-md-4 col-lg-4 col-xl-3 order-2 order-md-1">
                         <div class="department-menu_block">
                             <div class="department-menu d-flex justify-content-between align-items-center"><i

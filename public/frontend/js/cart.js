@@ -52,28 +52,28 @@ function addToCart() {
         method: "POST",
         data: {foodPropertyId: elem.data('food-property-id'), quantity: $('input.quantity').val() || 1},
         success: function (html) {
-            // var dialog = bootbox.dialog({
-            //     title: 'Корзина',
-            //     message: "<p><i class='far fa-check-circle'></i> Товар успешно добавлен в корзину.</p>",
-            //     size: 'large',
-            //     buttons: {
-            //         cancel: {
-            //             label: "Перейти к корзине",
-            //             className: 'btn-danger',
-            //             callback: function () {
-            //                 location.href = '/cart';
-            //             }
-            //         },
-            //
-            //         ok: {
-            //             label: "Вернуться к сайту",
-            //             className: 'btn-outline-primary',
-            //             callback: function () {
-            //                 console.log('Custom OK clicked');
-            //             }
-            //         }
-            //     }
-            // });
+            var dialog = bootbox.dialog({
+                title: 'Корзина',
+                message: "<p><i class='far fa-check-circle'></i> Товар успешно добавлен в корзину.</p>",
+                size: 'large',
+                buttons: {
+                    cancel: {
+                        label: "Перейти к корзине",
+                        className: 'btn-danger',
+                        callback: function () {
+                            location.href = '/cart';
+                        }
+                    },
+
+                    ok: {
+                        label: "Вернуться к сайту",
+                        className: 'btn-outline-primary',
+                        callback: function () {
+                            console.log('Custom OK clicked');
+                        }
+                    }
+                }
+            });
             // bootbox.confirm({
             //     message: "<b>Товар</b> успешно добавлен в корзину! Перейти к оплате?",
             //     buttons: {
@@ -92,9 +92,6 @@ function addToCart() {
             //         }
             //     }
             // });
-
-            $('.toast').toast('show');
-
             getCart();
         },
 
