@@ -286,7 +286,7 @@
                         </div>
                     </div>
                     -->
-                    <div class="col-12 col-md-8 col-lg-8 col-xl-9 order-1 order-md-2">
+                    <div class="col-12 col-md-12 col-lg-12 col-xl-12 order-1 order-md-2">
                         <form action="{{route('food.by-search')}}">
                             <div class="website-search">
                                 <div class="d-flex justify-content-between">
