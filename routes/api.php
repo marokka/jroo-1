@@ -25,6 +25,7 @@ Route::group(['prefix' => 'food'], function () {
 
 
 Route::apiResource('categories', 'Api\V1\CategoryController')->middleware('api.headers');
+Route::apiResource('foods', 'Api\V1\FoodApiController')->middleware('api.headers');
 
 
 Route::group(['prefix' => 'cart'], function () {
@@ -52,7 +53,7 @@ Route::post('/success-pay', 'OrderController@webhook');
 
 Route::get('/console/cache-clear', 'ConsoleController@cacheClear');
 Route::get('/console/migrate', 'ConsoleController@migrate');
-Route::get('/console/php', function (){
+Route::get('/console/php', function () {
     phpinfo();
 });
 

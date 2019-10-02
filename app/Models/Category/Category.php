@@ -2,6 +2,7 @@
 
 namespace App\Models\Category;
 
+use App\Models\Food\Food;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -61,4 +62,9 @@ class Category extends Model
         return url('storage/' . $value);
     }
 
+
+    public function foods()
+    {
+        return $this->hasMany(Food::class);
+    }
 }
