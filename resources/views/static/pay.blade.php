@@ -18,6 +18,37 @@
         <div class="container">
             <div class="our-story">
                 <div class="row">
+                    <div class="col-12">
+                        <h1 class="title green-underline">Мы принимаем оплату</h1>
+                        <div class="customer-benefit">
+                            <div class="ogami-container-fluid">
+                                <div class="benefit-block">
+                                    <div class="our-benefits shadowless benefit-border">
+                                        <div class="row no-gutters">
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="benefit-detail d-flex flex-column align-items-center"><img class="benefit-img" src="assets/images/homepage01/benefit-icon1.png" alt="">
+                                                    <br>
+                                                    <h5 class="benefit-title">Наличными курьеру.</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="benefit-detail d-flex flex-column align-items-center"><img class="benefit-img" src="assets/images/homepage01/benefit-icon2.png" alt="">
+                                                    <br>
+                                                    <h5 class="benefit-title">В кафе при получении заказа.</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="benefit-detail d-flex flex-column align-items-center"><img class="benefit-img" src="assets/images/homepage01/benefit-icon3.png" alt="">
+                                                    <br>
+                                                    <h5 class="benefit-title">Онлайн-переводом с банковской карты.</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-12 col-md-6">
                         <div class="our-story_text">
                             <h1 class="title green-underline">ОПЛАТА НАЛИЧНЫМИ</h1>
