@@ -107,7 +107,7 @@
                 </div>
                 -->
             </div>
-            <div class="row align-items-center justify-content-end">
+            <div class="row align-items-center justify-content-end" style="margin-top: -45px;">
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="cart-total_block">
                         <h2>Сумма заказа</h2>
