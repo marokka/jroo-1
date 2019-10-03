@@ -36,6 +36,7 @@ class OrderObserver
             $properties = $this->orderRepository->getOrderProperties($order->cart_id)->toArray();
 
             $this->tillypadService->sendingOrderToTillypad($order, $properties);
+            session()->regenerate();
         }
     }
 
@@ -50,6 +51,7 @@ class OrderObserver
         if ($order::TYPE_ONLINE === $order->pay_type) {
             $properties = $this->orderRepository->getOrderProperties($order->cart_id);
             $this->tillypadService->sendingOrderToTillypad($order, $properties);
+            session()->regenerate();
         }
     }
 

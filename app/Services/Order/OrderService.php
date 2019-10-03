@@ -80,7 +80,6 @@ TEXT;
             //$cart->status = Cart::STATUS_INACTIVE;
 
             //$cart->delete();
-            session()->regenerate();
             return $order;
         } catch (\Throwable $exception) {
             dd($exception);
