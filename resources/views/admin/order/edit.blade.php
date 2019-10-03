@@ -3,7 +3,7 @@
  * @var Food $model
  */
 
-use App\Http\Controllers\Admin\FoodController as Controller;
+use App\Http\Controllers\Admin\OrderController as Controller;
 
 ?>
 @extends('admin.layout.main')
@@ -12,7 +12,7 @@ use App\Http\Controllers\Admin\FoodController as Controller;
     <div class="content-wrapper">
         <div class="box_general padding_bottom">
             <div class="header_box version_2">
-                <h2><i class="fa fa-cutlery" aria-hidden="true"></i>Добавление блюда</h2>
+                <h2><i class="fa fa-cutlery" aria-hidden="true"></i>Изменение заказа</h2>
             </div>
 
 
@@ -20,9 +20,7 @@ use App\Http\Controllers\Admin\FoodController as Controller;
                 @csrf
                 @method("PUT")
 
-                @include('admin.coupon._form', [
-                    'statusVariants' => $statusVariants,
-                    'typeVariants' => $typeVariants,
+                @include('admin.order._form', [
                     'model' => $model,
                 ])
                 <button class="btn btn-success">Сохранить</button>

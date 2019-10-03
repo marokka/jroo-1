@@ -49,7 +49,7 @@ class OrderObserver
      */
     public function updated(Order $order)
     {
-        if ($order::TYPE_ONLINE === $order->pay_type) {
+        if ($order::STATUS_PAID === $order->status) {
             $properties = $this->orderRepository->getOrderProperties($order->cart_id);
             Log::info("Данные", [$order->id, $order->cart_id]);
             $this->tillypadService->sendingOrderToTillypad($order, $properties);
