@@ -10,6 +10,7 @@ namespace App\Repositories\Category;
 
 
 use App\Models\Category\Category;
+use App\Models\Food\Food;
 use Illuminate\Support\Facades\Cache;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -31,6 +32,19 @@ class CategoryRepository
         }
 
         return $category;
+    }
+
+    public function builder()
+    {
+
+        return Category::with('foods')
+            ->leftJoin(
+                Food::TABLE_NAME,
+                Food::TABLE_NAME . '.' . Food::ATTR_CATEGORY_ID,
+                '=',
+                Category::TABLE_NAME . '.' . Category::ATTR_ID
+            );
+
     }
 
     public function byId($id)

@@ -34,6 +34,8 @@ class Category extends Model
     const ATTR_CREATED_AT  = 'created_at';
     const ATTR_UPDATED_AT  = 'updated_at';
 
+    const TABLE_NAME = 'categories';
+
     protected $fillable = [self::ATTR_NAME, self::ATTR_DESCRIPTION, self::ATTR_IMG, self::ATTR_ICON];
 
     /**
@@ -66,5 +68,10 @@ class Category extends Model
     public function foods()
     {
         return $this->hasMany(Food::class);
+    }
+
+    public function scopeFilter($builder, $filters)
+    {
+        return $filters->apply($builder);
     }
 }

@@ -2,23 +2,35 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Filters\FoodFilter;
 use App\Models\Category\Category;
 use App\Models\Category\models\CategoryViewModel;
+use App\Repositories\Category\CategoryRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class FoodApiController extends Controller
 {
     /**
+     * @var CategoryRepository
+     */
+    private $categoryRepository;
+
+    public function __construct(CategoryRepository $categoryRepository)
+    {
+        $this->categoryRepository = $categoryRepository;
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request, FoodFilter $foodFilter)
     {
         $foods = [];
 
-        $categories = Category::with('foods')->get();
+        $categories = $this->categoryRepository->builder()->filter($foodFilter)->get();
 
         foreach ($categories as $category) {
             $foods[] = new CategoryViewModel($category);
