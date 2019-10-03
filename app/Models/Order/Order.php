@@ -110,6 +110,7 @@ class Order extends Model
     {
         return [
             static::STATUS_NO_PAID => 'Не оплачен',
+            static::STATUS_PAID => 'Оплачен',
         ];
     }
 
