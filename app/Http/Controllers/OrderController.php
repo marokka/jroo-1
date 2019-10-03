@@ -35,7 +35,7 @@ class OrderController extends Controller
 
     public function webhook(Request $request)
     {
-        Log::info("Информация об оплате", $request->all());
+        Log::info("Информация об оплате", [$request->get('InvId') ?? $request->get('inv_id')]);
         /**
          * @var Order $order
          */
