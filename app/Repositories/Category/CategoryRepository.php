@@ -44,7 +44,8 @@ class CategoryRepository
                 Food::TABLE_NAME . '.' . Food::ATTR_CATEGORY_ID,
                 '=',
                 Category::TABLE_NAME . '.' . Category::ATTR_ID
-            );
+            )
+            ->groupBy([Category::TABLE_NAME . '.' . Category::ATTR_ID]);
 
     }
 
