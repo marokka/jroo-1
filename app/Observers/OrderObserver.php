@@ -6,6 +6,7 @@ use App\Models\Order\Order;
 use App\Repositories\Order\OrderRepository;
 use App\Services\Tillypad\TillypadService;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Log;
 
 class OrderObserver
 {
@@ -32,7 +33,7 @@ class OrderObserver
      */
     public function created(Order $order)
     {
-        if ($order::TYPE_CASH === (int) $order->pay_type) {
+        if ($order::TYPE_CASH === (int)$order->pay_type) {
             $properties = $this->orderRepository->getOrderProperties($order->cart_id)->toArray();
 
             $this->tillypadService->sendingOrderToTillypad($order, $properties);
@@ -50,8 +51,9 @@ class OrderObserver
     {
         if ($order::TYPE_ONLINE === $order->pay_type) {
             $properties = $this->orderRepository->getOrderProperties($order->cart_id);
+            Log::info('Пропсы', [$properties]);
+            Log::info('Заказ', $order);
             $this->tillypadService->sendingOrderToTillypad($order, $properties);
-            session()->regenerate();
         }
     }
 

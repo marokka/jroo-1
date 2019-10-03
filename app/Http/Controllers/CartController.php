@@ -73,6 +73,7 @@ class CartController extends Controller
 
     public function complete(Request $request, $id)
     {
+        session()->regenerate();
         return view('cart.complete');
     }
 
