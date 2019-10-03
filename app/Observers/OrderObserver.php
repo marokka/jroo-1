@@ -51,6 +51,7 @@ class OrderObserver
     {
         if ($order::TYPE_ONLINE === $order->pay_type) {
             $properties = $this->orderRepository->getOrderProperties($order->cart_id);
+            Log::info("Данные", [$order->id, $order->cart_id]);
             $this->tillypadService->sendingOrderToTillypad($order, $properties);
         }
     }
