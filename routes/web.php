@@ -30,7 +30,7 @@ Route::get('/bonus', 'HomeController@bonus')->name('bonus');
 
 Route::get('/cart', 'CartController@cart')->name('cart');
 Route::get('/checkout', 'CartController@checkout')->name('checkout');
-Route::get('/complete/{id}', 'CartController@complete')->name('complete');
+Route::get('/complete', 'CartController@complete')->name('complete');
 
 
 Route::get('/foods', 'FoodController@index')->name('foods.index');
