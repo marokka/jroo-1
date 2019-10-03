@@ -51,7 +51,7 @@ Route::group(['prefix' => 'food'], function () {
 });
 
 Route::group(['prefix' => 'api'], function () {
-    Route::post('/success-pay', 'OrderController@webhook');
+    Route::get('/success-pay', 'OrderController@webhook');
 
     Route::group(['prefix' => 'cart'], function () {
         Route::post('/add-to-cart', 'CartController@store')->name('cart.add-to-cart');
