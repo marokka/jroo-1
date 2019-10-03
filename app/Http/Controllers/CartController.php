@@ -7,6 +7,7 @@ use App\Models\Cart\Cart;
 use App\Models\Cart\CartProperty;
 use App\Models\Cart\models\CartPropertyViewModel;
 use App\Models\Cart\models\CartViewModel;
+use App\Models\Order\Order;
 use App\Repositories\Cart\CartRepository;
 use App\Services\Cart\CartService;
 use Illuminate\Http\Request;
@@ -71,7 +72,7 @@ class CartController extends Controller
         return view('cart.checkout');
     }
 
-    public function complete()
+    public function complete(Request $request)
     {
         session()->regenerate();
         return view('cart.complete');
