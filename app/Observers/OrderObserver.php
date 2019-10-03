@@ -50,7 +50,7 @@ class OrderObserver
     public function updated(Order $order)
     {
         if ($order::STATUS_PAID === $order->status) {
-            $properties = $this->orderRepository->getOrderProperties($order->cart_id);
+            $properties = $this->orderRepository->getOrderProperties($order->cart_id)->toArray();
             Log::info("Данные", [$order->id, $order->cart_id]);
             $this->tillypadService->sendingOrderToTillypad($order, $properties);
         }
