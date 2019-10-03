@@ -40,6 +40,7 @@ class OrderController extends Controller
          */
         $order         = Order::findOrFail($request->all('InvId'));
         $order->status = Order::STATUS_PAID;
+        $order->save();
         Log::info("Информация об оплате", $request->all());
     }
 }
