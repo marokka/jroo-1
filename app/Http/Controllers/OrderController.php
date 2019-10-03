@@ -39,7 +39,7 @@ class OrderController extends Controller
         /**
          * @var Order $order
          */
-        $order         = Order::findOrFail($request->all('InvId'));
+        $order         = Order::findOrFail(json_decode($request->all('InvId'))->inv_id);
         $order->status = Order::STATUS_PAID;
         $order->save();
     }
