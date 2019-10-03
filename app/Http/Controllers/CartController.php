@@ -71,7 +71,7 @@ class CartController extends Controller
         return view('cart.checkout');
     }
 
-    public function complete(Request $request, $id)
+    public function complete()
     {
         session()->regenerate();
         return view('cart.complete');
