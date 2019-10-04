@@ -61,6 +61,11 @@ use App\Http\Controllers\Admin\OrderController as Controller;
                         @endforeach
 
                     </ul>
+
+                </div>
+
+                <div class="mt-2">
+                    {{$orders->links()}}
                 </div>
 
             </div>

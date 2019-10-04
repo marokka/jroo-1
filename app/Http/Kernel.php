@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\ApiMiddleware;
 use App\Http\Middleware\CheckAdmin;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -52,16 +53,17 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \App\Http\Middleware\Authenticate::class,
-        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        'auth'          => \App\Http\Middleware\Authenticate::class,
+        'auth.basic'    => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'bindings'      => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
-        'can' => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
-        'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
-        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'check.admin' => CheckAdmin::class,
+        'can'           => \Illuminate\Auth\Middleware\Authorize::class,
+        'guest'         => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'signed'        => \Illuminate\Routing\Middleware\ValidateSignature::class,
+        'throttle'      => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'verified'      => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'check.admin'   => CheckAdmin::class,
+        'api.headers'           => ApiMiddleware::class,
     ];
 
     /**

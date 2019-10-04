@@ -42,6 +42,15 @@ class OrderRepository
         return $this->order;
     }
 
+    public function update(array $attributes, int $id)
+    {
+        $order = Order::findOrFail($id);
+        $order->update($attributes);
+        $order->save();
+
+        return $order;
+    }
+
     public function get()
     {
         $orders = $this->order;

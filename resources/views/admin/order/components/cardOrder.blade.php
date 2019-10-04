@@ -21,8 +21,8 @@
     <p>
     </p>
     <ul class="buttons">
-        <li><a href="{{route('order.show', $model->id)}}" class="btn_1 gray"><i class="fa fa-fw fa-eye"></i> Посмотреть</a>
-        </li>
+        <li><a href="{{route('order.show', $model->id)}}" class="btn_1 gray"><i class="fa fa-fw fa-eye"></i> Посмотреть</a></li>
+        <li><a href="{{route('order.edit', $model->id)}}" class="btn_1 gray"><i class="fa fa-fw fa-edit"></i>Изменить</a></li>
         <li>
             <a class="btn_1 gray" href="{{route('order.destroy', $model->id)}}" title="Удалить"
                aria-label="Удалить"

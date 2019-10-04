@@ -41,7 +41,6 @@ class OrderController extends Controller
          * @var Order[] $orders
          */
         $orders = $this->orderRepository->get()->filter($orderFilter)->paginate(15);
-
         return view('admin.order.index', compact('orders'));
     }
 
@@ -88,7 +87,10 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $order = Order::findOrFail($id);
+        $model = new OrderViewModel($order, $this->orderRepository);
+
+        return view('admin.order.edit', compact('model'));
     }
 
     /**
@@ -100,7 +102,9 @@ class OrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->orderRepository->update($request->all(['name']), $id);
+
+        return redirect()->route(static::ROUTE_SHOW, $id);
     }
 
     /**

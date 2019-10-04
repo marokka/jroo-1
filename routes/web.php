@@ -30,7 +30,7 @@ Route::get('/bonus', 'HomeController@bonus')->name('bonus');
 
 Route::get('/cart', 'CartController@cart')->name('cart');
 Route::get('/checkout', 'CartController@checkout')->name('checkout');
-Route::get('/complete/{id}', 'CartController@complete')->name('complete');
+Route::get('/complete', 'CartController@complete')->name('complete');
 
 
 Route::get('/foods', 'FoodController@index')->name('foods.index');
@@ -51,6 +51,8 @@ Route::group(['prefix' => 'food'], function () {
 });
 
 Route::group(['prefix' => 'api'], function () {
+    Route::get('/success-pay', 'OrderController@webhook');
+
     Route::group(['prefix' => 'cart'], function () {
         Route::post('/add-to-cart', 'CartController@store')->name('cart.add-to-cart');
         Route::post('/get', 'CartController@show')->name('cart.get');
