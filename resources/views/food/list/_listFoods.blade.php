@@ -18,7 +18,7 @@ use App\Models\Food\models\FoodViewModel;
                     </div>
 
                     <div class="product-info_block">
-                        <h5 class="product-type mt-2">{{$food->category}}</h5>
+{{--                        <h5 class="product-type mt-2">{{$food->category}}</h5>--}}
                         <a class="view product-name mt-5" href="javascript:;" data-id="{{$food->id}}">{{$food->name}}</a>
                         <h3 class="product-price">₽{{$food->properties[0]->price}}
                             @if($food->properties[0]->old_price)
