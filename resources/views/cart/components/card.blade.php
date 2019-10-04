@@ -13,7 +13,7 @@
     </td>
     <td class="product-name" style="font-size: 11px;">{{$property->name}}</td>
 {{--    <td class="product-price">₽{{$property->price}}</td>--}}
-    <td class="product-quantity" style="font-size: 11px;">>
+    <td class="product-quantity" style="font-size: 11px;">
         <div class="number-input d-flex align-items-center text-center">
             <button class="step-button minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                 <i class="fas fa-minus"></i>
@@ -24,8 +24,8 @@
             </button>
         </div>
     </td>
-    <td class="product-total" style="font-size: 11px;">>₽{{$property->sum}}</td>
-    <td class="product-clear" style="font-size: 11px;">>
+    <td class="product-total" style="font-size: 11px;">₽{{$property->sum}}</td>
+    <td class="product-clear" style="font-size: 11px;">
         <button data-property-id="{{$property->id}}" class="remove-item no-round-btn"><i class="icon_close"></i></button>
     </td>
 </tr>
