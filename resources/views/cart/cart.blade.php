@@ -72,7 +72,7 @@
                                 <th class="product-quantity" style="font-size: 11px;" scope="col">Кол-во</th>
                                 <th class="product-total" style="font-size: 11px;" scope="col">Сумма</th>
                                 <th class="product-clear" style="font-size: 11px;" scope="col">
-                                    <a href="{{route('cart.destroy', $model->id)}}" class="no-round-btn"
+                                    <a href="{{route('cart.destroy', $model->id)}}" class="btn"
                                        title="Очистить корзину?" aria-label="Удалить"
                                        data-confirm="Вы уверены, что хотите очистить корзину?"
                                        data-method="delete" data-redirect="{{route('home')}}"><i
