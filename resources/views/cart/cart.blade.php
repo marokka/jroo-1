@@ -54,7 +54,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="product-table table-responsive">
+                    <div class="product-table">
                         <table class="table">
                             <colgroup>
                                 <col span="1" style="width: 15%">
