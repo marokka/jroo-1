@@ -48,7 +48,7 @@ class OrderService
             /**
              * @var Cart $cart
              */
-            $cart       = Cart::withTrashed()->where(Cart::ATTR_SESSION, Session::get(Cart::SESSION_KEY))->first();
+            $cart       = Cart::where(Cart::ATTR_SESSION, Session::get(Cart::SESSION_KEY))->first();
             $attributes = $request->all([
                 Order::ATTR_NAME,
                 Order::ATTR_PHONE,
