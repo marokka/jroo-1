@@ -67,11 +67,11 @@
                             <thead>
                             <tr>
                                 <th class="product-iamge" scope="col">Фото</th>
-                                <th class="product-name" scope="col">Название</th>
+                                <th class="product-name" style="font-size: 11px;"> scope="col">Название</th>
 {{--                                <th class="product-price" scope="col">Цена</th>--}}
-                                <th class="product-quantity" scope="col">Кол-во</th>
-                                <th class="product-total" scope="col">Сумма</th>
-                                <th class="product-clear" scope="col">
+                                <th class="product-quantity" style="font-size: 11px;"> scope="col">Кол-во</th>
+                                <th class="product-total" style="font-size: 11px;"> scope="col">Сумма</th>
+                                <th class="product-clear" style="font-size: 11px;"> scope="col">
                                     <a href="{{route('cart.destroy', $model->id)}}" class="no-round-btn"
                                        title="Очистить корзину?" aria-label="Удалить"
                                        data-confirm="Вы уверены, что хотите очистить корзину?"
