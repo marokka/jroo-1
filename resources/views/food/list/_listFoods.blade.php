@@ -16,10 +16,10 @@ use App\Models\Food\models\FoodViewModel;
                             <img src="{{$food->img}}" alt="">
                         </a>
                     </div>
-                    <div class="clearfix"></div>
+
                     <div class="product-info_block">
 {{--                        <h5 class="product-type mt-2">{{$food->category}}</h5>--}}
-                        <a class="view product-name" href="javascript:;" data-id="{{$food->id}}">{{$food->name}}</a>
+                        <a class="view product-name mt-5" href="javascript:;" data-id="{{$food->id}}">{{$food->name}}</a>
                         <h3 class="product-price">₽{{$food->properties[0]->price}}
                             @if($food->properties[0]->old_price)
                                 <del>₽{{$food->properties[0]->old_price}}</del>
@@ -34,7 +34,6 @@ use App\Models\Food\models\FoodViewModel;
 {{--                        <button class="add-to-wishlist button-borderless"><i--}}
 {{--                                class="icon_heart_alt"></i></button>--}}
                     </div>
-                    <div class="clearfix"></div>
                     <div class="grid-buttons">
                         {{--<button class="add-to-wishlist round-icon-btn"><i--}}
                         {{--class="icon_heart_alt"></i></button>--}}
