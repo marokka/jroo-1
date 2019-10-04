@@ -29,5 +29,3 @@
         <button data-property-id="{{$property->id}}" class="remove-item no-round-btn"><i class="icon_close"></i></button>
     </td>
 </tr>
-
-<hr>
