@@ -4,7 +4,7 @@
  */
 ?>
 
-<tr data-property-id="{{$property->id}}">
+<tr class="mt-2" data-property-id="{{$property->id}}">
     <td class="product-iamge">
         <div class="img-wrapper">
             <img src="{{$property->img}}"
