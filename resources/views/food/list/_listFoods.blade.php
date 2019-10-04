@@ -9,7 +9,7 @@ use App\Models\Food\models\FoodViewModel;
 <div class="shop-products_bottom">
     <div class="row no-gutters-sm">
         @foreach($foods as $food)
-            <div class="col-12 col-md-4 mt-2">
+            <div class="col-12 col-md-4 mt-2 mb-5">
                 <div class="product animated grid-view zoomIn">
                     <div class="product-img_block">
                         <a class="view product-img" data-id="{{$food->id}}" href="javascript:;">
