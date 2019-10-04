@@ -16,8 +16,8 @@ use App\Models\Food\models\FoodViewModel;
                             <img src="{{$food->img}}" alt="">
                         </a>
                     </div>
-                    <div class="product-info_block mt-2">
-                        <h5 class="product-type">{{$food->category}}</h5>
+                    <div class="product-info_block">
+                        <h5 class="product-type mt-2">{{$food->category}}</h5>
                         <a class="view product-name" href="javascript:;" data-id="{{$food->id}}">{{$food->name}}</a>
                         <h3 class="product-price">₽{{$food->properties[0]->price}}
                             @if($food->properties[0]->old_price)
