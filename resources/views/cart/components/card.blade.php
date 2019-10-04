@@ -12,7 +12,7 @@
         </div>
     </td>
     <td class="product-name">{{$property->name}}</td>
-    <td class="product-price">₽{{$property->price}}</td>
+{{--    <td class="product-price">₽{{$property->price}}</td>--}}
     <td class="product-quantity">
         <div class="number-input d-flex align-items-center text-center">
             <button class="step-button minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >

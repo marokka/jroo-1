@@ -68,7 +68,7 @@
                             <tr>
                                 <th class="product-iamge" scope="col">Фото</th>
                                 <th class="product-name" scope="col">Название</th>
-                                <th class="product-price" scope="col">Цена</th>
+{{--                                <th class="product-price" scope="col">Цена</th>--}}
                                 <th class="product-quantity" scope="col">Кол-во</th>
                                 <th class="product-total" scope="col">Сумма</th>
                                 <th class="product-clear" scope="col">
