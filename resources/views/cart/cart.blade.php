@@ -59,9 +59,9 @@
                             <colgroup>
                                 <col span="1" style="width: 15%">
                                 <col span="1" style="width: 30%">
-                                <col span="1" style="width: 15%">
-                                <col span="1" style="width: 15%">
-                                <col span="1" style="width: 15%">
+                                <col span="1" style="width: 1%">
+                                <col span="1" style="width: 20%">
+                                <col span="1" style="width: 10%">
                                 <col span="1" style="width: 10%">
                             </colgroup>
                             <thead>
