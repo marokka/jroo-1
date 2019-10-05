@@ -11,7 +11,7 @@
                  title="{{$property->name}}">
         </div>
     </td>
-    <td class="product-name" style="font-weight: bold;">{{$property->name}}</td>
+    <td class="product-name" style="font-weight: bold;  font-size: 16px;">{{$property->name}}</td>
 {{--    <td class="product-price">₽{{$property->price}}</td>--}}
     <td class="product-quantity" >
         <div class="number-input d-flex align-items-center text-center">
@@ -24,7 +24,7 @@
             </button>
         </div>
     </td>
-    <td class="product-total" style="font-weight: bold;">₽{{$property->sum}} </td>
+    <td class="product-total" style="font-weight: bold; font-size: 18px;">₽{{$property->sum}} </td>
     <td class="product-clear">
         <button data-property-id="{{$property->id}}" class="remove-item no-round-btn"><i class="icon_close"></i></button>
     </td>
