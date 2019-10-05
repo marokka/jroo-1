@@ -29,8 +29,9 @@
                                     href="tel:+79780873337" style="color: #0b0b0b"> +7 (978) 087-33-37</a>
                             </p>
                             <p class="d-flex align-items-center"><img
-                                    src="{{asset('frontend/images/icon/time-machine.png')}}" style="width: 3em">с
-                                10:00 до 23:30</p>
+                                    src="{{asset('frontend/images/icon/time-machine.png')}}" style="width: 3em">Пн-пт с 9:00 до 23:00
+                                <br>
+                                Сб-вс с 10:00 до 23:00 </p>
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
