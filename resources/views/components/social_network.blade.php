@@ -26,6 +26,7 @@
         <div class="col-12 col-sm-4 text-sm-center text-md-left">
             <div class="footer-quicklink">
                 <!-- VK Widget -->
+                <!-- VK Widget -->
                 <div id="vk_groups"></div>
                 <script type="text/javascript">
                     VK.Widgets.Group("vk_groups", {mode: 4, height: "400"}, 136274972);
