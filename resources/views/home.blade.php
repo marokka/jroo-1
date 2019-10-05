@@ -35,7 +35,7 @@
                         <div class="col-12 col-sm-4 col-lg-4">
                             <a href="{{route('foods.index')}}">
                                 <img class="img-fluid"
-                                     src="http://jro.webshad.ru/storage/categories/toG5ETZGZ66DWrb1mD0ebOZuVVUHoQLV2UgYS6AM.png"
+                                     src="{{asset('frontend/images/categories/other.jpg')}}"
                                      alt="Все блюда" style="margin-bottom: 8%; border-radius: 14px;" title="Все блюда">
                             </a>
                         </div>
