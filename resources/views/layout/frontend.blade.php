@@ -325,7 +325,7 @@
                 <div class="footer-logo text-center"><img src="{{asset('frontend/images/JBS_Logo.png')}}" alt=""
                                                           style="width: 40%"></div>
                 <div class="footer-contact text-center">
-                    <p>Адрес: Крым, г. Ялта, ул. Игнатенко дом 3, </p>
+                    <p>Адрес: <a href="https://yandex.ru/maps/-/CGsruQ9e" style="color: #0b0b0b">Крым, г. Ялта, ул. Игнатенко дом 3,</a> </p>
                     <p>Телефон: <a href="tel:+79780873337" style="color: #0b0b0b"> +7 (978) 087-33-37</a></p>
                     <p>Email: <a href="mailto:jroo90@mail.ru" style="color: #0b0b0b">jroo90@mail.ru</a></p>
                 </div>

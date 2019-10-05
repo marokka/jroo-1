@@ -25,22 +25,22 @@
         <div class="col-12 col-md-4">
           <div class="method-block"><i class="icon_pin_alt"></i>
             <div class="method-block_text">
-              <p>Крым, г. Ялта, ул. Игнатенко, дом 3 </p>
+              <p><a href="https://yandex.ru/maps/-/CGsruQ9e" style="color: #0b0b0b">Крым, г. Ялта, ул. Игнатенко дом 3,</a> </p>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-4">
           <div class="method-block"><i class="icon_mail_alt"></i>
             <div class="method-block_text">
-              <p> <span>Телефон:</span>‎+7 (978) 087-33-37 </p>
-              <p><span>Mail:</span>jroo90@mail.ru</p>
+              <p> <span>Телефон:</span>‎<a href="tel:+79780873337" style="color: #0b0b0b"> +7 (978) 087-33-37</a></p>
+              <p><span>Mail:</span><a href="mailto:jroo90@mail.ru" style="color: #0b0b0b">jroo90@mail.ru</a></p>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-4">
           <div class="method-block"><i class="icon_clock_alt"></i>
             <div class="method-block_text">
-              <p> Рады видеть Вас: <br> в Пн-Пт с 9:00 до 00:00,<br>Сб-Вс с 10:00 до 00:00</p>
+              <p> Рады видеть Вас: <br> в Пн-пт с 9:00 до 23:00,<br>Сб-вс с 10:00 до 23:00</p>
             </div>
           </div>
         </div>
