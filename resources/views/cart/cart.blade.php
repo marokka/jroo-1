@@ -57,12 +57,12 @@
                     <div class="product-table">
                         <table class="table">
                             <colgroup>
-                                <col span="1">
-                                <col span="1">
-                                <col span="1">
-                                <col span="1">
-                                <col span="1">
-                                <col span="1">
+                                <col span="1" style="width: 15%">
+                                <col span="1" style="width: 30%">
+                                <col span="1" style="width: 15%">
+                                <col span="1" style="width: 15%">
+                                <col span="1" style="width: 15%">
+                                <col span="1" style="width: 10%">
                             </colgroup>
                             <thead>
                             <tr>
@@ -113,8 +113,8 @@
                         <h2>Сумма заказа</h2>
                         <table class="table">
                             <colgroup>
-                                <col span="1">
-                                <col span="1">
+                                <col span="1" style="width: 50%">
+                                <col span="1" style="width: 50%">
                             </colgroup>
                             <tbody>
                             <tr>
