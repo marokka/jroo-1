@@ -17,7 +17,7 @@
         <div class="header-block d-flex align-items-center">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-8">
+                    <div class="col-12 col-md-9">
                         <div class="header-left d-flex flex-column flex-md-row align-items-center">
                             <p class="d-flex align-items-center"><img
                                     src="{{asset('frontend/images/icon/map-marker.png')}}" style="width: 3em">Крым,
@@ -34,7 +34,7 @@
                                 Сб-вс с 10:00 до 23:00 </p>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-3">
                         <div
                             class="header-right d-flex justify-content-around">
                             <div class="social-link d-flex">
