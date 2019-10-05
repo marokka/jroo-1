@@ -6026,7 +6026,7 @@ footer.coffee .newletter {
       justify-content: center; }
       .shopping-cart .product-table .table tbody .product-iamge .img-wrapper img {
         max-height: 100%;
-        max-width: 100%; }
+        /*max-width: 100%; }*/
     .shopping-cart .product-table .table tbody .product-name, .shopping-cart .product-table .table tbody .product-price, .shopping-cart .product-table .table tbody .product-total, .shopping-cart .product-table .shop-compare .compre-table .table tbody .product-availability, .shop-compare .compre-table .shopping-cart .product-table .table tbody .product-availability, .shopping-cart .product-table .shop-compare .compre-table .table tbody .product-weight, .shop-compare .compre-table .shopping-cart .product-table .table tbody .product-weight, .shopping-cart .product-table .shop-compare .compre-table .table tbody .product-sku, .shop-compare .compre-table .shopping-cart .product-table .table tbody .product-sku {
       font-family: "Cera Pro Bold";
       font-size: 16px;
