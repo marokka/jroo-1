@@ -20,10 +20,11 @@
                     <div class="col-12 col-md-9">
                         <div class="header-left d-flex flex-column flex-md-row align-items-center">
                             <p class="d-flex align-items-center"><img
-                                    src="{{asset('frontend/images/icon/map-marker.png')}}" style="width: 3em">Крым,
+                                    src="{{asset('frontend/images/icon/map-marker.png')}}" style="width: 3em"><a
+                                    href="https://yandex.ru/maps/-/CGsruQ9e" style="color: black;">Крым,
                                 г. Ялта,
                                 ул.
-                                Игнатенко дом 3</p>
+                                Игнатенко дом 3</a></p>
                             <p class="d-flex align-items-center"><img
                                     src="{{asset('frontend/images/icon/phone.png')}}" style="width: 3em"><a
                                     href="tel:+79780873337" style="color: #0b0b0b"> +7 (978) 087-33-37</a>
@@ -209,7 +210,7 @@
 
                                 <div class="mobile-login" style="margin-top: 15px;">
 
-                                    <a href="">
+                                    <a href="https://yandex.ru/maps/-/CGsruQ9e">
                                         <p class="d-flex align-items-center">
                                             <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i>
                                             Крым,
@@ -227,7 +228,8 @@
                                         <p class="d-flex align-items-center">
                                             <i class="far fa-clock"
                                                style="margin-right: 10px;"></i>
-                                            с 9:00 до 23:30
+                                            Пн-пт с 9:00 до 23:00 <br>
+                                            Сб-вс с 10:00 до 23:00
                                         </p>
                                     </a>
 
