@@ -7,6 +7,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     getCart();
 
+    $(document).on('click', '.number-input > button', function () {
+        $("#preload").toggleClass('d-none');
+        updateCart().then(html => {
+            $.ajax({
+                url: location.href,
+                success: function (html) {
+                    $('.cart > tbody > tr').remove();
+                    $('.cart > tbody').append($(html).find('.cart > tbody').html());
+                    $("#preload").toggleClass('d-none');
+                }
+            })
+        })
+    })
+
     $(document).on('click', ".add-to-cart", addToCart);
     $('.remove-item').on('click', function () {
         const elem = $(this);
@@ -126,4 +140,19 @@ function removeItem(id) {
     setCart(newCart);
 
 
+}
+
+
+function updateCart() {
+    const elem = $(this);
+    let data = [];
+    const quantitiesInfo = $('.quantity[data-id]').each((idx, item) => {
+        data.push({id: $(item).data('id'), quantity: $(item).val()});
+    });
+
+    return $.ajax({
+        url: '/api/cart/cart-property',
+        method: "PUT",
+        data: {quantitiesInfo: data},
+    })
 }

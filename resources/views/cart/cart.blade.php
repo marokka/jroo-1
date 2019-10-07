@@ -55,7 +55,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="product-table">
-                        <table class="table">
+                        <table class="table cart">
                             <colgroup>
                                 <col span="1" style="width: 15%">
                                 <col span="1" style="width: 30%">
