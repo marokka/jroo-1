@@ -50,7 +50,7 @@ class LoginController extends Controller
 
         if (Auth::attempt([$field => $login, User::ATTR_PASSWORD => $password],
             $request->post('remember') ? true : false)) {
-            return redirect()->route('home');
+            return redirect()->back();
         }
 
 

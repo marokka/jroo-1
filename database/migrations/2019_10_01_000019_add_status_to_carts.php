@@ -14,6 +14,7 @@ class AddStatusToCarts extends Migration
     public function up()
     {
         Schema::table('carts', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->integer('status')->default(1);
         });
     }
@@ -26,6 +27,7 @@ class AddStatusToCarts extends Migration
     public function down()
     {
         Schema::table('carts', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->dropColumn('status');
         });
     }

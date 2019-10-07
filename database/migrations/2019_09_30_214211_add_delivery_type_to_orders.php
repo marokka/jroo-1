@@ -14,6 +14,7 @@ class AddDeliveryTypeToOrders extends Migration
     public function up()
     {
         Schema::table('orders', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->integer('delivery_type')->default(1);
         });
     }
@@ -26,6 +27,7 @@ class AddDeliveryTypeToOrders extends Migration
     public function down()
     {
         Schema::table('orders', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->dropColumn('delivery_type');
         });
     }

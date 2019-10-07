@@ -15,6 +15,7 @@ class UpdateRefUserTables extends Migration
     public function up()
     {
         Schema::table('ref_user', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->string('phone')->nullable()->change();
             $table->string('email')->change()->index();
             $table->integer('role')->default(User::ROLE_USER)->index();
@@ -29,6 +30,7 @@ class UpdateRefUserTables extends Migration
     public function down()
     {
         Schema::table('ref_user', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->string(User::ATTR_PHONE)->change();
             $table->string(User::ATTR_EMAIL)->nullable()->change();
             $table->dropColumn(User::ATTR_ROLE);

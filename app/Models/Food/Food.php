@@ -2,6 +2,7 @@
 
 namespace App\Models\Food;
 
+use App\Models\Ingridient\IngridientFoods;
 use App\Models\Category\Category;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
@@ -82,6 +83,11 @@ class Food extends Model
         });
     }
 
+    public function ingridients()
+    {
+        return $this->hasMany(IngridientFoods::class);
+    }
+
     /**
      * Категория блюда
      *
@@ -128,10 +134,10 @@ class Food extends Model
         return true === empty($value) ? "Не заполнено" : $value;
     }
 
-    public function getStatusAttribute($value)
-    {
-        return static::getStatusVariants()[$value];
-    }
+//    public function getStatusAttribute($value)
+//    {
+//        return static::getStatusVariants()[$value];
+//    }
 
 
     public function foodInfo()

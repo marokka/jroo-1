@@ -30,6 +30,8 @@
 
     <link rel="stylesheet" href="{{asset('admin_assets/css/fileinput.min.css')}}">
 
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body class="fixed-nav sticky-footer" id="page-top">
@@ -92,13 +94,15 @@
 
 <script src="{{asset('admin_assets/js/bootbox.all.min.js')}}"></script>
 
-<script src="{{ asset('admin_assets/js/custom.js')}}"></script>
 
 <!-- Custom scripts for this page-->
 
 <script src="{{asset('admin_assets/vendor/dropzone.js')}}"></script>
 <script src="{{asset('admin_assets/js/fileinput.min.js')}}"></script>
+<script src="{{asset('admin_assets/js/select2.min.js')}}"></script>
 
-<script src="{{asset('js/app.js')}}"></script>
+<script src="{{ asset('admin_assets/js/custom.js')}}"></script>
+<script src="{{mix('js/app.js')}}"></script>
+
 </body>
 </html>

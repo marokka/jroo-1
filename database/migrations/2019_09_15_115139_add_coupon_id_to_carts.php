@@ -14,6 +14,7 @@ class AddCouponIdToCarts extends Migration
     public function up()
     {
         Schema::table('carts', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->unsignedInteger('coupon_id')->nullable()->index();
         });
     }
@@ -26,6 +27,7 @@ class AddCouponIdToCarts extends Migration
     public function down()
     {
         Schema::table('carts', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->dropColumn('coupon_id');
         });
     }

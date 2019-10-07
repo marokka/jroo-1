@@ -1,12 +1,12 @@
 <?php
+
+use App\Models\Ingridient\Ingridient;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCartsTable extends Migration
+class CreateIngridientsTable extends Migration
 {
-    const TABLE_NAME = 'carts';
-
     /**
      * Run the migrations.
      *
@@ -14,13 +14,13 @@ class CreateCartsTable extends Migration
      */
     public function up()
     {
-        Schema::create(static::TABLE_NAME, function (Blueprint $table) {
+        Schema::create('ingridients', function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->increments('id');
-            $table->double('total');
-            $table->integer('user_id')->nullable()->index();
-            $table->string('session')->index();
+            $table->string('name');
+            $table->integer('status')->default(Ingridient::STATUS_ACTIVE);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -31,6 +31,6 @@ class CreateCartsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(static::TABLE_NAME);
+        Schema::dropIfExists('ingridients');
     }
 }

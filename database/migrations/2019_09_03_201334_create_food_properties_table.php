@@ -16,6 +16,7 @@ class CreateFoodPropertiesTable extends Migration
     public function up()
     {
         Schema::create(static::TABLE_NAME, function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('id');
             $table->unsignedInteger('food_id');
             $table->string('name');

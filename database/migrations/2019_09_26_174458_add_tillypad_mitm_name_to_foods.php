@@ -14,6 +14,7 @@ class AddTillypadMitmNameToFoods extends Migration
     public function up()
     {
         Schema::table('foods', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->string("mitm_name")->nullable();
         });
     }
@@ -26,6 +27,7 @@ class AddTillypadMitmNameToFoods extends Migration
     public function down()
     {
         Schema::table('foods', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->dropColumn('mitm_name');
         });
     }

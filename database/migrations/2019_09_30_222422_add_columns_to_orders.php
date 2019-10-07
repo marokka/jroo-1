@@ -14,6 +14,7 @@ class AddColumnsToOrders extends Migration
     public function up()
     {
         Schema::table('orders', function (Blueprint $table) {
+            $table->engine = "InnoDB";
 //            City
 //Street
 //House
@@ -41,6 +42,7 @@ class AddColumnsToOrders extends Migration
     public function down()
     {
         Schema::table('orders', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->dropColumn('city');
             $table->dropColumn('street');
             $table->dropColumn('house');

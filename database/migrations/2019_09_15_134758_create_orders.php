@@ -16,6 +16,7 @@ class CreateOrders extends Migration
     public function up()
     {
         Schema::create(static::TABLE, function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('id');
             $table->unsignedInteger('cart_id');
             $table->string('name');

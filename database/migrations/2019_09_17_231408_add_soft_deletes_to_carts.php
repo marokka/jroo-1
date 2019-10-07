@@ -14,6 +14,7 @@ class AddSoftDeletesToCarts extends Migration
     public function up()
     {
         Schema::table('carts', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->softDeletes();
         });
     }
@@ -26,6 +27,7 @@ class AddSoftDeletesToCarts extends Migration
     public function down()
     {
         Schema::table('carts', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->dropSoftDeletes();
         });
     }

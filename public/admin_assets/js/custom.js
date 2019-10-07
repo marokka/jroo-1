@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     $("[data-method]").on('click', function (e) {
         e.preventDefault();
         const elem = $(this);
+        const data = elem.data('data');
 
         bootbox.confirm({
             message: elem.attr('data-confirm'),
@@ -23,8 +24,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },
+                        data: data,
                         method: elem.attr('data-method'),
                         success: function () {
+                            location.href = elem.attr('data-redirect') || "/";
+                        },
+                        error: function () {
                             location.href = elem.attr('data-redirect') || "/";
                         }
                     })
@@ -33,5 +38,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
 
-    })
+    });
+
+    $('select.foods').select2({
+        placeholder: 'Выберите блюда'
+    });
+
 })

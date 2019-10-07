@@ -16,6 +16,7 @@ class CreateCartPropertiesTable extends Migration
     public function up()
     {
         Schema::create(static::TABLE_NAME, function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('id');
             $table->unsignedInteger('cart_id');
             $table->unsignedInteger('food_property_id');

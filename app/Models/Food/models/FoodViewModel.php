@@ -51,6 +51,11 @@ class FoodViewModel
     public $category;
 
     /**
+     * @var bool
+     */
+    public $active;
+
+    /**
      * @var FoodProperty[]
      */
     public $properties;
@@ -80,6 +85,7 @@ class FoodViewModel
         $this->status      = $food->status;
         $this->img         = $food->img;
         $this->category    = $food->categoryCache()['name'];
+        $this->active = $food::STATUS_ACTIVE === $food->status ? true : false;
 
         foreach ($food->properties as $property) {
             $this->properties[] = new FoodPropertyItem($property);

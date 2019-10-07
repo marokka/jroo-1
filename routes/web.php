@@ -18,6 +18,7 @@
 //    return view('welcome');
 //});
 
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
@@ -38,11 +39,15 @@ Route::get('/foods', 'FoodController@index')->name('foods.index');
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'check.admin']], function () {
     Route::get('/', 'Admin\AdminController@index')->name('admin.index');
     Route::resources([
-        'categories' => 'Admin\CategoryController',
-        'food'       => 'Admin\FoodController',
-        'coupon'     => 'Admin\CouponController',
-        'order'      => 'Admin\OrderController',
+        'categories'  => 'Admin\CategoryController',
+        'food'        => 'Admin\FoodController',
+        'coupon'      => 'Admin\CouponController',
+        'order'       => 'Admin\OrderController',
+        'ingridients' => 'Admin\IngridientController',
     ]);
+
+    Route::put('/ingridients/{ingridientID}/{foodID}',
+        'Admin\IngridientController@updateStatus')->name('ingridients.update-status');
 });
 
 Route::group(['prefix' => 'food'], function () {
