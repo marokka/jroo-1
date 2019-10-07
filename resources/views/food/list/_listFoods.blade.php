@@ -15,7 +15,7 @@ use App\Models\Food\models\FoodViewModel;
                     @if(false === $food->active)
                         <div
                             class="w-100 h-100 d-flex align-items-center flex-column justify-content-center position-absolute"
-                            style="background: #d8d8d891; color: #662c00;">
+                            style="background: #d8d8d891; color: #662c00; z-index: 1000;">
                             <i class="far fa-sad-tear fa-3x"></i>
                             <span class="mt-3 font-weight-bold">
                                     Всё съели
