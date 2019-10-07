@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 success: function (html) {
                     $('.cart > tbody > tr').remove();
                     $('.cart > tbody').append($(html).find('.cart > tbody').html());
+                    getCart();
                     $("#preload").toggleClass('d-none');
                 }
             })
