@@ -9,6 +9,7 @@ use App\Models\Cart\models\CartPropertyViewModel;
 use App\Models\Cart\models\CartViewModel;
 use App\Models\Order\Order;
 use App\Repositories\Cart\CartRepository;
+use App\Repositories\Food\FoodReadRepository;
 use App\Services\Cart\CartService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
@@ -23,17 +24,31 @@ class CartController extends Controller
      * @var CartRepository
      */
     private $cartRepository;
+    /**
+     * @var FoodReadRepository
+     */
+    private $foodReadRepository;
 
-    public function __construct(CartService $cartService, CartRepository $cartRepository)
-    {
-        $this->cartService    = $cartService;
-        $this->cartRepository = $cartRepository;
+    public function __construct(
+        CartService $cartService,
+        CartRepository $cartRepository,
+        FoodReadRepository $foodReadRepository
+    ) {
+        $this->cartService        = $cartService;
+        $this->cartRepository     = $cartRepository;
+        $this->foodReadRepository = $foodReadRepository;
     }
 
     public function store(CartRequest $request)
     {
+        $recomends = $this->foodReadRepository->getRecomendsFromFoodPropertyId($request->post('foodPropertyId'));
 
-        return response()->json(['cart' => $this->cartService->save($request)]);
+        $html = view('cart.api.recomend', [
+            'recomend' => $recomends
+        ])->render();
+
+
+        return $html;
     }
 
     /**

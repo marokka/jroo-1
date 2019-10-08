@@ -40,8 +40,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
-    $('select.foods').select2({
-        placeholder: 'Выберите блюда'
-    });
-
 })

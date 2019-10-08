@@ -90,7 +90,6 @@
 <script src="{{ asset('admin_assets/vendor/retina-replace.min.js')}}"></script>
 <script src="{{ asset('admin_assets/vendor/jquery.magnific-popup.min.js')}}"></script>
 <!-- Custom scripts for all pages-->
-<script src="{{ asset('admin_assets/js/admin.js')}}"></script>
 
 <script src="{{asset('admin_assets/js/bootbox.all.min.js')}}"></script>
 
@@ -102,6 +101,8 @@
 <script src="{{asset('admin_assets/js/select2.min.js')}}"></script>
 
 <script src="{{ asset('admin_assets/js/custom.js')}}"></script>
+<script src="{{ asset('admin_assets/js/admin.js')}}"></script>
+
 <script src="{{mix('js/app.js')}}"></script>
 
 </body>

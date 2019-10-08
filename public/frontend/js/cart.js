@@ -61,7 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function addToCart() {
     const elem = $(this);
 
-
+    $(".bootbox-close-button.close").click()
+    $("#quickview-close-btn").click();
     $.ajax({
         url: '/api/cart/add-to-cart',
         method: "POST",
@@ -69,7 +70,7 @@ function addToCart() {
         success: function (html) {
             var dialog = bootbox.dialog({
                 title: 'Корзина',
-                message: "<p><i class='far fa-check-circle'></i> Товар успешно добавлен в корзину.</p>",
+                message: `<p><i class='far fa-check-circle'></i> Товар успешно добавлен в корзину. </p>${html}`,
                 size: 'large',
                 buttons: {
                     cancel: {

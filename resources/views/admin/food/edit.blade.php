@@ -23,7 +23,8 @@ use App\Http\Controllers\Admin\FoodController as Controller;
                     'categories' => $categories,
                     'variants' => $variants,
                     'model' => $model,
-                    'foodProperties' => $foodProperties
+                    'foodProperties' => $foodProperties,
+                    'foods' => $foods
                 ])
                 <button class="btn btn-success">Сохранить</button>
             </form>

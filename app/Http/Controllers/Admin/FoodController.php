@@ -8,6 +8,7 @@ use App\Models\Category\Category;
 use App\Models\Food\Food;
 use App\Models\Food\FoodProperty;
 use App\Models\Food\models\FoodViewModel;
+use App\Models\RecomendFood\RecomendFood;
 use App\Repositories\Category\CategoryRepository;
 use App\Repositories\Food\FoodReadRepository;
 use App\Services\Food\FoodService;
@@ -65,7 +66,7 @@ class FoodController extends Controller
     public function index(Request $request, FoodFilter $filter)
     {
 
-        $foods        = $this->foodReadRepository->get()->filter($filter)->paginate(15);
+        $foods = $this->foodReadRepository->get()->filter($filter)->paginate(15);
 
         $categoryName = $request->get('category') ? $this->categoryRepository->byId($request->get('category'))->name : null;
 
@@ -82,7 +83,15 @@ class FoodController extends Controller
         $categories = Category::get();
         $variants   = Food::getStatusVariants();
 
-        return view('admin.food.create', compact('categories', 'variants'));
+        $foods = Food::get()->map(function (Food $food) {
+            return [
+                'id'     => $food->id,
+                'name'   => $food->name,
+                'select' => false
+            ];
+        });
+
+        return view('admin.food.create', compact('categories', 'variants', 'foods'));
     }
 
     /**
@@ -130,13 +139,24 @@ class FoodController extends Controller
         $categories    = Category::get();
         $variants      = Food::getStatusVariants();
         $foodPropeties = $model->properties;
+        $foods         = Food::get()->map(function (Food $food) use ($model) {
+
+            return [
+                'id'     => $food->id,
+                'name'   => $food->name,
+                'select' => $model->food->recomend()->where([
+                    [RecomendFood::ATTR_FOOD_RECOMEND_ID, $food->id]
+                ])->first() ? true : false
+            ];
+        });
 
 
         return view('admin.food.edit', [
             'model'          => $food,
             'categories'     => $categories,
             'variants'       => $variants,
-            'foodProperties' => $foodPropeties
+            'foodProperties' => $foodPropeties,
+            'foods'          => $foods
         ]);
     }
 

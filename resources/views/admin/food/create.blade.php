@@ -12,7 +12,7 @@ use App\Http\Controllers\Admin\FoodController as Controller;
             <form action="{{route(Controller::ROUTE_STORE)}}" method="POST" enctype="multipart/form-data">
                 @csrf
 
-                @component('admin.food._form', ['categories' => $categories, 'variants' => $variants])@endcomponent
+                @component('admin.food._form', ['categories' => $categories, 'variants' => $variants, 'foods' => $foods])@endcomponent
                 <button class="btn btn-success">Создать</button>
             </form>
         </div>

@@ -4,6 +4,7 @@ namespace App\Models\Food;
 
 use App\Models\Ingridient\IngridientFoods;
 use App\Models\Category\Category;
+use App\Models\RecomendFood\RecomendFood;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
@@ -143,5 +144,14 @@ class Food extends Model
     public function foodInfo()
     {
         return $this->hasOne(FoodInfo::class, 'food_id', 'id');
+    }
+
+    public function recomend() {
+        return $this->belongsToMany(
+            Food::class,
+            RecomendFood::TABLE_NAME,
+            RecomendFood::ATTR_FOOD_ID,
+            RecomendFood::ATTR_FOOD_RECOMEND_ID
+        );
     }
 }

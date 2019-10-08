@@ -128,7 +128,8 @@ use App\Models\Food\models\FoodViewModel;
 
                     <label class="control-label">Жиры</label>
 
-                    <input type="text" class="form-control" name="FoodInfo[fat]" value="{{old('FoodInfo[fat]', $model->foodInfo->fat ?? '')}}">
+                    <input type="text" class="form-control" name="FoodInfo[fat]"
+                           value="{{old('FoodInfo[fat]', $model->foodInfo->fat ?? '')}}">
 
                     <div class="help-block"></div>
 
@@ -140,7 +141,8 @@ use App\Models\Food\models\FoodViewModel;
 
                     <label class="control-label">Калории</label>
 
-                    <input type="text" class="form-control" name="FoodInfo[calories]" value="{{old('FoodInfo[calories]', $model->foodInfo->calories ?? '')}}">
+                    <input type="text" class="form-control" name="FoodInfo[calories]"
+                           value="{{old('FoodInfo[calories]', $model->foodInfo->calories ?? '')}}">
 
                     <div class="help-block"></div>
 
@@ -153,6 +155,18 @@ use App\Models\Food\models\FoodViewModel;
 
     <div class="col-md-12">
         <div id="react-add-variants" data-foods='@json($foodProperties ?? [])'></div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="form-group">
+            <strong for="recomend">Выберите рекомендуемые блюда</strong>
+            <select id="recomend" name="recomendID[]" class="form-control foods" multiple>
+                @foreach($foods as $food)
+                    <option
+                        value="{{$food['id']}}" {{true === $food['select'] ? "selected" : ''}} >{{$food['name']}}</option>
+                @endforeach
+            </select>
+        </div>
     </div>
 
 </div>

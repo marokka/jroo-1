@@ -11,6 +11,7 @@ namespace App\Repositories\Food;
 
 use App\Models\Food\Food;
 use App\Models\Food\FoodProperty;
+use App\Models\Food\models\FoodViewModel;
 use App\Repositories\Category\CategoryRepository;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
@@ -38,13 +39,14 @@ class FoodReadRepository
      */
     public function get(): Builder
     {
-        return Food::select([Food::TABLE_NAME . '.*', DB::raw('GROUP_CONCAT(' .FoodProperty::TABLE_NAME . '.name' . ') as property_name')])
+        return Food::select([Food::TABLE_NAME . '.*',
+                             DB::raw('GROUP_CONCAT(' . FoodProperty::TABLE_NAME . '.name' . ') as property_name')])
             ->join(
                 FoodProperty::TABLE_NAME,
                 Food::TABLE_NAME . '.' . Food::ATTR_ID,
                 '=', FoodProperty::ATTR_FOOD_ID
             )
-            ->groupBy(Food::TABLE_NAME . '.'. Food::ATTR_ID);
+            ->groupBy(Food::TABLE_NAME . '.' . Food::ATTR_ID);
     }
 
     public function findByCategorySlug(string $slug): ?Builder
@@ -63,5 +65,20 @@ class FoodReadRepository
     public function byId($id)
     {
         return $this->get()->findOrFail($id);
+    }
+
+    public function getRecomendsFromFoodPropertyId($foodPropertyId): ?array
+    {
+        $foodProperty = FoodProperty::with('food')->findOrFail($foodPropertyId);
+
+        $food = $foodProperty->food;
+
+
+        $recomends = [];
+        foreach ($food->recomend()->get() as $item) {
+            $recomends[] = new FoodViewModel($item);
+        }
+
+        return $recomends;
     }
 }

@@ -51,6 +51,10 @@ class FoodService
 
         }
 
+
+        $food->recomend()->sync($request->post('recomendID'));
+
+
         return $food;
 
     }
@@ -63,6 +67,9 @@ class FoodService
     public function edit(FoodRequest $request, $id): Food
     {
 
+        /**
+         * @var Food $model
+         */
         $model = Food::findOrFail($id);
         $model->fill($request->all([
             Food::ATTR_NAME,
@@ -93,6 +100,9 @@ class FoodService
             $foodInfo->save();
 
         }
+
+        $model->recomend()->sync($request->post('recomendID'));
+
 
         return $model;
 

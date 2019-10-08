@@ -89,4 +89,9 @@
             $(this).parent().parent().parent().remove();
         });
     }
+
+    $('select.foods').select2({
+        placeholder: 'Выберите блюда'
+    });
+
 })(jQuery); // End of use strict
