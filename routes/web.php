@@ -59,9 +59,12 @@ Route::group(['prefix' => 'api'], function () {
     Route::get('/success-pay', 'OrderController@webhook');
 
     Route::group(['prefix' => 'cart'], function () {
-        Route::post('/add-to-cart', 'CartController@store')->name('cart.add-to-cart');
-        Route::post('/get', 'CartController@show')->name('cart.get');
-        Route::post('/add-order', 'OrderController@addOrder')->name('cart.addOrder');
+
+        Route::options('/', 'CartController@store')->middleware('api.headers');
+        Route::post('/', 'CartController@store')->middleware('api.headers');
+        Route::post('/add-to-cart', 'CartController@store')->name('cart.add-to-cart')->middleware('api.headers');
+        Route::post('/get', 'CartController@show')->name('cart.get')->middleware('api.headers');
+        Route::post('/add-order', 'OrderController@addOrder')->name('cart.addOrder')->middleware('api.headers');
         Route::post('/activate-coupon', 'CartController@activateCoupon')->name('cart.activate-coupon');
     });
 });

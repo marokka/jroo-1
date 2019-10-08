@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Order
- * @property integer id
- * @property integer cart_id
+ * @property integer $id
+ * @property integer $cart_id
  * @property string $name
  * @property string $phone
  * @property string $address

@@ -35,7 +35,7 @@ class CartService
     public function save(CartRequest $request): Cart
     {
         // Required data
-        $session        = $request->session()->get(Cart::SESSION_KEY);
+        $session        = $request->get(Cart::SESSION_KEY) ?? $request->session()->get(Cart::SESSION_KEY);
         $foodPropertyId = $request->get('foodPropertyId');
         $foodProperty   = FoodProperty::findOrFail($foodPropertyId);
 

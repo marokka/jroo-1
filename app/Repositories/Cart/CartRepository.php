@@ -8,6 +8,7 @@ use App\Models\Cart\Cart;
 use App\Models\Cart\CartProperty;
 use App\Models\Food\Food;
 use App\Models\Food\FoodProperty;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
@@ -110,7 +111,7 @@ class CartRepository
 
     public function getCart()
     {
-        $session = Session::get(Cart::SESSION_KEY);
+        $session = request(Cart::SESSION_KEY) ?? Session::get(Cart::SESSION_KEY);
 
         $cart = Cart::where([
             [Cart::ATTR_SESSION, $session],
