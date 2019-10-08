@@ -41,6 +41,8 @@ class CartController extends Controller
 
     public function store(CartRequest $request)
     {
+        $this->cartService->save($request);
+        
         $recomends = $this->foodReadRepository->getRecomendsFromFoodPropertyId($request->post('foodPropertyId'));
 
         $html = view('cart.api.recomend', [
