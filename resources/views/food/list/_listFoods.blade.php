@@ -9,7 +9,7 @@ use App\Models\Food\models\FoodViewModel;
 <div class="shop-products_bottom">
     <div class="row no-gutters-sm">
         @foreach($foods as $food)
-            <div class="col-12 col-md-4 mt-2 mb-5">
+            <div class="col-12 col-md-4">
                 <div class="product animated grid-view zoomIn">
 
                     @if(false === $food->active)
@@ -30,7 +30,7 @@ use App\Models\Food\models\FoodViewModel;
                     </div>
 
                     <div class="product-info_block">
-                        {{--                        <h5 class="product-type mt-2">{{$food->category}}</h5>--}}
+                        <h5 class="product-type mt-2">{{$food->category}}</h5>
                         <a class="view product-name mt-5" href="javascript:;"
                            data-id="{{$food->id}}">{{$food->name}}</a>
 
