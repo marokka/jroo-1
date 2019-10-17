@@ -47,8 +47,8 @@
 <div class="coming-soon">
     <div class="container">
         <div class="coming-soon_block">
-            <h1 class="title">Comming Soon</h1>
-            <h5 class="subtitle">Our Website is Under Corporate.</h5>
+            <h1 class="title">Jroo-доставка</h1>
+            <h5 class="subtitle">Данный ресурс ожидает оплаты</h5>
         </div>
     </div>
 </div>
