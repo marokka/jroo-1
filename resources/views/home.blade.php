@@ -49,11 +49,6 @@
         <div class="coming-soon_block">
             <h1 class="title">Comming Soon</h1>
             <h5 class="subtitle">Our Website is Under Corporate.</h5>
-            <div class="d-flex justify-content-center" id="event-countdown"></div>
-            <div class="follow-us">
-                <h5>Follow Us For Updates</h5>
-                <div class="social"><a class="round-icon-btn" href=""><i class="fab fa-facebook-f"> </i></a><a class="round-icon-btn" href=""><i class="fab fa-twitter"></i></a><a class="round-icon-btn" href=""><i class="fab fa-invision"> </i></a><a class="round-icon-btn" href=""><i class="fab fa-pinterest-p"></i></a></div>
-            </div>
         </div>
     </div>
 </div>
