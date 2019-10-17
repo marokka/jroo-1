@@ -46,9 +46,9 @@
 {{--    </div>--}}
 <div class="coming-soon">
     <div class="container">
-        <div class="coming-soon_block">
+        <div class="coming-soon_block" style="    width: 60%; background: white; border-radius: 10px;padding: 7px; margin-left: 20%;">
             <h1 class="title">Jroo-доставка</h1>
-            <h5 class="subtitle">Данный ресурс ожидает оплаты</h5>
+            <h5 class="subtitle" style="margin-bottom: 0px !important;">Данный ресурс ожидает оплаты</h5>
         </div>
     </div>
 </div>
