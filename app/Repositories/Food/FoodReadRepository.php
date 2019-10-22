@@ -46,7 +46,7 @@ class FoodReadRepository
                 Food::TABLE_NAME . '.' . Food::ATTR_ID,
                 '=', FoodProperty::ATTR_FOOD_ID
             )
-            ->groupBy(Food::TABLE_NAME . '.' . Food::ATTR_NAME);
+            ->groupBy(Food::TABLE_NAME . '.' . Food::ATTR_NAME, Food::TABLE_NAME . '.' . Food::ATTR_ID);
     }
 
     public function findByCategorySlug(string $slug): ?Builder
