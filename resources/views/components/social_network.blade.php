@@ -16,10 +16,9 @@
         <div class="col-12 col-sm-4">
             <div class="text-center">
                 <!-- VK Widget -->
-                <!-- VK Widget -->
                 <div id="vk_groups"></div>
                 <script type="text/javascript">
-                    VK.Widgets.Group("vk_groups", {mode: 4, height: "400"}, 136274972);
+                    VK.Widgets.Group("vk_groups", {mode: 4, color2: '2C150C', color3: '2C150C'}, 136274972);
                 </script>
             </div>
         </div>
