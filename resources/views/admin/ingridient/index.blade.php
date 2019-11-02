@@ -17,14 +17,14 @@ use App\Http\Controllers\Admin\IngridientController as Controller;
                 <li class="breadcrumb-item">
                     <a href="{{route('admin.index')}}">Доска</a>
                 </li>
-                <li class="breadcrumb-item active">{{Controller::TITLE}}</li>
+                <li class="breadcrumb-item active">Стоп-лист</li>
             </ol>
 
             <!-- /cards -->
             <h2></h2>
             <div class="box_general padding_bottom">
                 <div class="header_box version_2">
-                    <h2><i class="fa fa-fw fa-list"></i>{{Controller::TITLE}}</h2>
+                    <h2><i class="fa fa-fw fa-list"></i>Стоп-лист</h2>
                     <div class="pull-right">
                         <a href="{{route(Controller::ROUTE_CREATE)}}" class="btn badge-primary">Добавить</a>
                     </div>
