@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="col-12 col-sm-4 text-sm-center text-md-left">
-            <div class="footer-quicklink">
+            <div class="text-center">
                 <!-- VK Widget -->
                 <!-- VK Widget -->
                 <div id="vk_groups"></div>
