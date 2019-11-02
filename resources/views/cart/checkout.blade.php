@@ -141,11 +141,11 @@ use App\Models\Order\Order;
                         <div class="form-row">
                             <div class="form-group col-md-4 hide-pickup">
                                 <label for="inputCompanyName">Город*</label>
-                                <input class="no-round-input-bg" name="city" type="text">
+                                <input class="no-round-input-bg" name="city" type="text" required="">
                             </div>
                             <div class="form-group col-md-4 hide-pickup">
                                 <label for="inputCompanyName">Улица*</label>
-                                <input class="no-round-input-bg" name="street" type="text">
+                                <input class="no-round-input-bg" name="street" type="text" required="">
                             </div>
                             <div class="form-group col-md-4 hide-pickup">
                                 <label for="inputCompanyName">Дом*</label>
