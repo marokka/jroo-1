@@ -35,7 +35,7 @@ use App\Models\Food\models\FoodViewModel;
                            data-id="{{$food->id}}">{{$food->name}}</a>
 
                         @if(true === $food->active)
-                            <h3 class="product-price">₽{{$food->properties[0]->price}}
+                            <h3 class="product-price"><i class="fas fa-ruble-sign"></i>{{$food->properties[0]->price}}
                                 @if($food->properties[0]->old_price)
                                     <del>₽{{$food->properties[0]->old_price}}</del>
                                 @endif

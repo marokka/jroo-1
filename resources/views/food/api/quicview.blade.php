@@ -29,7 +29,7 @@ use App\Models\Food\models\FoodViewModel;
                     <div class="price-rate">
                         <h3 class="product-price">
                             @if($model->properties[0]->old_price)
-                                <del>₽{{$model->properties[0]->old_price}}</del>
+                                <del>{{$model->properties[0]->old_price}}<i class="fas fa-ruble-sign"></i></del>
                             @endif
                             ₽{{$model->properties[0]->price}}
                         </h3>
