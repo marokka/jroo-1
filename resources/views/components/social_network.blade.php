@@ -5,7 +5,7 @@
         <div class="col-12 col-sm-4 text-sm-center text-md-left">
             <div class="footer-quicklink">
 {{--                <iframe src="https://averin.pro/widget.php?l=jroo_burger_steak&style=4&width=250&gallery=1&s=80&icc=3&icr=3&t=1&tt=Мы в Инстаграм&h=1&ttcolor=FFFFFF&th=c3c3c3&bw=f9f9f9&bscolor=FFFFFF&bs=FF0000&ts=Подписаться"allowtransparency="true" frameborder="0" scrolling="no"style="border:none;overflow:hidden;width:auto; height: 490px"></iframe>--}}
-                <iframe src="//widget.stapico.ru/?q=jroo_burger_steak&s=100&w=2&h=3&b=1&bg=574e16&p=5&effect=2" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:250px; height: 490px" ></iframe>
+                <iframe src="//widget.stapico.ru/?q=jroo_burger_steak&s=100&w=2&h=3&b=1&bg=2C150C&flw_bg=2C150C&p=3&title=%23jroo_burger_steak&effect=2" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:246px; height: 484px" ></iframe>
             </div>
         </div>
         <div class="col-12 col-sm-4 text-sm-center text-md-left">
