@@ -25,7 +25,8 @@ class FoodService
             ]
         )
         );
-
+        $food->mitm_id   = 0;
+        $food->mitm_name = "";
         if ($request->file('img')) {
             $food->img = $request->file('img')->store('foods', 'public');
         }
@@ -77,6 +78,9 @@ class FoodService
             Food::ATTR_STATUS,
             Food::ATTR_DESCRIPTION
         ]));
+
+        $model->mitm_id   = 0;
+        $model->mitm_name = "";
 
         if ($request->file('img')) {
             $model->img = $request->file('img')->store('foods', 'public');
