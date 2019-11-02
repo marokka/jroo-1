@@ -31,7 +31,7 @@ use App\Models\Food\models\FoodViewModel;
 
                     <div class="product-info_block">
                         <h5 class="product-type mt-2">{{$food->category}}</h5>
-                        <a class="view product-name mt-5" href="javascript:;"
+                        <a class="view product-name mt-1" href="javascript:;"
                            data-id="{{$food->id}}">{{$food->name}}</a>
 
                         @if(true === $food->active)
