@@ -119,7 +119,7 @@
                             <tbody>
                             <tr>
                                 <th>Сумма</th>
-                                <td class="total">₽0.00</td>
+                                <td class="total"><i class="fas fa-ruble-sign" style="font-size: 0.7em"></i> 0.00</td>
                             </tr>
                             </tbody>
                         </table>
