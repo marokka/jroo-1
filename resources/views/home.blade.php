@@ -23,7 +23,7 @@
                 <div class="slider-banner">
                     <div class="row">
                         @foreach($categories as $category)
-                            <div class="col-12 col-sm-4 col-lg-4">
+                            <div class="col-6 col-sm-4 col-lg-2">
                                 <a href="{{route('food.by-category-slug', $category->slug)}}">
                                     <img class="img-fluid" src="{{$category->img}}"
                                          alt="{{$category->name}}" style="margin-bottom: 8%; border-radius: 14px;"
@@ -32,13 +32,13 @@
                             </div>
                         @endforeach
 
-                        <div class="col-12 col-sm-4 col-lg-4">
-                            <a href="{{route('foods.index')}}">
-                                <img class="img-fluid"
-                                     src="{{asset('frontend/images/categories/other.jpg')}}"
-                                     alt="Все блюда" style="margin-bottom: 8%; border-radius: 14px;" title="Все блюда">
-                            </a>
-                        </div>
+{{--                        <div class="col-12 col-sm-4 col-lg-4">--}}
+{{--                            <a href="{{route('foods.index')}}">--}}
+{{--                                <img class="img-fluid"--}}
+{{--                                     src="{{asset('frontend/images/categories/other.jpg')}}"--}}
+{{--                                     alt="Все блюда" style="margin-bottom: 8%; border-radius: 14px;" title="Все блюда">--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
