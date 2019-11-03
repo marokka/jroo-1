@@ -32,7 +32,7 @@
             </div>
             <div class="col-12 col-md-12 col-lg-4 order-2 order-md-4 order-lg-3 text-center">
                 <div class="week-product_img"><img class="img-fluid" src="{{asset('frontend/images/jroo-big.png')}}" alt="">
-                    <p>Only<br><span>$19.00</span></p>
+                    <p><img src="{{asset('frontend/images/icon-item/logo50.png')}}" alt=""></div></p>
                 </div>
             </div>
             <div class="col-10 col-md-6 col-lg-4 order-4 order-md-3 order-lg-4">
