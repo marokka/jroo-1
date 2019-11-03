@@ -13,7 +13,7 @@
                                 <p>Так звали быка, который стал символом первого ресторана JROO несколько веков назад.</p>
                             </div>
                             <div class="featured-use_icon text-md-right order-1 order-md-2 featured-use_icon-left">
-                                <div class="icon-detail"><img src="{{asset('frontend/images/icon-imput/imput1.png')}}" alt=""></div>
+                                <div class="icon-detail"><img src="{{asset('frontend/images/icon-item/imput1.png')}}" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -24,7 +24,7 @@
                                 <p>Беспланая доставка от 1000Р по Ялте</p>
                             </div>
                             <div class="featured-use_icon text-md-right order-1 order-md-2 featured-use_icon-left">
-                                <div class="icon-detail"><img src="{{asset('frontend/images/icon-imput/imput2.png')}}" alt=""></div>
+                                <div class="icon-detail"><img src="{{asset('frontend/images/icon-item/imput2.png')}}" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                                 <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
                             </div>
                             <div class="featured-use_icon order-1 ml-0">
-                                <div class="icon-detail"><img src="{{asset('frontend/images/icon-imput/imput3.png')}}" alt=""></div>
+                                <div class="icon-detail"><img src="{{asset('frontend/images/icon-item/imput3.png')}}" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                                 <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
                             </div>
                             <div class="featured-use_icon order-1 ml-0">
-                                <div class="icon-detail"><img src="{{asset('frontend/images/icon-imput/imput4.png')}}" alt=""></div>
+                                <div class="icon-detail"><img src="{{asset('frontend/images/icon-item/imput4.png')}}" alt=""></div>
                             </div>
                         </div>
                     </div>
