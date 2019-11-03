@@ -3792,7 +3792,7 @@ header.coffee-2 .navigation-filter .website-search .filter-search .categories-se
 .deal-of-week {
   margin-bottom: 60px; }
   .deal-of-week h1 {
-    margin-bottom: 100px; }
+    margin-bottom: 25px; }
   .deal-of-week .featured-use {
     display: flex;
     margin-bottom: 40px;
@@ -3823,7 +3823,7 @@ header.coffee-2 .navigation-filter .website-search .filter-search .categories-se
       height: 70px;
       width: 70px;
       background-color: #fff;
-      padding: 20px 0;
+      padding: 10px 0;
       bottom: 0;
       right: 0;
       box-shadow: 0px 5px 13px 0 rgba(53, 78, 84, 0.21);
