@@ -315,7 +315,9 @@
 
 @yield('content')
 <!-- End header-->
+    @include('components.story')
     @include('components.partners')
+
 </div>
 <!-- End partner-->
 <footer>
