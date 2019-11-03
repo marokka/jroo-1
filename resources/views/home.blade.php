@@ -44,6 +44,6 @@
             </div>
         </div>
     </div>
-
+    @include('components.story')
     <!-- End shop layout-->
 @endsection
