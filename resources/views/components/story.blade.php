@@ -44,7 +44,7 @@
                                 <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
                             </div>
                             <div class="featured-use_icon order-1 ml-0">
-                                <div class="icon-detail"><img src="{{asset('frontend/images/icon-item/imput3.png')}}" alt=""></div>
+                                <div class="icon-detail"><img src="{{asset('frontend/images/icon-item/imput4.png')}}" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                                 <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
                             </div>
                             <div class="featured-use_icon order-1 ml-0">
-                                <div class="icon-detail"><img src="{{asset('frontend/images/icon-item/imput4.png')}}" alt=""></div>
+                                <div class="icon-detail"><img src="{{asset('frontend/images/icon-item/imput3.png')}}" alt=""></div>
                             </div>
                         </div>
                     </div>
