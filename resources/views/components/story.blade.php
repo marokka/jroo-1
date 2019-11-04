@@ -41,7 +41,7 @@
                         <div class="featured-use">
                             <div class="featured-use_intro order-2">
                                 <h5>Начинаем сразу готовить</h5>
-                                <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
+                                <p>Заказ поступает сразу на кухню и и быстро готовится</p>
                             </div>
                             <div class="featured-use_icon order-1 ml-0">
                                 <div class="icon-detail"><img src="{{asset('frontend/images/icon-item/imput4.png')}}" alt=""></div>
@@ -52,7 +52,7 @@
                         <div class="featured-use">
                             <div class="featured-use_intro order-2">
                                 <h5>Только свежие ингредиенты</h5>
-                                <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
+                                <p>Используются только свежие ингредиенты</p>
                             </div>
                             <div class="featured-use_icon order-1 ml-0">
                                 <div class="icon-detail"><img src="{{asset('frontend/images/icon-item/imput3.png')}}" alt=""></div>
