@@ -41,7 +41,7 @@
                         <div class="featured-use">
                             <div class="featured-use_intro order-2">
                                 <h5>Начинаем сразу готовить</h5>
-                                <p>Заказ поступает сразу на кухню и и быстро готовится</p>
+                                <p>Заказ поступает сразу на кухню и быстро готовится</p>
                             </div>
                             <div class="featured-use_icon order-1 ml-0">
                                 <div class="icon-detail"><img src="{{asset('frontend/images/icon-item/imput4.png')}}" alt=""></div>
