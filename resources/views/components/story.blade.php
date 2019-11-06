@@ -84,7 +84,7 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="benefit-detail boderless d-flex flex-column align-items-center"><img class="benefit-img" style="max-height: 50px !important;" src="{{asset('frontend/images/icon-item/money.png')}}" alt="">
-                            <h5 class="benefit-title">Удобный выд оплаты</h5>
+                            <h5 class="benefit-title">Удобный вид оплаты</h5>
                             <p class="benefit-describle">Наличкой курьеру или онлайн</p>
                         </div>
                     </div>
@@ -96,15 +96,15 @@
         <div class="full-fluid">
             <div class="container">
                 <div class="delivery-process_wrapper text-center">
-                    <h1 class="title coffee-underline text-white">Delivery Process</h1>
+                    <h1 class="title coffee-underline text-white">Процесс доставки</h1>
                     <div class="delivery-process_block">
                         <div class="row justify-content-between">
                             <div class="col-6 col-md-3">
                                 <div class="process">
                                     <div class="process-icon"><img src="{{asset('frontend/images/icon-item/item11.png')}}" alt=""></div>
                                     <div class="process-text">
-                                        <h5>Step 1</h5>
-                                        <p>Choose Your Products</p>
+                                        <h5>Шаг 1</h5>
+                                        <p>Добавьте товар в корзину и уточните количество</p>
                                     </div>
                                 </div>
                             </div>
@@ -112,8 +112,8 @@
                                 <div class="process">
                                     <div class="process-icon"><img src="{{asset('frontend/images/icon-item/item12.png')}}" alt=""></div>
                                     <div class="process-text">
-                                        <h5>Step 2</h5>
-                                        <p>Connect Nearest Farm</p>
+                                        <h5>Шаг 2</h5>
+                                        <p>Заполните форму</p>
                                     </div>
                                 </div>
                             </div>
@@ -121,8 +121,8 @@
                                 <div class="process">
                                     <div class="process-icon"><img src="{{asset('frontend/images/icon-item/item13.png')}}" alt=""></div>
                                     <div class="process-text">
-                                        <h5>Step 3</h5>
-                                        <p>Share Your Location</p>
+                                        <h5>Шаг 3</h5>
+                                        <p>Выберете вид доставки</p>
                                     </div>
                                 </div>
                             </div>
@@ -130,8 +130,8 @@
                                 <div class="process">
                                     <div class="process-icon clear"><img src="{{asset('frontend/images/icon-item/item14.png')}}"alt=""></div>
                                     <div class="process-text">
-                                        <h5>Step 4</h5>
-                                        <p>Get Delivered Fast</p>
+                                        <h5>Шаг 4</h5>
+                                        <p>Выберете удобный способ оплаты и нажмите кнопку оформить</p>
                                     </div>
                                 </div>
                             </div>
