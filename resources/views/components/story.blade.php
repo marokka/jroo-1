@@ -143,7 +143,11 @@
     </div>
 </div>
 <!-- End delivery-process-->
-<div class="col-12 text-center" style="background-color: #2C150C; border-radius: 10px; padding: 20px;">
-    <h1 style="font-size: 1.3em; color: white;font-weight: bold;">JROO burger & steak включает в себя простоту и локаничность интерьера, безупречный вкус качественных местных продуктов и доступную стоимость блюд.
-        Мы удивим Вас простотой исполнения и в то же время изяществом вкуса сочных стейков, приготовленных из мяса местного производства.</h1>
+<div class="deal-of-week">
+    <div class="container">
+            <div class="col-12 text-center" style="background-color: #2C150C; border-radius: 10px; padding: 20px;">
+               <h1 style="font-size: 1.3em; color: white;font-weight: bold;">JROO burger & steak включает в себя простоту и локаничность интерьера, безупречный вкус качественных местных продуктов и доступную стоимость блюд.
+                   Мы удивим Вас простотой исполнения и в то же время изяществом вкуса сочных стейков, приготовленных из мяса местного производства.</h1>
+            </div>
+    </div>
 </div>
