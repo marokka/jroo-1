@@ -55,6 +55,16 @@ class FoodService
 
         $food->recomend()->sync($request->post('recomendID'));
 
+        if ($request->file('imgs')) {
+
+            foreach ($request->file('imgs') as $file) {
+                $fileModel = new Image();
+                $fileModel->image = $file->store('foods', 'public');
+                $fileModel->model = $fileModel::MODEL_FOOD;
+                $fileModel->model_id = $food->id;
+                $fileModel->save();
+            }
+        }
 
         return $food;
 

@@ -40,13 +40,12 @@ class FoodReadRepository
     public function get(): Builder
     {
         return Food::select([Food::TABLE_NAME . '.*',
-                             DB::raw('GROUP_CONCAT(' . FoodProperty::TABLE_NAME . '.name' . ') as property_name')])
+                             DB::raw(FoodProperty::TABLE_NAME . '.name' . ' as property_name')])
             ->join(
                 FoodProperty::TABLE_NAME,
                 Food::TABLE_NAME . '.' . Food::ATTR_ID,
                 '=', FoodProperty::ATTR_FOOD_ID
-            )
-            ->groupBy(Food::TABLE_NAME . '.' . Food::ATTR_ID);
+            );
     }
 
     public function findByCategorySlug(string $slug): ?Builder

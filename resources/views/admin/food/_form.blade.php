@@ -154,6 +154,13 @@ use App\Models\Food\models\FoodViewModel;
 
 
     <div class="col-md-12">
+        <div class="form-group">
+            <label>Дополнительные изображения</label>
+            <input id="input-b1" name="imgs[]" type="file" multiple class="file" data-browse-on-zone-click="true">
+        </div>
+    </div>
+
+    <div class="col-md-12">
         <div id="react-add-variants" data-foods='@json($foodProperties ?? [])'></div>
     </div>
 
