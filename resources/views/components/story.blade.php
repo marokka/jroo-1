@@ -21,7 +21,7 @@
                         <div class="featured-use text-md-right">
                             <div class="featured-use_intro order-2 order-md-1">
                                 <h5>Быстрая доставка</h5>
-                                <p>Беспланая доставка от 1000Р по Ялте</p>
+                                <p>Доставим с максимальной скоростью по Ялте и в округе</p>
                             </div>
                             <div class="featured-use_icon text-md-right order-1 order-md-2 featured-use_icon-left">
                                 <div class="icon-detail"><img src="{{asset('frontend/images/icon-item/imput2.png')}}" alt=""></div>
@@ -85,7 +85,7 @@
                     <div class="col-12 col-md-4">
                         <div class="benefit-detail boderless d-flex flex-column align-items-center"><img class="benefit-img" style="max-height: 50px !important;" src="{{asset('frontend/images/icon-item/money.png')}}" alt="">
                             <h5 class="benefit-title">Удобный вид оплаты</h5>
-                            <p class="benefit-describle">Наличкой курьеру или онлайн</p>
+                            <p class="benefit-describle">Наличными курьеру или онлайн</p>
                         </div>
                     </div>
                 </div>
