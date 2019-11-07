@@ -37,7 +37,7 @@ class FoodRequest extends FormRequest
             'name'                 => 'required',
             'category_id'          => 'required|integer',
             'FoodProperty'         => 'required',
-            'FoodProperty.*.price' => 'required|integer',
+            'FoodProperty.*.price' => 'required',
             'FoodProperty.*.is_visible' => 'required|integer',
         ];
     }
