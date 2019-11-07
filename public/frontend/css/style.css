@@ -5040,7 +5040,7 @@ footer.coffee .newletter {
   position: relative; }
   .delivery-process .delivery-process_holder {
     margin-bottom: 60px;
-    background-image: url(../images/homepage04/parallax-home4.jpg);
+      background: linear-gradient(to right, #F6EFD2, #CEAD78);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

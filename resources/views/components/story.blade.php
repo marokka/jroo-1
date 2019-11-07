@@ -96,7 +96,7 @@
         <div class="full-fluid">
             <div class="container">
                 <div class="delivery-process_wrapper text-center">
-                    <h1 class="title coffee-underline text-white">Процесс доставки</h1>
+                    <h1 class="title coffee-underline text-white" style="color: #2C150C !important;">Процесс доставки</h1>
                     <div class="delivery-process_block">
                         <div class="row justify-content-between">
                             <div class="col-6 col-md-3">
@@ -104,7 +104,7 @@
                                     <div class="process-icon"><img src="{{asset('frontend/images/icon-item/item11.png')}}" alt=""></div>
                                     <div class="process-text">
                                         <h5>Шаг 1</h5>
-                                        <p>Добавьте товар в корзину и уточните количество</p>
+                                        <p style="color: #2C150C">Добавьте товар в корзину и уточните количество</p>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                                     <div class="process-icon"><img src="{{asset('frontend/images/icon-item/item12.png')}}" alt=""></div>
                                     <div class="process-text">
                                         <h5>Шаг 2</h5>
-                                        <p>Заполните форму</p>
+                                        <p style="color: #2C150C">Заполните форму, зоблюдая все пункты</p>
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@
                                     <div class="process-icon"><img src="{{asset('frontend/images/icon-item/item13.png')}}" alt=""></div>
                                     <div class="process-text">
                                         <h5>Шаг 3</h5>
-                                        <p>Выберете вид доставки</p>
+                                        <p style="color: #2C150C">Выберете вид доставки</p>
                                     </div>
                                 </div>
                             </div>
@@ -131,7 +131,7 @@
                                     <div class="process-icon clear"><img src="{{asset('frontend/images/icon-item/item14.png')}}"alt=""></div>
                                     <div class="process-text">
                                         <h5>Шаг 4</h5>
-                                        <p>Выберете удобный способ оплаты и нажмите кнопку оформить</p>
+                                        <p style="color: #2C150C">Выберете удобный способ оплаты и нажмите кнопку "Оформить"</p>
                                     </div>
                                 </div>
                             </div>
