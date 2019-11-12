@@ -113,7 +113,7 @@
                                     <div class="process-icon"><img src="{{asset('frontend/images/icon-item/item12.png')}}" alt=""></div>
                                     <div class="process-text">
                                         <h5>Шаг 2</h5>
-                                        <p style="color: #2C150C">Заполните форму, зоблюдая все пункты</p>
+                                        <p style="color: #2C150C">Заполните форму, cоблюдая все пункты</p>
                                     </div>
                                 </div>
                             </div>
