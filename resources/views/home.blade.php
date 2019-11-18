@@ -53,7 +53,7 @@
         <div class="coming-soon_block" style="padding: 10px; background: #2C150C; border-radius: 10px;">
             <h1 class="title" style="color: white;">Технические работы на сайте</h1>
             <h5 class="subtitle" style="color: white; margin-bottom: 10px !important;">На данный момент на сайте проводяться технические работы. Связанные с обновлением меню. </h5>
-            <button type="button" class="btn btn-secondary"><a href="http://jroo.cafe/#menu" target="_blank">Ознакомиться с новым меню</a></button>
+            <button type="button" class="btn btn-secondary"><a href="http://jroo.cafe/#menu" target="_blank" style="color: white;">Ознакомиться с новым меню</a></button>
             <div class="follow-us">
                 <h5 style="color: white;">Вы можете посмотреть на нас в соц. сетях</h5>
                 <div class="social"><a class="round-icon-btn" href="https://www.facebook.com/jrooburgersteak/" target="_blank"><i class="fab fa-facebook-f"> </i></a><a class="round-icon-btn" href="https://vk.com/club136274972" target="_blank"><i class="fab fa-vk"> </i></a><a class="round-icon-btn" href="https://www.instagram.com/jroo_burger_steak/" target="_blank"><i class="fab fa-instagram"></i></a></div>
