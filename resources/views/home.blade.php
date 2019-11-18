@@ -52,7 +52,7 @@
     <div class="container">
         <div class="coming-soon_block" style="padding: 10px; background: #2C150C; border-radius: 10px;">
             <h1 class="title" style="color: white;">Технические работы на сайте</h1>
-            <h5 class="subtitle" style="color: white; margin-bottom: 10px !important;">На данный момент на сайте проводяться технические работы. Связанные с обновлением меню. </h5>
+            <h5 class="subtitle" style="color: white; margin-bottom: 20px !important;">На данный момент на сайте проводяться технические работы. Связанные с обновлением меню. </h5>
             <button type="button" class="btn btn-secondary"><a href="http://jroo.cafe/#menu" target="_blank" style="color: white;">Ознакомиться с новым меню</a></button>
             <div class="follow-us">
                 <h5 style="color: white;">Вы можете посмотреть на нас в соц. сетях</h5>
