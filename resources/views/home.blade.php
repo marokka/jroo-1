@@ -55,7 +55,7 @@
             <h5 class="subtitle" style="color: white;">На данный момент на сайте проводяться технические работы. Связанные с обновлением меню. </h5>
             <div class="follow-us">
                 <h5 style="color: white;">Вы можете посмотреть на нас в соц. сетях</h5>
-                <div class="social"><a class="round-icon-btn" href=""><i class="fab fa-facebook-f"> </i></a><a class="round-icon-btn" href=""><i class="fab fa-vk"> </i></a><a class="round-icon-btn" href=""><i class="fab fa-instagram"></i></a></div>
+                <div class="social"><a class="round-icon-btn" href="https://www.facebook.com/jrooburgersteak/" target="_blank"><i class="fab fa-facebook-f"> </i></a><a class="round-icon-btn" href="https://vk.com/club136274972" target="_blank"><i class="fab fa-vk"> </i></a><a class="round-icon-btn" href="https://www.instagram.com/jroo_burger_steak/" target="_blank"><i class="fab fa-instagram"></i></a></div>
             </div>
         </div>
     </div>
