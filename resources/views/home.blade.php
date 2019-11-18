@@ -50,12 +50,12 @@
 
 <div class="coming-soon">
     <div class="container">
-        <div class="coming-soon_block">
+        <div class="coming-soon_block" style="padding: 10px; background: #2C150C; border-radius: 10px;">
             <h1 class="title" style="color: white;">Технические работы на сайте</h1>
             <h5 class="subtitle" style="color: white;">На данный момент на сайте проводяться технические работы. Связанные с обновлением меню. </h5>
             <div class="follow-us">
-                <h5>Вы можете посмотреть на нас в соц. сетях</h5>
-                <div class="social"><a class="round-icon-btn" href=""><i class="fab fa-facebook-f"> </i></a><a class="round-icon-btn" href=""><i class="fab fa-twitter"></i></a><a class="round-icon-btn" href=""><i class="fab fa-invision"> </i></a><a class="round-icon-btn" href=""><i class="fab fa-pinterest-p"></i></a></div>
+                <h5 style="color: white;">Вы можете посмотреть на нас в соц. сетях</h5>
+                <div class="social"><a class="round-icon-btn" href=""><i class="fab fa-facebook-f"> </i></a><a class="round-icon-btn" href=""><i class="fab fa-vk"> </i></a><a class="round-icon-btn" href=""><i class="fab fa-instagram"></i></a></div>
             </div>
         </div>
     </div>
