@@ -32,13 +32,13 @@
                             </div>
                         @endforeach
 
-                        <div class="col-12 col-sm-4 col-lg-4">
-                            <a href="{{route('foods.index')}}">
-                                <img class="img-fluid"
-                                     src="{{asset('frontend/images/categories/other.jpg')}}"
-                                     alt="Все блюда" style="margin-bottom: 8%; border-radius: 14px;" title="Все блюда">
-                            </a>
-                        </div>
+{{--                        <div class="col-12 col-sm-4 col-lg-4">--}}
+{{--                            <a href="{{route('foods.index')}}">--}}
+{{--                                <img class="img-fluid"--}}
+{{--                                     src="{{asset('frontend/images/categories/other.jpg')}}"--}}
+{{--                                     alt="Все блюда" style="margin-bottom: 8%; border-radius: 14px;" title="Все блюда">--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
