@@ -19,7 +19,7 @@
 <!-- End breadcrumb-->
 <div class="contact-us">
   <div class="container">
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A402a2c4c078dedc29756cfcadd4e3a3973f0a66ec1f5a7bf2a7800ac57e73cbc&amp;source=constructor" width="100%" height="517" frameborder="0"></iframe>
+      <iframe src="https://yandex.ru/map-widget/v1/-/CGTvNI5K" width="100%" height="400" frameborder="1" allowfullscreen="true"></iframe>
     <div class="contact-method">
       <div class="row">
         <div class="col-12 col-md-4">

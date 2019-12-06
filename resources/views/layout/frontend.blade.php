@@ -256,40 +256,6 @@
         <div class="navigation-filter">
             <div class="container">
                 <div class="row">
-                    <!--
-                    <div class="col-12 col-md-4 col-lg-4 col-xl-3 order-2 order-md-1">
-                        <div class="department-menu_block">
-                            <div class="department-menu d-flex justify-content-between align-items-center"><i
-                                    class="fas fa-bars"></i>Рекомендуем наборы<span><i
-                                        class="arrow_carrot-down"></i></span></div>
-                            <div class="department-dropdown-menu" style="display: none;">
-                                <ul>
-                                    <li><a class="department-link" href="shop_grid+list_3col.html">
-                                            <img src="{{asset('frontend/images/icon/steak-medium.png')}}"
-                                                 style="width: 35px;">Стейк (на выбор) + <img
-                                                src="{{asset('frontend/images/icon/porridge.png')}}"
-                                                style="width: 35px;">гарнир (на выбор) + <img
-                                                src="{{asset('frontend/images/icon/sauce.png')}}"
-                                                style="width: 35px;">соус (на выбор)</a></li>
-                                    <li><a class="department-link" href="shop_grid+list_3col.html">
-                                            <img src="{{asset('frontend/images/icon/beefburger.png')}}"
-                                                 style="width: 35px;">Бургер (на выбор) + <img
-                                                src="{{asset('frontend/images/icon/french-fries.png')}}"
-                                                style="width: 35px;">фри + <img
-                                                src="{{asset('frontend/images/icon/sauce.png')}}"
-                                                style="width: 35px;">(соус на выбор)</a></li>
-                                    <li><a class="department-link" href="shop_grid+list_3col.html">
-                                            <img src="{{asset('frontend/images/icon/beefburger.png')}}"
-                                                 style="width: 35px;">Бургер (на выбор) + <img
-                                                src="{{asset('frontend/images/icon/sweet-patato.png')}}"
-                                                style="width: 35px;">картофельные дольки + <img
-                                                src="{{asset('frontend/images/icon/sauce.png')}}"
-                                                style="width: 35px;">(соус на выбор)</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    -->
                     <div class="col-12 col-md-12 col-lg-12 col-xl-12 order-1 order-md-2">
                         <form action="{{route('food.by-search')}}">
                             <div class="website-search">
@@ -315,7 +281,7 @@
 
 @yield('content')
 <!-- End header-->
-    @include('components.partners')
+{{--    @include('components.partners')--}}
 
 </div>
 <!-- End partner-->
