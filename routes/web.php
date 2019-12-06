@@ -68,3 +68,5 @@ Route::group(['prefix' => 'api'], function () {
         Route::post('/activate-coupon', 'CartController@activateCoupon')->name('cart.activate-coupon');
     });
 });
+
+Route::get('/order/{id}', 'Admin\OrderController@show');

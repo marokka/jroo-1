@@ -40,7 +40,7 @@ class OrderController extends Controller
         /**
          * @var Order[] $orders
          */
-        $orders = $this->orderRepository->get()->filter($orderFilter)->paginate(15);
+        $orders = $this->orderRepository->get()->filter($orderFilter)->orderBy(Order::ATTR_ID, 'desc')->paginate(15);
         return view('admin.order.index', compact('orders'));
     }
 

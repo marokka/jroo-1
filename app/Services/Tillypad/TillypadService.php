@@ -12,6 +12,7 @@ namespace App\Services\Tillypad;
 use App\Models\Cart\Cart;
 use App\Models\Order\Order;
 use App\Repositories\Cart\CartRepository;
+use App\Services\Telegram\TelegramService;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Log;
 
@@ -151,22 +152,25 @@ class TillypadService
                     "PostCode"      => "1"
                 ];
             }
-            $client = new Client([
-                'http_error' => false
-            ]);
+            try {
+                $client = new Client();
 
-            $response = $client->post('https://api.tillypad.online/_v1.0/Request.php', [
-                'headers' => [
-                    'Authorization' => env('TILLYPAD_TOKEN'),
-                    'Content-Type'  => 'application/json',
-                    'Target'        => 'Delivery',
-                ],
+                $response = $client->post('https://api.tillypad.online/_v1.0/Request.php', [
+                    'headers' => [
+                        'Authorization' => env('TILLYPAD_TOKEN'),
+                        'Content-Type'  => 'application/json',
+                        'Target'        => 'Delivery',
+                    ],
 
-                'body' => json_encode($json),
-            ]);
+                    'body' => json_encode($json),
+                ]);
+            } catch (\Exception $exception) {
+                (new TelegramService)->sendToTelegram($order);
+            }
 
 
-            Log::info('Информация о заказа', [$response->getBody()->getContents()]);
+
+            Log::info('Информация о заказе', [$response->getBody()->getContents()]);
             Log::info("Массив", $json);
         }
     }
