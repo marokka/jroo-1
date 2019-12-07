@@ -164,6 +164,14 @@ class TillypadService
 
                     'body' => json_encode($json),
                 ]);
+
+                $json = json_decode($response->getBody()->getContents(), true);
+
+                if(true === isset($json[0]['ErrorNumber'])) {
+                    throw new \Exception("Ошибка");
+                }
+
+
             } catch (\Exception $exception) {
                 (new TelegramService)->sendToTelegram($order);
             }
