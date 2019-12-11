@@ -132,6 +132,7 @@ class TillypadService
 
             foreach ($properties as $key => $property) {
                 $json[] = [
+                    "orit_ID"       => "",
                     "clnt_id"       => $orderClient[0]['clnt_ID'],
                     "mitm_ID"       => $property['mitm_id'],
                     "mitm_value"    => "1",
@@ -167,7 +168,7 @@ class TillypadService
 
                 $json = json_decode($response->getBody()->getContents(), true);
 
-                if(true === isset($json[0]['ErrorNumber'])) {
+                if (true === isset($json[0]['ErrorNumber'])) {
                     throw new \Exception("Ошибка");
                 }
 
@@ -175,7 +176,6 @@ class TillypadService
             } catch (\Exception $exception) {
                 (new TelegramService)->sendToTelegram($order);
             }
-
 
 
             Log::info('Информация о заказе', [$response->getBody()->getContents()]);
