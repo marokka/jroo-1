@@ -86,6 +86,27 @@ class OrderViewModel
      * @var integer
      */
     public $status;
+    /**
+     * @var string
+     */
+    public $house;
+    /**
+     * @var string
+     */
+    public $apartment;
+    /**
+     * @var string
+     */
+    public $entrance;
+    /**
+     * @var string
+     */
+    public $intercom;
+    /**
+     * @var string
+     */
+    public $building;
+
 
     /**
      * @var CartProperty[]
