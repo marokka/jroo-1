@@ -33,11 +33,12 @@ class OrderObserver
      */
     public function created(Order $order)
     {
-        $properties = $this->orderRepository->getOrderProperties($order->cart_id)->toArray();
+        if ($order::TYPE_CASH === (int)$order->pay_type) {
+            $properties = $this->orderRepository->getOrderProperties($order->cart_id)->toArray();
 
-        $this->tillypadService->sendingOrderToTillypad($order, $properties);
-        session()->regenerate();
-
+            $this->tillypadService->sendingOrderToTillypad($order, $properties);
+            session()->regenerate();
+        }
     }
 
     /**
@@ -50,6 +51,7 @@ class OrderObserver
     {
         if ($order::STATUS_PAID === $order->status) {
             $properties = $this->orderRepository->getOrderProperties($order->cart_id)->toArray();
+            Log::info("Данные", [$order->id, $order->cart_id]);
             $this->tillypadService->sendingOrderToTillypad($order, $properties);
         }
     }

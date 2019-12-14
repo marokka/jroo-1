@@ -105,6 +105,12 @@ class OrderViewModel
     const ATTR_TOTAL         = 'total';
     const ATTR_COMMENT       = 'comment';
     const ATTR_STATUS        = 'status';
+    const ATTR_STREET        = 'street';
+    const ATTR_HOUSE         = 'house';
+    const ATTR_APARTMENT     = 'apartment';
+    const ATTR_ENTRANCE      = 'entrance';
+    const ATTR_INTERCOM      = 'intercom';
+    const ATTR_BUILDING      = 'building';
 
 
     public function __construct(Order $order, OrderRepository $orderRepository)
@@ -134,10 +140,6 @@ class OrderViewModel
     {
         return [
             self::ATTR_PHONE         => 'Телефон',
-            self::ATTR_ADDRESS       => 'Адрес',
-            self::ATTR_HOME          => 'Дом',
-            self::ATTR_FLOOR         => 'Этаж',
-            self::ATTR_PORCH         => 'Подъезд',
             self::ATTR_TIME_DELIVERY => 'Время доставки',
             self::ATTR_DATE_DELIVERY => 'Дата доставки',
             self::ATTR_ORGANIZATION  => 'Организация',
@@ -146,6 +148,11 @@ class OrderViewModel
             self::ATTR_TOTAL         => 'Сумма заказа',
             self::ATTR_COMMENT       => 'Коммент',
             self::ATTR_STATUS        => 'Статус',
+            self::ATTR_STREET        => 'Адрес',
+            self::ATTR_BUILDING      => 'Корпус',
+            self::ATTR_ENTRANCE      => 'Подъезд',
+            self::ATTR_APARTMENT     => 'Квартира',
+            self::ATTR_HOUSE         => 'Дом',
         ];
     }
 }
