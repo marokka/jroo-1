@@ -107,6 +107,11 @@ class OrderViewModel
      */
     public $building;
 
+    /**
+     * @var string
+     */
+    public $street;
+
 
     /**
      * @var CartProperty[]
