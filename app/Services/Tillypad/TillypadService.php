@@ -171,15 +171,16 @@ class TillypadService
                 if (true === isset($json[0]['ErrorNumber'])) {
                     throw new \Exception("Ошибка");
                 }
-
+                Log::info('Информация о заказе', [$response->getBody()->getContents()]);
+                Log::info("Массив", $json);
 
             } catch (\Exception $exception) {
+                Log::info('Информация о заказе', [$response->getBody()->getContents()]);
+                Log::info("Массив", $json);
                 (new TelegramService)->sendToTelegram($order);
             }
 
 
-            Log::info('Информация о заказе', [$response->getBody()->getContents()]);
-            Log::info("Массив", $json);
         }
     }
 }
