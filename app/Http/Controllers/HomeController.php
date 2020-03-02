@@ -3,10 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category\Category;
+use App\Models\Category\models\CategoryViewModel;
+use App\Repositories\Category\CategoryRepository;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    /**
+     * @var CategoryRepository
+     */
+    private $categoryRepository;
+
+    /**
+     * HomeController constructor.
+     * @param CategoryRepository $categoryRepository
+     */
+    public function __construct(CategoryRepository $categoryRepository)
+    {
+        $this->categoryRepository = $categoryRepository;
+    }
 
     /**
      * Show the application dashboard.
@@ -15,8 +30,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $categories = Category::get();
-        return view('home', compact('categories'));
+        $categories = $this->categoryRepository->builder()->orderBy(Category::ATTR_ORDER)->get();
+
+        $categoriesWithFoods = [];
+
+        foreach ($categories as $category) {
+            $categoriesWithFoods[] = new CategoryViewModel($category);
+        }
+
+
+        return view('home', compact('categories', 'categoriesWithFoods'));
     }
 
     public function pay()
@@ -33,6 +56,7 @@ class HomeController extends Controller
     {
         return view('static.contact');
     }
+
     public function bonus()
     {
         return view('static.bonus');

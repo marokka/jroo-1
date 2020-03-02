@@ -102,7 +102,7 @@
 
 <script src="{{ asset('admin_assets/js/custom.js')}}"></script>
 <script src="{{ asset('admin_assets/js/admin.js')}}"></script>
-
+<script src="{{asset('admin_assets/js/jquery-ui.min.js')}}"></script>
 <script src="{{mix('js/app.js')}}"></script>
 
 </body>

@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string $img
  * @property string $icon
  * @property string $description
+ * @property int $oder
  * @property string $slug
  * @property integer $parent_id
  * @property integer $created_at
@@ -30,6 +31,7 @@ class Category extends Model
     const ATTR_ICON        = 'icon';
     const ATTR_DESCRIPTION = 'description';
     const ATTR_SLUG        = 'slug';
+    const ATTR_ORDER       = 'order';
     const ATTR_PARENT_ID   = 'parent_id';
     const ATTR_CREATED_AT  = 'created_at';
     const ATTR_UPDATED_AT  = 'updated_at';

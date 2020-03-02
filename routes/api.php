@@ -26,7 +26,7 @@ Route::group(['prefix' => 'food'], function () {
 
 Route::apiResource('categories', 'Api\V1\CategoryController')->middleware('api.headers');
 Route::apiResource('foods', 'Api\V1\FoodApiController')->middleware('api.headers');
-
+Route::post("set-position", 'Admin\CategoryController@setPosition');  // Сортировка категорий
 
 Route::group(['prefix' => 'cart'], function () {
     Route::delete('/{id}', 'CartController@destroy')->name('cart.destroy'); // Удаление корзины

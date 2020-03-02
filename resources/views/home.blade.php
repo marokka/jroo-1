@@ -44,6 +44,34 @@
             </div>
         </div>
     </div>
+
+    <div class="container feature-products feature-products_v2">
+        <div class="ogami-container-fluid">
+            @foreach($categoriesWithFoods as $categoryViewModel)
+                <div class="row align-items-center align-content-center">
+                    <div class="col-6">
+                        <h1 class="title mx-auto">{{$categoryViewModel->name}}</h1>
+                    </div>
+                    <div class="col-6 text-right" style="margin-bottom: 30px;">
+                        <a href="{{route('food.by-category-slug', ['slug' => $categoryViewModel->slug])}}" target="_blank" style="font-weight: bold;font-family: Gussi;font-size: 18px;color: white;padding: 4px 20px;border-radius: 10px;background-color: black;"><i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            @foreach($categoryViewModel->foodProperties as $index => $foodViewModel)
+                                @if($index <= 2)
+                                    <div class="col-12 col-md-4 col-lg-4 col-xxl-4" style="margin-bottom: 30px;margin-top: 2%;">
+                                        @component('food.list._cardFood', ['food' => $foodViewModel])@endcomponent
+                                    </div>
+                                @endif
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+
+
     @include('components.story')
     <!-- End shop layout-->
 

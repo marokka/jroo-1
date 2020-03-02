@@ -253,30 +253,30 @@
                 </div>
             </div>
         </div>
-        <div class="navigation-filter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-12 col-lg-12 col-xl-12 order-1 order-md-2">
-                        <form action="{{route('food.by-search')}}">
-                            <div class="website-search">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <div class="search-input">
-                                            <input name="name" value="{{request('name')}}" required
-                                                   class="no-round-input no-border" type="text"
-                                                   placeholder="Поиск по блюдам">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <button class="no-round-btn">Поиск</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+{{--        <div class="navigation-filter">--}}
+{{--            <div class="container">--}}
+{{--                <div class="row">--}}
+{{--                    <div class="col-12 col-md-12 col-lg-12 col-xl-12 order-1 order-md-2">--}}
+{{--                        <form action="{{route('food.by-search')}}">--}}
+{{--                            <div class="website-search">--}}
+{{--                                <div class="d-flex justify-content-between">--}}
+{{--                                    <div>--}}
+{{--                                        <div class="search-input">--}}
+{{--                                            <input name="name" value="{{request('name')}}" required--}}
+{{--                                                   class="no-round-input no-border" type="text"--}}
+{{--                                                   placeholder="Поиск по блюдам">--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div>--}}
+{{--                                        <button class="no-round-btn">Поиск</button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </form>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </header>
 
 @yield('content')

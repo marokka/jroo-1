@@ -23,7 +23,7 @@ class CategoryController extends Controller
     public function __construct(CategoryService $categoryService, Category $model)
     {
         $this->categoryService = $categoryService;
-        $this->model = $model;
+        $this->model           = $model;
     }
 
     /**
@@ -33,7 +33,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::paginate(15);
+        $categories = Category::orderBy(Category::ATTR_ORDER)->paginate(15);
 
         return view('admin.category.index', ['categories' => $categories]);
     }
@@ -57,7 +57,7 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -70,7 +70,7 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -93,7 +93,7 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -101,5 +101,15 @@ class CategoryController extends Controller
         $this->model::find($id)->delete();
 
         return redirect()->route('categories.index');
+    }
+
+    public function setPosition(Request $request)
+    {
+        foreach ($request->post('blocks') ?? [] as $item) {
+            $model        = $this->model::findOrFail($item['id']);
+            $model->order = $item['position'];
+            $model->save();
+        }
+
     }
 }

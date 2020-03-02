@@ -8,6 +8,7 @@ use App\Http\Requests\Foods\FoodRequest;
 use App\Models\Food\Food;
 use App\Models\Food\FoodInfo;
 use App\Models\Food\FoodProperty;
+use App\Models\Image\Image;
 
 class FoodService
 {

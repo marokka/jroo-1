@@ -30,15 +30,21 @@
 
                 <div class="categories">
                     <table class="table">
-                        <tbody>
+                        <thead>
                         <tr>
+                            <th></th>
                             <th>#</th>
                             <th>Название</th>
                             <th>Действие</th>
                         </tr>
 
+                        </thead>
+                        <tbody id="sortable">
                         @foreach($categories as $category)
-                            <tr>
+                            <tr data-id="{{$category->id}}">
+                                <td>
+                                    <i class="fa fa-arrows-alt"></i>
+                                </td>
                                 <td>
                                     {{$category->id}}
                                 </td>
@@ -50,11 +56,13 @@
                                             class="fa fa-fw fa-eye"></i></a>
                                     <a href="{{route('categories.edit', ['id' => $category->id])}}"><i
                                             class="fa fa-fw fa-edit"></i></a>
-                                    <form style="display: inline" action="{{ route('categories.destroy' , $category->id)}}" method="POST"
+                                    <form style="display: inline"
+                                          action="{{ route('categories.destroy' , $category->id)}}" method="POST"
                                           class="{{"form-" . $category->id}}">
                                         {!! method_field('DELETE') !!}
                                         @csrf
-                                        <button style="border: none; background: none;" type="submit" onclick="return confirm('Вы уверены?')"><a
+                                        <button style="border: none; background: none;" type="submit"
+                                                onclick="return confirm('Вы уверены?')"><a
                                                 href="javascript:void(0)"><i class="fa fa-trash"></i></a>
                                         </button>
                                     </form>
@@ -69,6 +77,29 @@
         </div>
         <!-- /.container-fluid-->
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            $("#sortable").sortable({
+                stop: function (evt, ui) {
+                    let blocks = [];
+                    $("#sortable > tr").each((key, item) => {
+                        blocks.push({position: key, id: $(item).attr('data-id')})
+                    });
+
+                    $.ajax({
+                        url: "/api/set-position",
+                        type: "POST",
+                        data: {blocks: blocks},
+                        success: function() {
+                            // location.reload();
+                        }
+                    })
+                }
+            });
+            $("#sortable").disableSelection();
+        })
+    </script>
 @endsection
 
 

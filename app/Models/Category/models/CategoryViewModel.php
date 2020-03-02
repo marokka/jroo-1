@@ -47,7 +47,7 @@ class CategoryViewModel
     /**
      * @var FoodViewModel[]
      */
-    public $foodProperties;
+    public $foodProperties = [];
 
     public function __construct(Category $model)
     {
