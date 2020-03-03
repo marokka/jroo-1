@@ -34,7 +34,7 @@ class FoodFilter extends QueryFilter
         $this->builder->where(FoodProperty::TABLE_NAME . '.price', $value);
     }
 
-    public function category(string $value)
+    public function category(?string $value)
     {
         if (!$value) {
             return;
@@ -43,7 +43,7 @@ class FoodFilter extends QueryFilter
         $this->builder->where(Food::TABLE_NAME . '.' . Food::ATTR_CATEGORY_ID, $value);
     }
 
-    public function prices(array $value)
+    public function prices(?array $value)
     {
         if (!$value) {
             return;

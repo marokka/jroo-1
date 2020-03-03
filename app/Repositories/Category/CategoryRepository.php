@@ -38,8 +38,6 @@ class CategoryRepository
     {
 
         return Category::with('foods')
-            ->select([Category::TABLE_NAME . '.*'])
-            
             ->groupBy([Category::TABLE_NAME . '.' . Category::ATTR_ID]);
 
     }
