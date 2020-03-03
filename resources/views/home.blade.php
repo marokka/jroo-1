@@ -23,7 +23,7 @@
                 <div class="slider-banner">
                     <div class="row">
                         @foreach($categories as $category)
-                            <div class="col-6 col-sm-4 col-lg-3">
+                            <div class="col-6 col-sm-4 col-lg-2">
                                 <a href="{{route('food.by-category-slug', $category->slug)}}">
                                     <img class="img-fluid" src="{{$category->img}}"
                                          alt="{{$category->name}}" style="margin-bottom: 8%; border-radius: 14px;"
